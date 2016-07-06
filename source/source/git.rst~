@@ -1,0 +1,244 @@
+Using Git
+=========
+
+.. _git:
+
+.. why automatic theme?
+
+.. how to stop the terminal? q
+
+
+Git is a version control system. There is a bit of a learning curve,
+but once you master it, it simplifies your life considerably.
+
+As we saw :ref:`before <github1>`, it helps you to publish your work on
+GitHub.
+
+Second, as the name "version control" suggests, it helps you to keep
+control of different versions. Hence, there is no need anymore to call
+your files "file_v2_a". You change your files and "commit" the
+changes, Git keeps track of the different versions.
+
+Third, it allows you to collaborate with (many) others. You and your
+collaborators can work on the same file. Git/GitHub offers a way to
+track changes and merge changes into the main file. Here we explain
+how this works.
+
+Note that you've already seen a number of Git-commands :ref:`here <github1>` 
+when we were using GitHub. Here we will explain what these commands
+actually mean.
+
+As before, there are numerous Git tutorials on the web. You can either
+google or look at the following:
+
+* `<https://www.atlassian.com/git/tutorials/>`_
+* `<https://progit.org/>`_
+* on how to collaborate: `<https://help.github.com/categories/collaborating/>`_
+
+Workflow
+--------
+
+working on one branch
+~~~~~~~~~~~~~~~~~~~~~
+
+Let's create a third repository on GitHub, using the steps :ref:`here <github1>`.
+
+* Create a new repository, say "third-repo".
+
+* Go to your command line and navigate to your directory "github"
+
+* Type at the command line: :command:`git clone
+  https://github.com/janboone/third-repo` where you change
+  "/janboone/" to your own user name (instead of
+  "janboone")
+
+* the repository that you just created on GitHub is now copied
+  ("cloned") to your computer.
+
+* Type the following to change into the directory
+  "third-repo" ("cd" stands for Change Directory):
+  
+* :command:`cd third-repo/`
+
+* start your markdown editor (whichever one you installed) and create
+  a file "document.md" in this directory "github/third-repo". Type
+  some text here.
+
+* The following command adds all files in the directory to be tracked
+  by Git:
+  
+* :command:`git add .`
+
+* the files are now "staged" and the following command adds these
+  files to the next "commit" (with the "-m" flag, you add a message):
+  
+* :command:`git commit -m "First version of document"`
+
+  * optional: you can skip the "git add" part, if you use the "-a"
+	flag: 
+  * :command:`git commit -a -m "First version of document"`
+
+* if you want to see what you have changed, type either of the
+  following (depending how much information you want):
+
+  * :command:`git log -p`
+  * :command:`git log --stat`
+  
+* the files are pushed to GitHub with the following command:
+
+* :command:`git push origin master`
+
+* Go to the website: "http://janboone.github.io/third-repo/" where
+  you change "janboone" into your own github user name.
+
+
+* You can see that there are 2 commits now:
+
+.. image:: /images/github_repo_8.png
+   :scale: 90 %
+   :align: center
+
+* click on "commits" and you see what they are:
+
+  * the initial commit when we created the repository
+  * and the document file created above which we committed with the
+	message "First version of this document"
+		   
+.. image:: /images/github_repo_9.png
+   :scale: 90 %
+   :align: center
+
+* click on "First version of this document" and you can see what we
+  changed here. That is, you see the text that you typed in your editor
+			 
+.. image:: /images/github_repo_10.png
+   :scale: 90 %
+   :align: center
+
+
+* now change document.md by typing some changes to this file with your
+  editor. Delete some words and add some sentences etc.
+
+* :command:`git commit -a -m "Second version of document"`
+
+* :command:`git push origin master`
+
+* again go to the GitHub website as above
+
+* you can see that there are 3 commits now
+
+* click on each commit to see what you have changed.
+
+branching out
+~~~~~~~~~~~~~  
+
+
+* With the following command we create a new branch called "testbranch":
+
+* :command:`git branch testbranch`
+
+* now we switch to this new branch:
+
+* :command:`git checkout testbranch`
+
+* go back to your file document.md and change something in this file again
+
+* :command:`git commit -a -m "Third version of this document in the testbranch"`
+
+* :command:`git push origin testbranch`
+
+* go back to your github website; you will see something like:
+  
+.. image:: /images/github_repo_11.png
+   :scale: 90 %
+   :align: center
+
+* the site notes that you pushed "testbranch"
+
+* click on "branch master" and you can choose between the master
+  branch and the testbranch branch:
+		   
+.. image:: /images/github_repo_12.png
+   :scale: 90 %
+   :align: center
+
+* compare the version of document.md in each branch. 
+		   
+* with :command:`git checkout master` you switch back to the master branch. You
+  can change things here which will not affect the testbranch etc.
+
+  * in case you get an error message here: you can only checkout of a branch if all your changes are committed
+  
+* after you typed :command:`git checkout master`, use your editor to open the
+  file document.md on your computer. Hence, your file document.md on
+  your computer has switched back to the previous version (i.e. the
+  changes you made in testbranch have gone in this version; by typing
+  "git checkout testbranch" you see this version again)
+
+* the following command gives an overview of your branches:
+  
+* :command:`git log --oneline --decorate --graph --all`
+
+* Now suppose that you are happy with the changes you made in
+  testbranch. Then you would like to have these changes in the master
+  branch as well. For this we "merge" the changes into the master branch
+
+* first switch back to master (in case you had not done so yet):
+  
+* :command:`git checkout master`
+
+* and merge the changes from testbranch into master:
+  
+* :command:`git merge testbranch`
+
+* Note: if in the meantime you have also changed document.md in the
+  master branch, Git cannot merge two versions. See `here
+  <http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#Basic-Merge-Conflicts>`_
+  on how to deal with this.
+
+* if you want, you can delete the testbranch now (all changes have
+  been merged into master): :command:`git branch -d testbranch`, but you don't
+  have to. 
+
+.. check whether new file is indeed the latest version
+
+  
+collaborating
+~~~~~~~~~~~~~
+
+There are a number of ways in which you can collaborate on GitHub. As
+you will be working with a relatively small team, we present here the
+workflow where everyone has push rights on the repository. An
+alternative is that only one person has push rights and the others
+fork the repository. This is described `here <http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project>`_.
+
+One team member creates a new repository. As described `here <http://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project>`_
+this team member clicks on settings, and then adds collaborators by
+their GitHub user names. Then all members clone this repository to
+their own computer. The workflow is then the same as above, with one
+exception.
+
+There is a probability that 2 or more members work on the project
+simultaneously and make changes. Then the first to push the changes
+back to GitHub has no problem: it works as above.
+
+When the second team member tries to push her/his changes, Git gives
+an error: it does not know how to merge the differences. The second
+team member to push changes, first needs to take the changes on board
+made by the first before pushing her/his changes to GitHub. This is done by
+typing the following:
+
+* :command:`git fetch origin`
+
+* :command:`git merge origin/master`
+
+Now the second member can push her/his changes onto GitHub by:
+
+* :command:`git push origin master`
+
+If you would like to avoid this, an alternative is that each team
+member creates her/his own branch of the repository and everyone works
+on her/his own branch only. Then the member's branch can be merged
+with the master branch.
+
+

@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Two math tools for economists &mdash; Apllied Economics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Apllied Economics 1.0 documentation" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="two-math-tools-for-economists">
+<h1>Two math tools for economists<a class="headerlink" href="#two-math-tools-for-economists" title="Permalink to this headline">¶</a></h1>
+<p>Slightly unfairly one could say that economics needs (only) two tools:</p>
+<ul class="simple">
+<li>maximization</li>
+<li>equilibrium</li>
+</ul>
+<p>We usually analyze agents maximizing utility, firms maximizing profits
+and regulators/planners maximizing welfare. Hence, this file gives an
+introduction to optimization in python. It gives examples and
+illustrates where you can look for more or terms that you can google to
+find more information.</p>
+<p>When more than one agent/firm/planner interacts, we derive the
+equilibrium. Equilibrium is a fixed point &#8211;in terms of reaction
+functions&#8211; and hence we also introduce a number of solvers.</p>
+<p>There are number of optimization routines and solvers for python. For
+our course, it is sufficient to work with the optimize library from
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/optimize.html">scipy</a>. You
+can use the documentation at this site or google &#8220;scipy fsolve&#8221; to find
+examples that you can copy and adapt to your purposes.</p>
+<p>If, at some point, you need other solvers/maximizers, you can take a
+look at <a class="reference external" href="http://www.scipy.org/topical-software.html">this website</a>
+for an overview of scientific tools for python.</p>
+<p>First, we import the relevant libraries. Numpy and scipy are math
+libraries for python. We import matplotlib to create figures which will
+be displayed in the notebook because of <code class="docutils literal"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre>from scipy import optimize,arange
+from numpy import array
+import matplotlib.pyplot as plt
+%matplotlib inline
+</pre></div>
+</div>
+<div class="section" id="i-o-example">
+<h2>I.O. example<a class="headerlink" href="#i-o-example" title="Permalink to this headline">¶</a></h2>
+<p>We use the following example from industrial organization (I.O.). Firms
+operating in a market, maximizing profits. We first look at the monopoly
+problem, where we focus on profit maximization (as equilibrium is no
+issue here).</p>
+<p>Then we look at the case with two or more firms, where we both maximize
+profits and find an equilibrium.</p>
+<p>In all the examples, we work with a linear demand curve <span class="math">\(p(Q)=1-Q\)</span>
+and costs <span class="math">\(c(q)=c_i q\)</span>, where <span class="math">\(Q\)</span> denotes total output on
+the market and <span class="math">\(q\)</span> the output level of one firm. For a monopolist,
+we obviously have <span class="math">\(q=Q\)</span>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">demand</span><span class="p">(</span><span class="n">Q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="n">Q</span>
+
+<span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>  <span class="c1"># c is constant marginal cost</span>
+    <span class="k">return</span> <span class="n">c</span><span class="o">*</span><span class="n">q</span>
+</pre></div>
+</div>
+<div class="section" id="monopoly">
+<h3>Monopoly<a class="headerlink" href="#monopoly" title="Permalink to this headline">¶</a></h3>
+<p>Monopoly profits are given by <span class="math">\(\pi(q) = (1-q)q-cq\)</span>. When we solve
+this analytically, we take the first order condition: <span class="math">\(1-2q-c=0\)</span>
+and hence <span class="math">\(q = (1-c)/2\)</span>. Hence, for <span class="math">\(c=0\)</span>, we find
+<span class="math">\(q=0.5\)</span>.</p>
+<p>Indeed, we can use a solver like <code class="docutils literal"><span class="pre">fsolve</span></code> to find this outcome. With
+<span class="math">\(c=0\)</span>, <code class="docutils literal"><span class="pre">fsolve</span></code> finds the solution to <span class="math">\(1-2q=0\)</span>. We use a
+lambda-function to define this (rather simple) equation:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">output</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">q</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">output</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span> <span class="mf">0.5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">fsolve</span></code> needs a function (here the lambda-function) and an initial
+guess for the solution (here we start from <span class="math">\(q = 0\)</span>).</p>
+<p>But we can also use maximization directly. Scipy has only minimization
+routines, hence to maximize profits <span class="math">\(\pi(q)\)</span>, we need to minimize
+negative profits <span class="math">\(-\pi(q)\)</span>. For this we can use a local optimizer
+like <code class="docutils literal"><span class="pre">fmin</span></code>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">minus_profits</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>         <span class="c1"># we want to see profits as a function of q when we maximize profits or</span>
+    <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">demand</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">q</span><span class="o">-</span><span class="n">cost</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">))</span> <span class="c1"># minimize minus_profits; hence c is specified as &quot;*args&quot;, when calling fmin</span>
+                                    <span class="c1"># we specify the c in the &quot;args=(c,)&quot;</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="n">minus_profits</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,))</span> <span class="c1"># note the comma in &quot;args(c,)&quot;; it needs to be there!</span>
+<span class="k">print</span> <span class="n">output</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Optimization terminated successfully.
+         Current function value: -0.250000
+         Iterations: 23
+         Function evaluations: 46
+[ 0.5]
+</pre></div>
+</div>
+<p>Hence the optimal output value equals 0.5 (as we found above). Profits
+at this optimal output level equal 0.25 (that is
+<span class="math">\(-\)</span><code class="docutils literal"><span class="pre">minus_profits</span></code><span class="math">\(=0.25\)</span>).</p>
+<p>As an alternative, you can also use a global optimizer like <code class="docutils literal"><span class="pre">brute</span></code>.
+It uses the following syntax. It does not require an initial guess but a
+range in which to look for the optimum, here the range
+<span class="math">\((0.0,1.0)\)</span>. The answer is close enough to 0.5.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">c</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">brute</span><span class="p">(</span><span class="n">minus_profits</span><span class="p">,((</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">),),</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,))</span>
+<span class="k">print</span> <span class="n">output</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span> <span class="mf">0.49995888</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="duopoly">
+<h3>Duopoly<a class="headerlink" href="#duopoly" title="Permalink to this headline">¶</a></h3>
+<p>In a duopoly in this set-up, we have firms 1 and 2 producing perfect
+substitutes. Output level of firm <span class="math">\(i\)</span> is denoted <span class="math">\(q_i\)</span>. Firm
+<span class="math">\(i\)</span>&#8216;s profit is written as
+<span class="math">\(\pi(q_i,q_j)=(1-q_i-q_j)q_i-c_i q_i\)</span> for <span class="math">\(j \neq i\)</span>. The
+way we usually solve this analytically is as follows.</p>
+<p>The two first order conditions for firms 1 and 2 can be written as:</p>
+<div class="math">
+\[1-2q_1-q_2-c_1 = 0\]</div>
+<p>and</p>
+<div class="math">
+\[1-2q_2-q_1-c_2 = 0\]</div>
+<p>Then we can solve these two equations in the unknowns <span class="math">\(q_1,q_2\)</span>.
+However, we usually take a step in between and define the reaction
+functions. That is, we solve the optimal <span class="math">\(q_i\)</span> as a function of
+<span class="math">\(q_j\)</span>:</p>
+<div class="math">
+\[q_i = \frac{1}{2}(1-c_i-q_j)\]</div>
+<p>Or defining <span class="math">\(i\)</span>&#8216;s reaction function as</p>
+<div class="math">
+\[R_i(q_j) = \frac{1}{2}(1-c_i-q_j)\]</div>
+<p>We have an equilibrium if <span class="math">\(q_1 = R_1(q_2)\)</span> and
+<span class="math">\(q_2 = R_2(q_1)\)</span>. We can plot the reaction functions to give the
+following well-known figure.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">reaction_function</span><span class="p">(</span><span class="n">q_other</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="n">q_other</span><span class="p">)</span>
+
+<span class="n">c_1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">c_2</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">range_q</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">range_reaction_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">reaction_function</span><span class="p">(</span><span class="n">q_2</span><span class="p">,</span><span class="n">c_1</span><span class="p">)</span> <span class="k">for</span> <span class="n">q_2</span> <span class="ow">in</span> <span class="n">range_q</span><span class="p">]</span>
+<span class="n">range_reaction_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">reaction_function</span><span class="p">(</span><span class="n">q_1</span><span class="p">,</span><span class="n">c_2</span><span class="p">)</span> <span class="k">for</span> <span class="n">q_1</span> <span class="ow">in</span> <span class="n">range_q</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">range_q</span><span class="p">,</span> <span class="n">range_reaction_2</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">range_reaction_1</span><span class="p">,</span> <span class="n">range_q</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Equilibrium&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$q_1$&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$q_2$&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;$R_2(q_1)$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">reaction_function</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">c_2</span><span class="p">)),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="c1"># here we define the labels and arrows in the graph</span>
+              <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                              <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=.2&quot;</span><span class="p">),</span>
+              <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;$R_1(q_2)$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">reaction_function</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">c_1</span><span class="p">),</span><span class="mf">0.6</span><span class="p">),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="c1"># here we define the labels and arrows in the graph</span>
+              <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                              <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=.2&quot;</span><span class="p">),</span>
+              <span class="p">)</span>
+
+
+
+
+<span class="c1"># plt.xlim(c,1.0)</span>
+<span class="c1"># plt.ylim(0.0,0.3)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;cournot_equilibrium.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/output_12_0.png" src="../_images/output_12_0.png" />
+<p>The equilibrium is given by <span class="math">\(q_1,q_2\)</span> such that</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix} q_1\\ q_2\end{pmatrix} = \begin{pmatrix} R_1(q_2)\\ R_2(q_1)\end{pmatrix}\end{split}\]</div>
+<p>If both have the same costs, the symmetric equilibrium is given by
+<span class="math">\(q=R(q)\)</span>.</p>
+<p>Instead of using the first order condition for <span class="math">\(q_i\)</span>, we can
+directly find the optimum using <code class="docutils literal"><span class="pre">fmin</span></code> as we did above.</p>
+<p>Let&#8217;s redo the figure with the reaction functions, now using <code class="docutils literal"><span class="pre">fmin</span></code>.
+Note that instead of using <code class="docutils literal"><span class="pre">*args</span></code>, we use a lambda function here.
+Both approaches are fine, use the one you like best.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">minus_duopoly_profits</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">q_other</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">demand</span><span class="p">(</span><span class="n">q</span><span class="o">+</span><span class="n">q_other</span><span class="p">)</span><span class="o">*</span><span class="n">q</span><span class="o">-</span><span class="n">cost</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">new_reaction_function</span><span class="p">(</span><span class="n">q_other</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="n">minus_duopoly_profits</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">q_other</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="n">x0</span><span class="p">,</span><span class="n">disp</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span> <span class="c1"># disp = False reduces</span>
+    <span class="k">return</span> <span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                                                                     <span class="c1"># the output of the routine</span>
+                                                                                         <span class="c1"># disp = True shows the difference</span>
+<span class="n">c_1</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">c_2</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">range_q</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">range_reaction_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_reaction_function</span><span class="p">(</span><span class="n">q_2</span><span class="p">,</span><span class="n">c_1</span><span class="p">)</span> <span class="k">for</span> <span class="n">q_2</span> <span class="ow">in</span> <span class="n">range_q</span><span class="p">]</span>
+<span class="n">range_reaction_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_reaction_function</span><span class="p">(</span><span class="n">q_1</span><span class="p">,</span><span class="n">c_2</span><span class="p">)</span> <span class="k">for</span> <span class="n">q_1</span> <span class="ow">in</span> <span class="n">range_q</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">range_q</span><span class="p">,</span> <span class="n">range_reaction_2</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">range_reaction_1</span><span class="p">,</span> <span class="n">range_q</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Equilibrium&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$q_1$&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$q_2$&quot;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;$R_2(q_1)$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">reaction_function</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">c_2</span><span class="p">)),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="c1"># here we define the labels and arrows in the graph</span>
+              <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                              <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=.2&quot;</span><span class="p">),</span>
+              <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;$R_1(q_2)$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">reaction_function</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="n">c_1</span><span class="p">),</span><span class="mf">0.6</span><span class="p">),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="c1"># here we define the labels and arrows in the graph</span>
+              <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                              <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=.2&quot;</span><span class="p">),</span>
+              <span class="p">)</span>
+
+
+
+
+<span class="c1"># plt.xlim(c,1.0)</span>
+<span class="c1"># plt.ylim(0.0,0.3)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;cournot_equilibrium2.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/output_15_0.png" src="../_images/output_15_0.png" />
+<p>To calculate the equilibrium, we need to find a so called fixed point of
+the vector function <span class="math">\(R(q)\)</span>. This can be seen as follows.</p>
+<p>Define the function (or mapping) <span class="math">\(q \rightarrow R(q)\)</span> with
+<span class="math">\(q \in \Re^2\)</span> and</p>
+<div class="math">
+\[\begin{split}R(q) = \begin{pmatrix} R_1(q_2)\\ R_2(q_1)\end{pmatrix}\end{split}\]</div>
+<p>A fixed point of this function is defined as a vector <span class="math">\(q\)</span> such
+that <span class="math">\(q=R(q)\)</span>. In words, <span class="math">\(q_1\)</span> is the optimal reaction to
+<span class="math">\(q_2\)</span> and <span class="math">\(q_2\)</span> is the optimal reaction to <span class="math">\(q_1\)</span>. That
+is, the vector <span class="math">\(q\)</span> is a Nash equilibrium. Each firm <span class="math">\(i\)</span>
+chooses its optimal output level <span class="math">\(q_i\)</span>, given the choice by the
+other firm <span class="math">\(q_j\)</span>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">vector_reaction_function</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> <span class="c1"># q is a vector (or list in python) here</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">output_1</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q1</span><span class="p">:</span> <span class="n">minus_duopoly_profits</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="n">x0</span><span class="p">,</span><span class="n">disp</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">output_2</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q2</span><span class="p">:</span> <span class="n">minus_duopoly_profits</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="n">x0</span><span class="p">,</span><span class="n">disp</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">output_1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">output_2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">]</span>
+<span class="n">optimize</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="n">q</span><span class="o">-</span><span class="n">vector_reaction_function</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span> <span class="mf">0.3333125</span><span class="p">,</span>  <span class="mf">0.3333125</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="firms">
+<h3><span class="math">\(n\)</span> firms<a class="headerlink" href="#firms" title="Permalink to this headline">¶</a></h3>
+<p>Now we want to write the functions in such a way that we can calculate
+the equilibrium for <span class="math">\(n\)</span> firms in the market.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">n_reaction_function</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> <span class="c1"># q is a vector (or list in python) here</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="c1"># number of firms</span>
+    <span class="n">firms</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1"># create a list with n firm identities (0,1,...,n-1)</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># initial guess for a firm&#39;s optimal output level --given what the others do</span>
+    <span class="n">total_output</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># we create an empty list of optimal reactions `output`, and add the optimal reaction of each firm to it</span>
+    <span class="k">for</span> <span class="n">firm</span> <span class="ow">in</span> <span class="n">firms</span><span class="p">:</span> <span class="c1"># we use the duopoly profits with q_other = \sum_{j \neq i} q_j = \sum_{j} q_j - q_i</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">minus_duopoly_profits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">total_output</span><span class="o">-</span><span class="n">q</span><span class="p">[</span><span class="n">firm</span><span class="p">],</span><span class="n">c</span><span class="p">[</span><span class="n">firm</span><span class="p">]),</span><span class="n">x0</span><span class="p">,</span><span class="n">disp</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">]</span> <span class="c1"># consider the case with 4 firms in the market each with c = 0</span>
+<span class="n">optimize</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="n">q</span><span class="o">-</span><span class="n">n_reaction_function</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">c</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span> <span class="mf">0.2</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Cournot-Nash equilibrium with 4 firms with zero marginal costs is that
+each firm produces <span class="math">\(q=1/5\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Two math tools for economists</a><ul>
+<li><a class="reference internal" href="#i-o-example">I.O. example</a><ul>
+<li><a class="reference internal" href="#monopoly">Monopoly</a></li>
+<li><a class="reference internal" href="#duopoly">Duopoly</a></li>
+<li><a class="reference internal" href="#firms"><span class="math">\(n\)</span> firms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Intro_to_python_for_economists/Intro_to_python_for_economists.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Jan Boone and Sjak Smulders.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/Intro_to_python_for_economists/Intro_to_python_for_economists.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

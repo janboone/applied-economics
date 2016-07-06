@@ -1,0 +1,28 @@
+% Introduction Open Source
+% Jan Boone 
+% Dept. of Economics, Tilburg University
+
+
+Introduction
+============
+
+motivation
+----------
+
+
+
+<!--
+
+pandoc -s --mathjax --slide-level 2 --toc --toc-depth=1 -t revealjs presentation_florence.md -V theme=solarized -o presentation_florence.html
+
+pandoc --slide-level 2 --toc --toc-depth=1 -t beamer presentation_florence.md -V theme:Montpellier -o presentation_florence.pdf
+
+
+
+
+new slide:
+
+------------
+
+
+-->

@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plotting health care expenditure by age group &mdash; Apllied Economics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plotting-health-care-expenditure-by-age-group">
+<h1>Plotting health care expenditure by age group<a class="headerlink" href="#plotting-health-care-expenditure-by-age-group" title="Permalink to this headline">¶</a></h1>
+<p>We use here the following
+<a class="reference external" href="http://www.cbs.nl/nl-NL/menu/themas/gezondheid-welzijn/cijfers/incidenteel/maatwerk/zorgkosten-vanuit-de-zorgverzekeringswet-naar-leeftijd-en-huishoudensinkomen-2012.htm">data</a>
+We convert this data to csv and load it as dataframe using pandas. Costs
+are in euro&#8217;s.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>
+<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">plotly.tools</span> <span class="kn">as</span> <span class="nn">tls</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;zorgkostenvanuitdezorgverzekeringswetnaarleeftijdenhuishoudensinkomen2012.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">df</span>
+</pre></div>
+</div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Leeftijdsklasse</th>
+      <th>Kwintielen huishoudinkomen</th>
+      <th>Decielen Zorgkosten</th>
+      <th>Gemiddelde Zvw kosten</th>
+      <th>Gemiddelde Zvw kosten excl huisartsenzorg</th>
+      <th>Gemiddelde Zvw kosten excl huisartsenzorg en geboortezorg</th>
+      <th>Gemiddeld besteedbaar huishoudensinkomen</th>
+      <th>Aantal personen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>1</td>
+      <td>64</td>
+      <td>6</td>
+      <td>6</td>
+      <td>9870</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>2</td>
+      <td>121</td>
+      <td>38</td>
+      <td>38</td>
+      <td>10327</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>3</td>
+      <td>175</td>
+      <td>82</td>
+      <td>82</td>
+      <td>10377</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>4</td>
+      <td>241</td>
+      <td>134</td>
+      <td>134</td>
+      <td>10451</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>5</td>
+      <td>327</td>
+      <td>210</td>
+      <td>210</td>
+      <td>10597</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>6</td>
+      <td>449</td>
+      <td>325</td>
+      <td>324</td>
+      <td>10693</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>7</td>
+      <td>637</td>
+      <td>503</td>
+      <td>503</td>
+      <td>10650</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>8</td>
+      <td>977</td>
+      <td>837</td>
+      <td>837</td>
+      <td>10702</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>9</td>
+      <td>1691</td>
+      <td>1540</td>
+      <td>1540</td>
+      <td>10874</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0 t/m 19 jaar</td>
+      <td>1e kwintiel</td>
+      <td>10</td>
+      <td>8413</td>
+      <td>8244</td>
+      <td>8234</td>
+      <td>10763</td>
+      <td>83113</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>1</td>
+      <td>78</td>
+      <td>11</td>
+      <td>11</td>
+      <td>17534</td>
+      <td>73821</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>2</td>
+      <td>129</td>
+      <td>46</td>
+      <td>46</td>
+      <td>17587</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>3</td>
+      <td>178</td>
+      <td>86</td>
+      <td>86</td>
+      <td>17584</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>4</td>
+      <td>236</td>
+      <td>131</td>
+      <td>131</td>
+      <td>17575</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>5</td>
+      <td>312</td>
+      <td>197</td>
+      <td>197</td>
+      <td>17569</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>6</td>
+      <td>423</td>
+      <td>299</td>
+      <td>299</td>
+      <td>17560</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>7</td>
+      <td>597</td>
+      <td>465</td>
+      <td>465</td>
+      <td>17549</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>8</td>
+      <td>916</td>
+      <td>776</td>
+      <td>776</td>
+      <td>17548</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>9</td>
+      <td>1606</td>
+      <td>1456</td>
+      <td>1456</td>
+      <td>17539</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0 t/m 19 jaar</td>
+      <td>2e kwintiel</td>
+      <td>10</td>
+      <td>7415</td>
+      <td>7248</td>
+      <td>7244</td>
+      <td>17533</td>
+      <td>73822</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>1</td>
+      <td>80</td>
+      <td>12</td>
+      <td>12</td>
+      <td>21907</td>
+      <td>74115</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>2</td>
+      <td>128</td>
+      <td>46</td>
+      <td>46</td>
+      <td>21925</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>3</td>
+      <td>174</td>
+      <td>83</td>
+      <td>83</td>
+      <td>21926</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>4</td>
+      <td>227</td>
+      <td>124</td>
+      <td>124</td>
+      <td>21926</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>5</td>
+      <td>296</td>
+      <td>183</td>
+      <td>183</td>
+      <td>21914</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>6</td>
+      <td>399</td>
+      <td>278</td>
+      <td>278</td>
+      <td>21907</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>7</td>
+      <td>559</td>
+      <td>430</td>
+      <td>430</td>
+      <td>21902</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>8</td>
+      <td>851</td>
+      <td>713</td>
+      <td>713</td>
+      <td>21898</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>9</td>
+      <td>1492</td>
+      <td>1351</td>
+      <td>1350</td>
+      <td>21893</td>
+      <td>74116</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0 t/m 19 jaar</td>
+      <td>3e kwintiel</td>
+      <td>10</td>
+      <td>6961</td>
+      <td>6801</td>
+      <td>6798</td>
+      <td>21873</td>
+      <td>74115</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>1</td>
+      <td>157</td>
+      <td>68</td>
+      <td>68</td>
+      <td>21808</td>
+      <td>12941</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>2</td>
+      <td>564</td>
+      <td>397</td>
+      <td>397</td>
+      <td>21777</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>3</td>
+      <td>1011</td>
+      <td>815</td>
+      <td>815</td>
+      <td>21774</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>4</td>
+      <td>1519</td>
+      <td>1300</td>
+      <td>1300</td>
+      <td>21759</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>5</td>
+      <td>2120</td>
+      <td>1876</td>
+      <td>1876</td>
+      <td>21730</td>
+      <td>12941</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>6</td>
+      <td>2887</td>
+      <td>2618</td>
+      <td>2618</td>
+      <td>21766</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>7</td>
+      <td>3956</td>
+      <td>3657</td>
+      <td>3657</td>
+      <td>21754</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>227</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>8</td>
+      <td>5756</td>
+      <td>5411</td>
+      <td>5411</td>
+      <td>21734</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>9</td>
+      <td>9327</td>
+      <td>8934</td>
+      <td>8934</td>
+      <td>21734</td>
+      <td>12942</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>80 jaar en ouder</td>
+      <td>3e kwintiel</td>
+      <td>10</td>
+      <td>22590</td>
+      <td>22103</td>
+      <td>22103</td>
+      <td>21714</td>
+      <td>12941</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>1</td>
+      <td>130</td>
+      <td>51</td>
+      <td>51</td>
+      <td>27467</td>
+      <td>9220</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>2</td>
+      <td>513</td>
+      <td>351</td>
+      <td>351</td>
+      <td>27326</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>3</td>
+      <td>940</td>
+      <td>748</td>
+      <td>748</td>
+      <td>27388</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>4</td>
+      <td>1429</td>
+      <td>1215</td>
+      <td>1215</td>
+      <td>27368</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>5</td>
+      <td>2002</td>
+      <td>1768</td>
+      <td>1768</td>
+      <td>27347</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>235</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>6</td>
+      <td>2729</td>
+      <td>2470</td>
+      <td>2470</td>
+      <td>27340</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>236</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>7</td>
+      <td>3732</td>
+      <td>3438</td>
+      <td>3438</td>
+      <td>27344</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>237</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>8</td>
+      <td>5412</td>
+      <td>5074</td>
+      <td>5074</td>
+      <td>27332</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>238</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>9</td>
+      <td>8809</td>
+      <td>8417</td>
+      <td>8417</td>
+      <td>27328</td>
+      <td>9221</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>80 jaar en ouder</td>
+      <td>4e kwintiel</td>
+      <td>10</td>
+      <td>21662</td>
+      <td>21188</td>
+      <td>21188</td>
+      <td>27360</td>
+      <td>9220</td>
+    </tr>
+    <tr>
+      <th>240</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>1</td>
+      <td>107</td>
+      <td>40</td>
+      <td>40</td>
+      <td>43231</td>
+      <td>6975</td>
+    </tr>
+    <tr>
+      <th>241</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>2</td>
+      <td>471</td>
+      <td>312</td>
+      <td>312</td>
+      <td>44395</td>
+      <td>6975</td>
+    </tr>
+    <tr>
+      <th>242</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>3</td>
+      <td>885</td>
+      <td>696</td>
+      <td>696</td>
+      <td>45054</td>
+      <td>6976</td>
+    </tr>
+    <tr>
+      <th>243</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>4</td>
+      <td>1358</td>
+      <td>1147</td>
+      <td>1147</td>
+      <td>44134</td>
+      <td>6975</td>
+    </tr>
+    <tr>
+      <th>244</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>5</td>
+      <td>1926</td>
+      <td>1689</td>
+      <td>1689</td>
+      <td>44796</td>
+      <td>6976</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>6</td>
+      <td>2637</td>
+      <td>2376</td>
+      <td>2376</td>
+      <td>45075</td>
+      <td>6975</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>7</td>
+      <td>3622</td>
+      <td>3331</td>
+      <td>3331</td>
+      <td>45059</td>
+      <td>6976</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>8</td>
+      <td>5205</td>
+      <td>4867</td>
+      <td>4867</td>
+      <td>44450</td>
+      <td>6975</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>9</td>
+      <td>8526</td>
+      <td>8139</td>
+      <td>8139</td>
+      <td>44849</td>
+      <td>6976</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>80 jaar en ouder</td>
+      <td>5e kwintiel</td>
+      <td>10</td>
+      <td>21574</td>
+      <td>21099</td>
+      <td>21099</td>
+      <td>45152</td>
+      <td>6975</td>
+    </tr>
+  </tbody>
+</table>
+<p>250 rows × 8 columns</p>
+</div><div class="code python highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]))]</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span><span class="s1">&#39;1e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;2e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;3e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;4e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;5e kwintiel&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">income_average</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">cost_average</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">])):</span>
+    <span class="n">income_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s1">&#39;Gemiddeld besteedbaar huishoudensinkomen&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+    <span class="n">cost_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span>   <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s1">&#39;Gemiddelde Zvw kosten&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">age0_19</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+<span class="n">age20_39</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+
+<span class="n">age40_59</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+<span class="n">age60_79</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+<span class="n">age80</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<span class="p">)</span>
+
+
+
+
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Health care expend. vs. income for different age cohorts in the Netherlands 2012&#39;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="n">XAxis</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">,</span>
+        <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
+            <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7f7f7f&#39;</span>
+        <span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="n">YAxis</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;health care expenditure&#39;</span><span class="p">,</span>
+        <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
+            <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7f7f7f&#39;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span><span class="n">age0_19</span><span class="p">,</span><span class="n">age20_39</span><span class="p">,</span><span class="n">age40_59</span><span class="p">,</span><span class="n">age60_79</span><span class="p">,</span><span class="n">age80</span><span class="p">])</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;scatter income health care costs&#39;</span><span class="p">)</span>
+<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s2">&quot;https://plot.ly/~janboone/56&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~janboone/56.embed" height="525" width="100%"></iframe></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Plotly_example.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Jan Boone and Sjak Smulders.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/Plotly_example.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

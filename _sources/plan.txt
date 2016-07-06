@@ -5,10 +5,10 @@ questions
 ---------
 
 If you have questions/comments about this course, go to the `issues
-page <https://github.com/janboone/open_source_for_economists/issues>`_
+page <https://github.com/janboone/applied-economics/issues>`_
 open a new issue (with the green "New issue" button) and type your
 question. Use a title that is informative (e.g. not "question", but
-"question about assignment 2"). Go to the next box ("Leave a comment")
+"question about the second assignment"). Go to the next box ("Leave a comment")
 and type your question. Then click on "Submit new issue". We will
 answer your question as quickly as possible.
 
@@ -33,36 +33,33 @@ to the earlier issue and leave a comment in that "conversation".
 plan
 ----
 
-The plan for this course in the academic year 2015/2016 is as follows:
+The plan for this course in the academic year 2016/2017 is as follows:
 
 
 .. csv-table:: Preliminary schedule, may be updated by announcements on BB:
-   :header: "day", "date", "time", "room", "topic", "assignment due"
-   :widths: 5, 10, 15, 15, 20, 10
+   :header: "day", "date", "time", "room", "teacher", "topic", "Python basecamp"
+   :widths:   5,     10,     15,     30,      25,        70,       70
 
-   Tue, Feb 02 ,  16:45-19:30 ,  PZ 043 ,  introduction, 
-   Wed, Feb 17 ,  11:45-14:30 ,  PZ 044 ,  Q&A software install, 
-   Tue, Feb 23 ,  12:45-15:30 ,  CZ 006 ,  github and markdown, 
-   Wed, Mar 02 ,  11:45-14:30 ,  AZ 008 ,  git, Assignment 1 
-   Wed, Mar 09 ,  11:45-14:30 ,  WZ 203 ,  intro python, 
-   Wed, Mar 16 ,  11:45-14:30 ,  DZ 005 ,  no class, Assignment 2 
-   Wed, Mar 23 ,  11:45-14:30 ,  DZ 007 ,  python, 
-   Wed, Mar 30 ,  11:45-14:30 ,  PZ 045 ,  no class, 
-   Wed, Apr 06 ,  11:45-14:30 ,  DZ 004 ,  Q&A python assignment, 
-   Wed, Apr 13 ,  11:45-14:30 ,  DZ 005 ,  no class, Assignment 3
+   Wed, Aug 31,  13:45-17:30,          TZ 004, Sjak, Introduction to the course and program tracks ,
+   Wed, Sep 7,   info afternoon,             , , ,   
+   Wed, Sep 14,  13:45-17:30,          TZ 004, Simone and Jan, CV SWAT software installation,
+   Wed, Sep 21,  13:45-17:30,          TZ 004, Sjak, Canon,  Python Basics (Hello Python! - Variables&Types)
+   Wed, Sep 28,  Inside the business,  TZ 004, , ,  Python Basics (Variables&Types - Can Python handle everything?)
+   Wed, Oct 5,   13:45-17:30,          TZ 004, Rob and John, , Python Lists (Lists what are they? - Subset and calculate)
+   Wed, Oct 12,  13:45-17:30,          TZ 004, Rob and John, , Python Lists (Subset and calculate - Inner workings of lists)
+   Wed, Oct 19,  holiday,                    , , ,  
+   Wed, Oct 26,  13:45-17:30,          TZ 004, Sjak and Jan, Canon software check, Functions and Packages
+   Wed, Nov 2,   13:45-17:30,          TZ 004, Jan, Python,  Numpy (Numpy - 2D Numpy Arrays)
+   Wed, Nov 9,   13:45-17:30,          TZ 004, , ,  Numpy (2D Numpy Arrays - Blend it all together)
+   Wed, Nov 16,  13:45-17:30,          TZ 004, Jan, Python,  
+   Wed, Nov 23,  15:45-19:30,          TZ 004, , ,  
+   Wed, Nov 30,  Asset Talent Day,           , , ,
+   Wed, Dec 7,   13:45-17:30,          TZ 004, Minke, ,
 
 
-
-The goal of the course is to enable you to install and work with open source software. If you manage this with the course-website and on-line tutorials and information, there is no need to come to class. Stick to the assignment deadlines above and check blackboard to see wether there are changes to the schedule.
-
-There is one exception to the rule that you do not need to come to class: the lecture of Feb. 17th. If you have managed to install all the software, you may want to give other students a hand installing the software on their computer. Your help will be much appreciated. 
 
    
 grade
 -----
 
-Your grade is the average of the 3 assignments. Assignments 1 and 2 you do on your own. Assignment 3 in a group.
-
-The assignments are due at 16:00 of the Thursday in the weeks indicated above.
-
-In order for us to grade the assignments, we need to know your github address. After you make a github account, fill in the webform (address can be found on blackboard). Note that github records when "commits were pushed" (you will learn later on what this means) and hence we can check whether you handed in the assignment in time.
+Your grade is determined as follows. ...

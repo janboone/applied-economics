@@ -248,7 +248,22 @@ On Linux and Mac computers, "~" indicates your home-directory. On most terminals
 
 
 
-		   
+uploading assignments
+---------------------
+
+???add text????
+
+depending on your media player, you may want to download the videos and then watch them
+
+`uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
+
+
+
+
+`uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_
+
+Detailing the steps when using the shell:
+
 
 
 

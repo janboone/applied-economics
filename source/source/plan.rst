@@ -37,7 +37,7 @@ The plan for this course in the academic year 2016/2017 is as follows:
 
 
 .. csv-table:: Preliminary schedule, may be updated by announcements on BB:
-   :header: "day", "date", "time", "room", "teacher", "topic", "Python basecamp"
+   :header: "day", "date", "time", "room", "teacher", "topic", "Python datacamp"
    :widths:   5,     10,     15,     30,      25,        70,       70
 
    Wed, Aug 31,  13:45-17:30,          TZ 004, Sjak, Introduction to the course and program tracks ,
@@ -58,6 +58,26 @@ The plan for this course in the academic year 2016/2017 is as follows:
 
 
 
+python datacamp
+---------------
+
+The Python datacamp column refers to the following website:
+`<https://www.datacamp.com/home#tab_python-courses>`_. For this
+course, you only need to follow the first course "Intro to Python for
+Data Science". This course is free of charge.
+
+To follow the course, you do not need to install python on your
+computer; you simply work in your webbrowser. Look at the videos and
+do the exercises. Following the planning in the datacamp column makes
+sure that you are up-to-date for the first python lecture in
+November. During the lectures before November, no reference to python
+is made.
+
+If you prefer to use another introduction to python (e.g. using a
+book); feel free to do so. Make sure that you cover the same topics as
+the ones on datacamp.
+
+   
    
 grade
 -----

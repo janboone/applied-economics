@@ -29,7 +29,7 @@
     <link rel="prev" title="Reporting your results" href="reporting.html" />
    
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
   <body role="document">  
@@ -41,26 +41,70 @@
             
   <div class="section" id="first-assignment">
 <h1>First Assignment<a class="headerlink" href="#first-assignment" title="Permalink to this headline">¶</a></h1>
-<p id="assignment1">For the assignment, do the following:</p>
-<ul class="simple">
-<li>Copy the <a class="reference internal" href="github.html#buttondown"><span>buttondown files</span></a> that you downloaded
-before.</li>
-<li>Edit the file &#8220;pandoc_example.md&#8221; such that it becomes
-your CV. A CV has your name at the top, well I guess you know what a
-CV is... To edit the markdown file, use the (markdown) editor you installed.</li>
-<li>Convert your CV into html using pandoc and the stylesheet
-buttondown.css.</li>
-<li>Publish your CV both in html and in markdown on github.</li>
-<li>The html file needs to be published in the gh-pages branch of your repository so that others can see it with a webbrowser.</li>
-<li>Make sure that you have filled in the webform (address can be found on blackboard) so that we know the address of your github repository. If we do not have your address, we cannot grade the assignment!</li>
-<li>This CV becomes the starting point of your portfolio of projects. For assignments 2 and 3, you need to add links to this CV such that we &#8211;and others&#8211; can see what projects you have done.</li>
+<ul id="assignment1">
+<li><p class="first">create a github account at <a class="reference external" href="https://github.com/">github</a></p>
+</li>
+<li><p class="first">sign in with your new account and create a repository <cite>assignments</cite> (note that when creating the repository, click on &#8220;Initialize this repository with a README&#8221;)</p>
+</li>
+<li><p class="first">use this README file in the repository to present us with the links to your assignments; like <a class="reference external" href="https://github.com/janboone/assignments">here</a></p>
+</li>
+<li><p class="first">fill in the <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSfRGBsM3QYzY0jEX1O4_q38kzb4VPQEW-qPVzl6fwPJwOBPzg/viewform?c=0&amp;w=1&amp;usp=send_form">google form</a></p>
+</li>
+<li><p class="first">deadline for filling in the google form is: Tuesday September 20, 2016</p>
+</li>
+<li><p class="first">for the first assignment, you follow either of two routes</p>
+<blockquote>
+<div><ul class="simple">
+<li>the simple way</li>
+<li>the experienced way (to earn extra points)</li>
 </ul>
-<p>This assignment you make on your own: not in a group!</p>
-<p>Note that &#8211;in case you want to show off&#8211; there are stylesheets
-especially made to render CV&#8217;s in html. Google, for instance,
-&#8220;markdown CV&#8221;.</p>
-<p>There is no need to do this. But if you manage to do this for the
-assignment, we will be very impressed!</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="simple-way">
+<h2>simple way<a class="headerlink" href="#simple-way" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">the reason why this is &#8220;simple&#8221;, is because everything happens on-line</p>
+</li>
+<li><p class="first">in the web-browser, go to your repository <cite>assignments</cite></p>
+</li>
+<li><p class="first">make sure that you are signed in (with your github account)</p>
+</li>
+<li><p class="first">click on the button <cite>create new file</cite></p>
+</li>
+<li><p class="first">as the name of this new file, type <cite>CV.md</cite></p>
+</li>
+<li><p class="first">Below <cite>&lt;&gt; Edit new file</cite> start typing markdown</p>
+</li>
+<li><p class="first">every now and again, you can type <cite>Preview</cite> to see what it looks like</p>
+</li>
+<li><p class="first">make sure to save your work regularly</p>
+<blockquote>
+<div><ul class="simple">
+<li>by pressing the <cite>Commit new file</cite> button at the bottom</li>
+<li>you can add a message explaining what you change in each &#8220;commit&#8221;</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">as an example of such a CV &#8211;in progress&#8211; see <a class="reference external" href="https://github.com/janboone/assignments/blob/master/CV.md">this one</a></p>
+</li>
+<li><p class="first">once you are finished, copy the web address of your CV into the README file, as I have done <a class="reference external" href="https://github.com/janboone/assignments">here</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="experienced-way">
+<h2>experienced way<a class="headerlink" href="#experienced-way" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>this is &#8220;experienced&#8221; because you will be working off-line on your computer to do this (not on-line)</li>
+<li>this means you have to clone your repository to your computer</li>
+<li>create/edit the file CV.md</li>
+<li>using pandoc you can turn this markdown file into an html file</li>
+<li>for this conversion you can use CV-style files (use google to find these)</li>
+<li>or you can use the &#8220;buttondown files&#8221; from the applied economics page</li>
+<li>follow the <cite>Command line</cite> instructions at <a class="reference external" href="https://janboone.github.io/applied-economics/github.html">this page</a></li>
+<li>in the README file add two links: one link to markdown version of your CV (<cite>CV.md</cite>) and the other link to the html version (<cite>CV.html</cite>) published on the gh-pages branch</li>
+</ul>
+</div>
 </div>
 
 
@@ -68,7 +112,16 @@ assignment, we will be very impressed!</p>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">First Assignment</a><ul>
+<li><a class="reference internal" href="#simple-way">simple way</a></li>
+<li><a class="reference internal" href="#experienced-way">experienced way</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
@@ -105,8 +158,8 @@ assignment, we will be very impressed!</p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
       <a href="_sources/assignment1.txt"

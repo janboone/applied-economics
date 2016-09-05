@@ -111,7 +111,7 @@ editors that can do this and there is a war_ between them.
   
 
 
-.. _music: https://www.youtube.com/watch?v=w9TGj2jrJk8
+.. _music: https://www.youtube.com/watch?v=9Q7Vr3yQYWQ
 .. _Latex: http://latex-project.org/ftp.html
 .. _Pandoc: http://pandoc.org/installing.html
 .. _demos: http://pandoc.org/demos.html

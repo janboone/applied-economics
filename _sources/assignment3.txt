@@ -4,9 +4,7 @@ Final assignment
 .. _assignment:
 
 
-This assignment you can do with a group; in particular, the group you indicated on the web-form at the start of the course.
-
-For this assignment, you create an ipython/jupyter notebook which has extension ".ipynb". You publish this notebook on GitHub and add a link to your CV (created in assignment 1) so that we can find it. Note that when someone views the notebook on GitHub (with a decent browser), it is actually rendered as if the person is running python.
+For this assignment, you create an ipython/jupyter notebook which has extension ".ipynb". You publish this notebook on GitHub and add a link to your README file (created in assignment 1, and in the repository reported in the google form) so that we can find it. Note that when someone views the notebook on GitHub (with a decent browser), it is actually rendered as if the person is running python.
 
 
 The idea of the assignment is that you can report your findings in a
@@ -45,5 +43,10 @@ evaluate your assignment:
   create a link to it so that the reader can quickly glance what you
   have done and go back to where she/he was reading. For this to work, you need to export the notebook to html. You do not have to do this, but it will impress us if you manage it.
 
-  
 
+---------
+  
+examples from last year:
+
+        * `first example <https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb>`_
+        * `second example <https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb>`_

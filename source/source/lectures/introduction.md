@@ -9,16 +9,6 @@ Introduction
 motivation
 ----------
 
-* Economics can be hard to use in practice
-* you passed all your exams, understood the models, wrote a thesis
-* and now what?
-
-    * should you explain equations to colleagues?
-    * or just chat a bit about intuition?
-	* you have some data, but not the right instrumental variables ...
-
-----------
-
 * in this course we teach you
 
     * to combine rigorous economics
@@ -48,6 +38,11 @@ examples
 	* do simulations in python
 	* publish results like
     [this](http://janboone.github.io/Deductible_Health_Insurance/)
+	* examples from last year:
+
+        * [first example](https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb)
+        * [second example](https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb)
+
 	* collaborate on line with github
     * make interactive graphs like the following
 
@@ -80,7 +75,7 @@ What do you need?
 Install software
 ----------------
 
-* [here](http://janboone.github.io/open_source_for_economists/installing.html)
+* [here](https://janboone.github.io/applied-economics/installing.html)
   you find the software that you need to install
 * this includes:
 
@@ -93,11 +88,15 @@ Install software
 Rules of the game
 =======================
 
+* the point of the open source part of this course is that you teach yourself how to use open source
+
+    * we give you tips and guide the way (feel free to use a different approach)
+    * the [schedule](https://janboone.github.io/applied-economics/plan.html) suggests a way to learn to python using [datacamp](https://www.datacamp.com/courses/intro-to-python-for-data-science)
+	* but feel free to use another website or a book; see references [here](https://janboone.github.io/applied-economics/programming.html)
+
 * to get a grade, you need to do 3 assignments
-* the first two assignments are relatively straightforward and you do
-  them on your own
-* the third assignment involves programming in python
-* this assignment is more involved and you can do this in a group
+
+    * the first assignment is to create a web page with your CV
 
 
 What is next?
@@ -117,12 +116,7 @@ What is next?
 
 ------------
 
-* everything you need to know is on [the website](http://janboone.github.io/open_source_for_economists/index.html)
-* if you can follow what happens there, there is no need to come to
-  the lectures
-* *one exception*: next lecture where you can help others who did not
-  manage to install all the relevant software
-* my explanations --both on and off line-- are rather short:
+* everything you need to know is on [the website](https://janboone.github.io/applied-economics/index.html)
 * use the links to tutorials that I provide or google yourself for
   tutorials on
 

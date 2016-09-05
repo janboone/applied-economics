@@ -2,8 +2,6 @@ Reporting your results
 ======================
 
 
-
-
 Here we discuss ways to report results on the web. Markdown,
 Restructuredtext, Latex
 

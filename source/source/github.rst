@@ -251,20 +251,13 @@ On Linux and Mac computers, "~" indicates your home-directory. On most terminals
 uploading assignments
 ---------------------
 
-???add text????
+There are a number of ways in which you can get your assignments on github:
 
-depending on your media player, you may want to download the videos and then watch them
+* for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well
+* if you created your CV off-line and need to get the relevant files on github or if you want to get your python notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):
 
-`uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
-
-
-
-
-`uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_
-
-Detailing the steps when using the shell:
-
-
+    * `uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
+    * `uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_ (also see the instructions above to do this)
 
 
 .. _GitHub: https://github.com/

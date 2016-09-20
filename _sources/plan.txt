@@ -42,17 +42,17 @@ The plan for this course in the academic year 2016/2017 is as follows:
 
    Wed, Aug 31,  13:45-17:30,          TZ 004, Sjak, Introduction to the course and program tracks ,
    Wed, Sep 7,   info afternoon,             , , ,   
-   Wed, Sep 14,  13:45-17:30,          TZ 004, Simone and Jan, CV SWAT software installation,
-   Wed, Sep 21,  13:45-17:30,          TZ 004, Sjak, Canon,  Python Basics (Hello Python! - Variables&Types)
-   Wed, Sep 28,  Inside the business,  TZ 004, , ,  Python Basics (Variables&Types - Can Python handle everything?)
-   Wed, Oct 5,   13:45-17:30,          TZ 004, Rob and John, , Python Lists (Lists what are they? - Subset and calculate)
-   Wed, Oct 12,  13:45-17:30,          TZ 004, Rob and John, , Python Lists (Subset and calculate - Inner workings of lists)
+   Wed, Sep 14,  13:45-17:30,          TZ 004, Simone and Jan, CV SWOT software installation,
+   Wed, Sep 21,  15:45-17:30,          TZ 004, Sjak, Canon,  Python Basics (Hello Python! - Variables&Types)
+   Wed, Sep 28,  Inside the business,        , , ,  Python Basics (Variables&Types - Can Python handle everything?)
+   Wed, Oct 5,   13:45-17:30,          TZ 004, Sjak, Canon, Python Lists (Lists what are they? - Subset and calculate)
+   Wed, Oct 12,  13:45-17:30,          TZ 004, Sjak, Canon, Python Lists (Subset and calculate - Inner workings of lists)
    Wed, Oct 19,  holiday,                    , , ,  
-   Wed, Oct 26,  13:45-17:30,          TZ 004, Sjak and Jan, Canon software check, Functions and Packages
+   Tue, Oct 25,  14:45-16:30,          AZ 209 019, Rob and John, case, Functions and Packages
    Wed, Nov 2,   13:45-17:30,          TZ 004, Jan, Python,  Numpy (Numpy - 2D Numpy Arrays)
-   Wed, Nov 9,   13:45-17:30,          TZ 004, , ,  Numpy (2D Numpy Arrays - Blend it all together)
-   Wed, Nov 16,  13:45-17:30,          TZ 004, Jan, Python,  
-   Wed, Nov 23,  15:45-19:30,          TZ 004, , ,  
+   Wed, Nov 9,   13:45-17:30,          TZ 004, Jan, Python,  Numpy (2D Numpy Arrays - Blend it all together)
+   Tue, Nov 15,  16:45-18:30,          CZ 006 109, Rob and John, Case,  
+   Tue, Nov 22,  15:45-19:30,          TZ 004, Sjak, Canon,  
    Wed, Nov 30,  Asset Talent Day,           , , ,
    Wed, Dec 7,   13:45-17:30,          TZ 004, Minke, ,
 

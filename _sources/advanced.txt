@@ -3,23 +3,27 @@ Three advanced topics
 
 .. _advanced:
 
+In the lecture, we use `this notebook
+<https://janboone.github.io/applied-economics/_downloads/Advanced_Topics.html>`_.
+If you want, you can download `the notebook
+<https://janboone.github.io/applied-economics/_downloads/Advanced_Topics.ipynb>`_.
+
 With python there is a lot of stuff you can do. Feel free to roam the
 web to find something that you need/like.
 
-Here we introduce three advanced topics: making plots with `plotly <https://plot.ly/>`_,
-creating websites with `sphinx <http://sphinx-doc.org/>`_ and
-`mining the social web <https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition>`_.
+Below we give some more resources for making plots with `plotly. <https://plot.ly/>`_
+
+Further, if you like the style of the course's website, you can have a look at creating websites with `sphinx. <http://sphinx-doc.org/>`_
 
 The idea of the advanced topics is that you figure them out
 yourself. We will give a short introduction and some resources that
 you can consult. But feel free to google for more
 information/tutorials.
 
-In the third assignment you need to do some programming in a group. It
-is ok to use the resources that we taught during the course. But you
-will really impress us if you do something that goes beyond
-this. Either using one of the things below or something that you found
-yourself.
+In the third assignment you need to do some programming in a group. It is ok to
+use the resources that we taught during the course. But you will really impress
+us if you do something that goes beyond this. Either using one of the things
+discussed here or something that you found yourself.
 
 As new open source software is added continuously, it is important
 that you are able to absorb these new things as they come along. That
@@ -52,10 +56,6 @@ the computer that you use to make the plots. You cannot access their
 server from the notebooks on your computer without these
 credentials. This only needs to be done once.
 
-An example using plotly can be found `here
-<Plotly_Healthcare_Expenditure.html>`_. You can download the notebook here:
-
-* :download:`plotly graph <Plotly_Healthcare_Expenditure.ipynb>`
 
 
 Sphinx
@@ -63,7 +63,7 @@ Sphinx
 
 Combining sphinx with github is not entirely trivial. We gave a
 reference before, see :ref:`sphinx with github <sphinx-github>`. Here I explain how I do
-this myself. 
+this myself.
 
 
 * you need to install sphinx (as expected...); see :ref:`installing
@@ -76,12 +76,10 @@ this myself.
   get something like [source] = ~/Dropbox/source or on Windows:
   [source] = C:\\Dropbox\\source.
 * if you want to have the source files on github as well (e.g. because
-  you collaborate on the source files with others), the simplest way
-  is to have two github repositories: one with the source files and
-  one with the published version (using gh-pages). In this case, we
-  get something like: [source] = ~/github/source or [source] =
-  C:\\github\\source. There are other ways to resolve this; look on
-  the web if you want something more sophisticated. 
+  you collaborate on the source files with others), look at the structure of
+  this website: it contains both the source (.rst) files and the published
+  (.html) files. There are other ways to resolve this; look on
+  the web if you want something more sophisticated.
 * from now on, I assume that you have defined a [source] directory in
   either of the above ways.
 * the other directory that we need is [publish]; this is a github
@@ -90,7 +88,7 @@ this myself.
   and follow all the steps described there, including --importantly
   now-- :command:`touch .nojekyll`
 * the cloned version of this repository on your computer is denoted
-  [publish]. 
+  [publish].
 * using the command prompt/terminal navigate to [source]
 * in [source] use the sphinx command "sphinx-quickstart" and follow the
   steps `described here <http://sphinx-doc.org/tutorial.html>`_
@@ -103,20 +101,3 @@ this myself.
 * if you type :command:`sphinx-build -E [source] [publish]`	the html
   files are copied to your github directory
 * go to the directory [publish] and push the changes onto github
-  
-
-
-
-Mining the social web
----------------------
-
-If you like social media and would like to analyze some economic
-problem using data from social media, you can take a look at this
-`book
-<https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition>`_. Each
-chapter is a notebook and the notebook for chapter 1 (on twitter) is
-available for free.
-
-Also here, you can google on "python twitter mining tutorial" or --if
-you have a broader interest-- things like "python web scraping".
-

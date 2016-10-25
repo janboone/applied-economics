@@ -14,7 +14,7 @@ Other answers, better motivated than my own, include:
 * `<https://sites.google.com/site/pythonforscientists/python-vs-matlab>`_
 * google the question if you want more answers.
 
-We will program python using the ipython or jupyter notebook. 
+We will program python using the ipython or jupyter notebook.
 One motivation to use the ipython notebook is based on a paper in the AER: https://www.youtube.com/watch?v=oP9Qcjq8UVI
 Note that this is a presentation on a python conference having nothing to do with
 economics. The fact that this presentation uses an AER paper to
@@ -35,35 +35,17 @@ Links and resources for python:
     * `<http://www.physics.nyu.edu/pine/pymanual/html/pymanMaster.html>`_
 
 
-Introduction to python for economists
--------------------------------------
+Recall that for this lecture you are supposed to have followed the `datacamp
+course. <https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1>`_
 
-simple introduction
-~~~~~~~~~~~~~~~~~~~
+Introduction to python
+----------------------
 
-A first very simple introduction to python can be found `here <http://janboone.github.io/competition_policy_and_regulation/Introduction_to_Python/Introduction_to_Python.html>`_
-
-With browsers like Safari, Chrome etc., you can see the notebook
-online, rendered by GitHub:
-
-* `<https://github.com/janboone/competition_policy_and_regulation/blob/gh-pages/_downloads/Introduction_to_Python.ipynb>`_
-* you can download the notebook at `<http://janboone.github.io/competition_policy_and_regulation/_downloads/Introduction_to_Python.ipynb>`_
-
-
-introduction for economists
-~~~~~~~~~~~~~~~~~~~~~~~~~~~  
-  
-An introduction notebook that focuses on the two tools that economists need
-(optimization and equilibrium) can be
-
-* viewed as html `here <Intro_to_python_for_economists/Intro_to_python_for_economists.html>`_ and
-* as :download:`presentation <lectures/Intro_to_python_for_economists-presentation.slides.html>`
-* :download:`downloaded here <Intro_to_python_for_economists.ipynb>`. 
-
-
-.. ipython nbconvert Intro_to_python_for_economists-presentation.ipynb --to slides --post serve  
+In the lecture, we use `this notebook
+<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.html>`_.
+If you want, you can download `the notebook
+<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.ipynb>`_.
 
 
 
-
-
+.. ipython nbconvert Intro_to_python_for_economists-presentation.ipynb --to slides --post serve

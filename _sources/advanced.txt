@@ -8,6 +8,23 @@ In the lecture, we use `this notebook
 If you want, you can download `the notebook
 <https://janboone.github.io/applied-economics/_downloads/Advanced_Topics.ipynb>`_.
 
+Python assignment
+-----------------
+
+* The python assignment you can do alone or with at max. two other
+  students (i.e. max group size is 3).
+* deadline for the assignment?
+
+
+Internships
+-----------
+
+* AMC internship where you can use python to program for
+  them. :download:`Details here <Internship_AMC.pdf>`
+
+Python topics
+-------------
+
 With python there is a lot of stuff you can do. Feel free to roam the
 web to find something that you need/like.
 

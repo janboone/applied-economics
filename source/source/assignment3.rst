@@ -13,7 +13,7 @@ transparent way that can easily be verified/reproduced by others.
 
 Example assignment: http://janboone.github.io/Deductible_Health_Insurance/
 
-The python noetbook here is more elaborate than what we expect you to
+The python notebook here is more elaborate than what we expect you to
 do. However, the following ingredients will be important when we
 evaluate your assignment:
 
@@ -29,7 +29,7 @@ evaluate your assignment:
 * Give the *answer* that you find.
 * Mention the main *assumptions* that you need to get this answer.
 * When you use information, create a link to this information. The
-  reader then only needs to click to find the relevant information. 
+  reader then only needs to click to find the relevant information.
 * If you use data, present graphs of the data.
 * If you use equations, use latex to make them easy to read.
 * Explain your code, the reader must be able to easily follow what you
@@ -45,8 +45,12 @@ evaluate your assignment:
 
 
 ---------
-  
+
 examples from last year:
 
         * `first example <https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb>`_
         * `second example <https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb>`_
+
+---------
+
+`Lecture Minke <https://janboone.github.io/applied-economics/_downloads/Lecture_December_7_2016Minke.pdf>`_

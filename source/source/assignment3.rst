@@ -46,11 +46,9 @@ evaluate your assignment:
 
 ---------
 
-examples from last year:
+examples from previous years:
 
         * `first example <https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb>`_
-        * `second example <https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb>`_
-
----------
-
-`Lecture Minke <https://janboone.github.io/applied-economics/_downloads/Lecture_December_7_2016Minke.pdf>`_
+        * `second example
+          <https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb>`_
+        * `third example <https://joelleduff.github.io/Final/STindex.html>`_

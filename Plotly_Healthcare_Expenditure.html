@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Plotting health care expenditure by age group &mdash; Apllied Economics 1.0 documentation</title>
+    <title>Plotting health care expenditure by age group &#8212; Apllied Economics 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,20 +17,25 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -52,15 +57,15 @@ spend less on health care. Which effect dominates?</p>
 get older.</p>
 <p>But people usually see their income rise as well with age. Can we show
 the effect of income and age separately in one graph?</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>
-<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">plotly.tools</span> <span class="kn">as</span> <span class="nn">tls</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
+<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">plotly.tools</span> <span class="k">as</span> <span class="nn">tls</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;zorgkostenvanuitdezorgverzekeringswetnaarleeftijdenhuishoudensinkomen2012.csv&quot;</span><span class="p">,</span> \
-                 <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                 <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>If you want to see what this data look like, type <code class="docutils literal"><span class="pre">df</span></code> in an empty
@@ -78,11 +83,11 @@ besteedbaar huishoudensinkomen&#8221;) and number of people (&#8220;aantal
 personen&#8221;) per row in the table.</p>
 <p>To see, for instance, the age categories used and the quantiles, one can
 use a command like:</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]))]</span>
-<span class="k">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]))]</span>
+<span class="nb">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;1e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;2e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;3e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;4e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;5e kwintiel&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -93,7 +98,7 @@ basic insurance.</p>
 <p>We create two dictionaries (one for income, one for health care costs).
 A dictionary contains for each age group, the vector of variables
 (income, costs resp.)</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">income_average</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">income_average</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">cost_average</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">])):</span>
     <span class="n">income_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s1">&#39;Gemiddeld besteedbaar huishoudensinkomen&#39;</span><span class="p">]</span>\
@@ -107,7 +112,7 @@ A dictionary contains for each age group, the vector of variables
 <p>Plotly works with <code class="docutils literal"><span class="pre">Scatter</span></code> to combine data and characteristics of the
 plots (like &#8220;markers+lines&#8221;, the text you see when hovering over the
 plotted line).</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">age0_19</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">age0_19</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
     <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
     <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
@@ -199,21 +204,18 @@ over the lines, you can see more information.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Plotly_Healthcare_Expenditure.txt"
+      <li><a href="_sources/Plotly_Healthcare_Expenditure.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -224,11 +226,11 @@ over the lines, you can see more information.</p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/Plotly_Healthcare_Expenditure.txt"
+      <a href="_sources/Plotly_Healthcare_Expenditure.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

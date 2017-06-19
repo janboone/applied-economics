@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installing the stuff &mdash; Apllied Economics 1.0 documentation</title>
+    <title>Installing the stuff &#8212; Apllied Economics 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,22 +17,27 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Schedule for the course" href="plan.html" />
     <link rel="prev" title="Economics in practice" href="practice.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,43 +60,37 @@ solve your problem. If not; ask us in class.</p>
 <div class="section" id="required-installs-for-this-course">
 <h2>Required installs for this course:<a class="headerlink" href="#required-installs-for-this-course" title="Permalink to this headline">¶</a></h2>
 <p>Installing the software is quite a bit of work and the first one (Latex) takes a lot of time (for your computer, not for you). Stay with it; once you are done, you are all set for the course. If you have problems with one piece of software that you cannot resolve, simply go on with the next. The more you manage to install the better; remaining issues we sort out in class.</p>
-<ul>
-<li><p class="first">First, we install <a class="reference external" href="http://latex-project.org/ftp.html">Latex</a>. Latex is great to write your MSc thesis
+<ul class="simple">
+<li>First, we install <a class="reference external" href="http://latex-project.org/ftp.html">Latex</a>. Latex is great to write your MSc thesis
 in. For this course, we need it to convert and display math in the
-different file types that we will use.</p>
-</li>
-<li><p class="first">Next, install <a class="reference external" href="http://pandoc.org/installing.html">Pandoc</a>. Pandoc is an incredible piece of software. It
+different file types that we will use.</li>
+<li>Next, install <a class="reference external" href="http://pandoc.org/installing.html">Pandoc</a>. Pandoc is an incredible piece of software. It
 allows you to easily move between different formats. See the <a class="reference external" href="http://pandoc.org/demos.html">demos</a>
 on the Pandoc website. We will be publishing a lot in html, but the
 last thing you want is to actually type html. With Pandoc you don&#8217;t
 need to. You type in an &#8220;easy&#8221; language like <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> or
 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> and then convert to html (or <a class="reference external" href="http://lab.hakim.se/reveal-js/#/">reveal.js</a> to make a
-presentation).</p>
-</li>
-<li><p class="first">As we will be working with <a class="reference external" href="https://github.com/">GitHub</a>, we need to install <a class="reference external" href="http://git-scm.com/downloads">Git</a>. No need
-to install a fancy GUI, as we will be working with the command line.</p>
-<ul>
+presentation).</li>
+<li>As we will be working with <a class="reference external" href="https://github.com/">GitHub</a>, we need to install <a class="reference external" href="http://git-scm.com/downloads">Git</a>. No need
+to install a fancy GUI, as we will be working with the command line.<ul>
 <li><dl class="first docutils">
 <dt>if you need more help here,</dt>
-<dd><p class="first last"><a class="reference external" href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">http://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>
+<dd><a class="reference external" href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">http://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>
 may be useful and
-<a class="reference external" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>.</p>
-</dd>
+<a class="reference external" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>.</dd>
 </dl>
 </li>
 </ul>
 </li>
-<li><p class="first">Windows has a <a class="reference external" href="http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window">command-prompt</a> installed by default. It is probably
+<li>Windows has a <a class="reference external" href="http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window">command-prompt</a> installed by default. It is probably
 not the best terminal you can use. Here is a discussion of better
 <a class="reference external" href="http://stackoverflow.com/questions/60950/is-there-a-better-windows-console-window">consoles</a> for windows. Note that the last link points to
 <a class="reference external" href="http://stackoverflow.com/">stackoverflow</a>; a website that you will be visiting a lot in the
-coming weeks!</p>
-</li>
-<li><p class="first">If you have a Mac, the application you need is called Terminal. But
+coming weeks!</li>
+<li>If you have a Mac, the application you need is called Terminal. But
 you may want to install <a class="reference external" href="https://www.iterm2.com/">iTerm2</a>, as it is more fancy and easier to
-work with.</p>
-</li>
-<li><p class="first">The program language that we use for this course is <a class="reference external" href="https://www.python.org/">python</a> which we
+work with.</li>
+<li>The program language that we use for this course is <a class="reference external" href="https://www.python.org/">python</a> which we
 will use with the <a class="reference external" href="http://ipython.org/">ipython</a> or <a class="reference external" href="https://jupyter.org/">Jupyter</a> notebook interface. You can install these
 things separately, but it is easier to install everything
 together. The best way to do this is to use the <a class="reference external" href="http://continuum.io/downloads">anaconda</a>
@@ -101,8 +100,7 @@ some reason you cannot get anaconda installed, ask us in class and
 we will help. As an alternative you can choose
 <a class="reference external" href="https://store.enthought.com/downloads/#default">canopy</a>. If even that gives problems, you can also work in
 the cloud with <a class="reference external" href="https://wakari.io/">wakari</a>. But my guess is that this will be
-slower. We recommend to work with anaconda.</p>
-</li>
+slower. We recommend to work with anaconda.</li>
 </ul>
 <p>If you have installed all this: congratulations, you are done! If you experienced any problems, ask us in class. Below we give some software resources, that you can install; but you do not have to do this.</p>
 </div>
@@ -182,21 +180,18 @@ want to be on the cutting-edge: choose 3.0.</td></tr>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/installing.txt"
+      <li><a href="_sources/installing.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -207,11 +202,11 @@ want to be on the cutting-edge: choose 3.0.</td></tr>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/installing.txt"
+      <a href="_sources/installing.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

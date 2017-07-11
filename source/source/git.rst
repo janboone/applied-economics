@@ -1,5 +1,5 @@
-Using Git
-=========
+OPTIONAL: Using Git
+===================
 
 .. _git:
 
@@ -7,6 +7,7 @@ Using Git
 
 .. how to stop the terminal? q
 
+This section is optional for the course. But, heck, you have a github account; why not learn how to use it properly? Here we give you a quick introduction to version control and how to collaborate on github.   
 
 Git is a version control system. There is a bit of a learning curve,
 but once you master it, it simplifies your life considerably.
@@ -24,7 +25,7 @@ collaborators can work on the same file. Git/GitHub offers a way to
 track changes and merge changes into the main file. Here we explain
 how this works.
 
-Note that you've already seen a number of Git-commands :ref:`here <github1>` 
+Note that you've already seen a number of Git-commands :ref:`on this page here <optionalgithub1>` 
 when we were using GitHub. Here we will explain what these commands
 actually mean.
 
@@ -41,7 +42,7 @@ Workflow
 working on one branch
 ~~~~~~~~~~~~~~~~~~~~~
 
-Let's create a third repository on GitHub, using the steps :ref:`here <github1>`.
+Let's create a third repository on GitHub, using :ref:`the steps here <github1>`.
 
 * Create a new repository, say "third-repo".
 

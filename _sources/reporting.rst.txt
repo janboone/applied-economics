@@ -22,7 +22,10 @@ either google "markdown tutorial" or use one of the following websites:
 Also note that once you know how to work with markdown, it becomes
 easy to make presentations in html. See for instance:
 `<http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html>`_. This
-you can try at home!
+you can try at home! But for the course it is optional. If you want to
+make an html presentation, you need to install pandoc (and latex, if
+you want to use equations). Both pandoc and latex are :ref:`optional
+<optionalinstall>` on the :ref:`installation page <install>`.
 
 If you want to see an example of this. Look at the github repository
 `<https://github.com/janboone/Private_contracts_health_care/tree/gh-pages>`_
@@ -45,7 +48,7 @@ Note that to edit a markdown file, you use the editor you installed before.
 Latex
 -----
 
-For the second assignment it is useful to familiarize yourself with
+For the python assignment it is useful to familiarize yourself with
 latex. Note that you do not need to type a whole document in latex (so
 don't worry about preambles etc.), you just need to know how to type
 \\(x^2\\), \\(\\alpha,\\beta\\) or have math displayed like
@@ -61,16 +64,3 @@ Google "latex tutorial" or go to pages like:
 * `<http://www.andy-roberts.net/writing/latex/mathematics_1>`_
 
 and focus on typesetting.
-
-
-reStructuredText
-----------------
-
-.. _sphinx-github:
-
-If you like the way the webpages of this course look, you can combine
-sphinx with GitHub pages. An example tutorial for this is:
-
-* `<http://daler.github.io/sphinxdoc-test/includeme.html>`_
-
-reStructuredText is similar to markdown, but not identical. Markdown is a bit simpler, so stick to that if you do want further complications. For the assignments, there is not need to work with reStructuredText.

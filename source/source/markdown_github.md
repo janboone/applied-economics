@@ -101,7 +101,9 @@ eh, no
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Relying on Excel for important calculations is like driving drunk: no matter how carefully you do it, a wreck is likely. <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a></p>&mdash; Philip Stark (@philipbstark) <a href="https://twitter.com/philipbstark/status/498683914592862208">August 11, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-------------
+
+Excel
+-----
 
     * indeed, simple things can be done in excel
     * e.g. keep track of your grades and calculate the average
@@ -259,6 +261,7 @@ experienced way
 * this means you have to clone your repository to your computer
 * create/edit the file CV.md
 * follow the `Command line` instructions above under "workflow"
+* or [here](https://janboone.github.io/applied-economics/github.html#optional-more-sophisticated-use-of-github) for more elaborate instructions
 * in the README file add a link to this markdown version of your CV (`CV.md`)
 
 

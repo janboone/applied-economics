@@ -65,6 +65,8 @@ If you can replicate the steps above, you are done! If you would like to know mo
 OPTIONAL: More sophisticated use of github
 ==========================================
 
+.. _optionalgithub1:
+
 This section is optional; it is not needed for the course. We will teach you how to use github from the command line. Moreover, we show you how you can convert your markdown CV into an html file and publish it on github as website. For this you need to install pandoc (and latex, if you want to use equations). Both pandoc and latex are :ref:`optional <optionalinstall>` on the :ref:`installation page <install>`.
 
 An introduction to GitHub can be found `here <http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration>`_ 

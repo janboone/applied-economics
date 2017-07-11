@@ -11,16 +11,10 @@ If you want, you can download `the notebook
 Python assignment
 -----------------
 
-* The python assignment you can do alone or with at max. two other
-  students (i.e. max group size is 3).
+* The python assignment you can do alone or with at max. one other
+  student (i.e. max group size is 2).
 * deadline for the assignment?
 
-
-Internships
------------
-
-* AMC internship where you can use python to program for
-  them. :download:`Details here <Internship_AMC.pdf>`
 
 Python topics
 -------------

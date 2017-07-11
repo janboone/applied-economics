@@ -67,7 +67,7 @@ You have to make two choices:
 * whether to do either John's or Rob's case
 * whether to do either the canon or python
 
-There is no need to follow the lectures of the option you have not chosen. To illustrate, if you choose, say, the canon, you do not need to attend the python lectures.
+There is no need to follow the lectures of the option you have not chosen. To illustrate, if you choose, say, the canon, you do not need to attend the python lectures. If you do attend the python lectures, bring your laptop so that you can work along with the notebooks in class.
 
 
 
@@ -85,10 +85,6 @@ To follow the datacamp course, you do not need to install python on your
 computer; you simply work in your webbrowser. Look at the videos and
 do the exercises. Following the planning in the datacamp column makes
 sure that you are up-to-date for the python lectures.
-
-If you prefer to use another introduction to python (e.g. using a
-book); feel free to do so. Make sure that you cover the same topics as
-the ones on datacamp.
 
    
    
@@ -111,3 +107,5 @@ Your grade is determined as follows:
 
 * you do a final assignment with which you can earn at max. 8 points.
 * Hence, your overall grade for Python is at max. 10 points.
+
+The final python assignment, you can --but you do not have to-- do with one other student.

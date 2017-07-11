@@ -9,6 +9,8 @@ programs, we cannot accept responsibility in case anything goes wrong
 with your computer. Also, when you use this software, make sure
 to save regularly and back up your work.
 
+You only need to install this software if you choose the python assignment for this course.
+
 We need to install quite some software. This will be a bit of work and
 things are bound to go wrong. So switch on some music_ and go ahead!
 
@@ -23,20 +25,9 @@ solve your problem. If not; ask us in class.
 Required installs for this course:
 ----------------------------------
 
-Installing the software is quite a bit of work and the first one (Latex) takes a lot of time (for your computer, not for you). Stay with it; once you are done, you are all set for the course. If you have problems with one piece of software that you cannot resolve, simply go on with the next. The more you manage to install the better; remaining issues we sort out in class.
+Installing the software is a bit of work which takes quite some time (for your computer, not for you). Stay with it; once you are done, you are all set for the course. If you have problems with one piece of software that you cannot resolve, simply go on with the next. The more you manage to install the better; remaining issues we sort out in class.
 
-* First, we install Latex_. Latex is great to write your MSc thesis
-  in. For this course, we need it to convert and display math in the
-  different file types that we will use.
-* Next, install Pandoc_. Pandoc is an incredible piece of software. It
-  allows you to easily move between different formats. See the demos_
-  on the Pandoc website. We will be publishing a lot in html, but the
-  last thing you want is to actually type html. With Pandoc you don't
-  need to. You type in an "easy" language like Markdown_ or
-  reStructuredText_ and then convert to html (or reveal.js_ to make a
-  presentation).
-* As we will be working with GitHub_, we need to install Git_. No need
-  to install a fancy GUI, as we will be working with the command line.
+* As we will be working with GitHub_, it is useful to install Git_.
 
   * if you need more help here,
 	`<http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
@@ -52,16 +43,15 @@ Installing the software is quite a bit of work and the first one (Latex) takes a
   you may want to install iTerm2_, as it is more fancy and easier to
   work with.
 * The program language that we use for this course is python_ which we
-  will use with the ipython_ or `Jupyter <https://jupyter.org/>`_ notebook interface. You can install these
-  things separately, but it is easier to install everything
-  together. The best way to do this is to use the anaconda_
-  distribution. Make sure to install python 2.7 (not 3.0) [#]_. See the
-  quantitative_ economics website on how to install anaconda. If for
-  some reason you cannot get anaconda installed, ask us in class and
-  we will help. As an alternative you can choose
-  canopy_. If even that gives problems, you can also work in
-  the cloud with wakari_. But my guess is that this will be
-  slower. We recommend to work with anaconda.
+  will use with the ipython_ or `Jupyter <https://jupyter.org/>`_
+  notebook interface. The best way to install all this together is to
+  use the anaconda_ distribution. Make sure to install python 3.X. If
+  for some reason you cannot get anaconda installed, ask us in class
+  and we will help. As an alternative you can choose canopy_. If even
+  that gives problems, you can also work in the cloud with
+  `<https://mindaro.uvt.nl/>`_. This link only works as long as you
+  are a TiU student. Another disadvantage of this is that you cannot
+  install packages yourself.
 
   
 If you have installed all this: congratulations, you are done! If you experienced any problems, ask us in class. Below we give some software resources, that you can install; but you do not have to do this.
@@ -70,15 +60,20 @@ If you have installed all this: congratulations, you are done! If you experience
 Optional:
 ---------
 
-If you like the way this website looks, you may want to install:
-
-* sphinx_. With sphinx you work with reStructuredText. You can also
-  export your notebooks to reStructuredText to integrate them with
-  sphinx, but you do not have to. Integrating sphinx with GitHub is a
-  but tricky, but we can explain how this works.
+.. _optionalinstall:
 
 
-We will be editing a lot of text files. Clearly, you can use MS Word
+* You can install Latex_. Latex is great to write your MSc thesis
+  in. For this course, you need it if you want to export a jupyter notebook and display math in html.
+* Further, you can install Pandoc_. Pandoc is an incredible piece of software. It
+  allows you to easily move between different formats. See the demos_
+  on the Pandoc website. Nowadays it is useful to be able to publish in html, but the
+  last thing you want is to actually type html. With Pandoc you don't
+  need to. You type in an "easy" language like Markdown_ or
+  reStructuredText_ and then convert to html (or reveal.js_ to make a
+  presentation).
+
+Once you really get into open source, you will be editing (plain) text files. Clearly, you can use MS Word
 or other office type software to do this, but this is not recommended
 (you probably guessed this). Most operating systems have a simple
 editor installed, like notepad on Windows. This may be a bit "too
@@ -91,8 +86,6 @@ You can install different editors for different purposes.
 * A Markdown editor for Windows is: MarkdownPad_. On Mac you can use:
   MacDown_ or Mou_. You can also google "markdown editor" and then add
   your operating system to the query.
-* Similarly, if you want to use reStructuredText, you need another
-  editor. This page gives an overview of rst-editors_.
 
 Alternatively, you can install an editor that can deal with any
 file. That is, the editor recognizes what type of file you are editing
@@ -111,7 +104,7 @@ editors that can do this and there is a war_ between them.
   
 
 
-.. _music: https://www.youtube.com/watch?v=9Q7Vr3yQYWQ
+.. _music: https://www.youtube.com/watch?v=kijpcUv-b8M
 .. _Latex: http://latex-project.org/ftp.html
 .. _Pandoc: http://pandoc.org/installing.html
 .. _demos: http://pandoc.org/demos.html
@@ -142,13 +135,6 @@ editors that can do this and there is a war_ between them.
 .. _which-emacs: http://ergoemacs.org/emacs/which_emacs.html
 .. _vi: https://en.wikipedia.org/wiki/Vi
 .. _vim: http://www.vim.org/download.php
-
-
-
-.. [#] Feel free to install 3.0, but you will run into some
-	   compatibility issues. If you know how to deal with these and
-	   want to be on the cutting-edge: choose 3.0.
-
 
 
 	   

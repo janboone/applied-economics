@@ -3,6 +3,8 @@ Final assignment
 
 .. _assignment:
 
+**1 other student**
+
 
 For this assignment, you create an ipython/jupyter notebook which has extension ".ipynb". You publish this notebook on GitHub and add a link to your README file (created in assignment 1, and in the repository reported in the google form) so that we can find it. Note that when someone views the notebook on GitHub (with a decent browser), it is actually rendered as if the person is running python.
 

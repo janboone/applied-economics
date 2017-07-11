@@ -40,13 +40,11 @@ examples
 
     * solve models in python
 	* do simulations in python
-	* publish results like
-    [this](http://janboone.github.io/Deductible_Health_Insurance/)
-	* examples from previous years:
-
-            * [first example](https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb)
-            * [second example](https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb)
-            * [third example](https://joelleduff.github.io/Final/STindex.html)
+	* publish results like [this](http://janboone.github.io/Deductible_Health_Insurance/)
+	* examples from previous years
+	* [first example](https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb)
+	* [second example](https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb)
+	* [third example](https://joelleduff.github.io/Final/STindex.html)
 
     * make interactive graphs like the following
 
@@ -102,6 +100,8 @@ eh, no
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Relying on Excel for important calculations is like driving drunk: no matter how carefully you do it, a wreck is likely. <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a></p>&mdash; Philip Stark (@philipbstark) <a href="https://twitter.com/philipbstark/status/498683914592862208">August 11, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+------------
 
     * indeed, simple things can be done in excel
     * e.g. keep track of your grades and calculate the average

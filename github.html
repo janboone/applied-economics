@@ -50,10 +50,13 @@
 <a class="reference internal" href="installing.html#install"><span class="std std-ref">page</span></a>. Now we start using <a class="reference external" href="https://github.com/">GitHub</a>. GitHub allows you
 to collaborate with others. This is also the way that you publish your
 assignments so that we can grade them.</p>
-<p>An introduction to GitHub can also be found <a class="reference external" href="http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration">here</a></p>
-<p>Although we will go over GitHub basics below and in class, the goal of this course is that you can find your way around open source software yourself; including finding the information on how to use it. Hence look for a GitHub tutorial on the web and read it carefully.</p>
-<p>But basically it boils down to the following:</p>
-<a class="reference internal image-reference" href="http://imgs.xkcd.com/comics/git.png"><img alt="http://imgs.xkcd.com/comics/git.png" class="align-center" src="http://imgs.xkcd.com/comics/git.png" /></a>
+<p>You will need to use github for three things:</p>
+<ul class="simple">
+<li>you sign up at github</li>
+<li>you create a repository &#8220;assignments&#8221; at github</li>
+<li>you upload assignments at github</li>
+</ul>
+<p>We will go over each of these steps.</p>
 <div class="section" id="sign-up">
 <h2>Sign up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
 <p>Go to the <a class="reference external" href="https://github.com/">GitHub</a> page and click on the green &#8220;sign up&#8221; button at the
@@ -63,9 +66,45 @@ button.</p>
 <p>In step 2 choose the free account. Then move on to your dashboard
 (step 3).</p>
 </div>
+<div class="section" id="create-repository">
+<h2>Create repository<a class="headerlink" href="#create-repository" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Now create your first repository. Call this, for instance, &#8220;assignments&#8221;. This is what you need to do:</li>
+</ul>
+<img alt="_images/github1.gif" class="align-left" src="_images/github1.gif" />
+<p>Once you created the new repository, follow the following 4 steps on the &#8220;Create a new repository&#8221; page:</p>
+<img alt="_images/github2.png" class="align-left" src="_images/github2.png" />
+<p>Well done, you have created your first repository!</p>
+<p>The final step is to upload your assignments; e.g. your jupyter notebook.</p>
+</div>
+<div class="section" id="uploading-assignments">
+<h2>uploading assignments<a class="headerlink" href="#uploading-assignments" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of ways in which you can get your assignments on github:</p>
+<ul>
+<li><p class="first">for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well</p>
+</li>
+<li><p class="first">if you created your CV off-line and need to get the relevant files on github or if you want to get your jupyter notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m">uploading your assignments with drag-and-drop using a browser</a></li>
+<li><a class="reference external" href="https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG">uploading your assignments using the shell or terminal</a> (see below for more detailed instructions)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>If you can replicate the steps above, you are done! If you would like to know more about github and how to use it, look at the next section (which is optional).</p>
+</div>
+</div>
+<div class="section" id="optional-more-sophisticated-use-of-github">
+<h1>OPTIONAL: More sophisticated use of github<a class="headerlink" href="#optional-more-sophisticated-use-of-github" title="Permalink to this headline">¶</a></h1>
+<p>This section is optional; it is not needed for the course. We will teach you how to use github from the command line. Moreover, we show you how you can convert your markdown CV into an html file and publish it on github as website. For this you need to install pandoc (and latex, if you want to use equations). Both pandoc and latex are <a class="reference internal" href="installing.html#optionalinstall"><span class="std std-ref">optional</span></a> on the <a class="reference internal" href="installing.html#install"><span class="std std-ref">installation page</span></a>.</p>
+<p>An introduction to GitHub can be found <a class="reference external" href="http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration">here</a></p>
+<p>One of the goals of this course is that you can find your way around open source software yourself; including finding the information on how to use it. Hence look for a GitHub tutorial on the web and read it carefully.</p>
+<p>Basically using git and github boils down to the following:</p>
+<a class="reference internal image-reference" href="http://imgs.xkcd.com/comics/git.png"><img alt="http://imgs.xkcd.com/comics/git.png" class="align-center" src="http://imgs.xkcd.com/comics/git.png" /></a>
 <div class="section" id="set-up-git">
 <h2>Set up Git<a class="headerlink" href="#set-up-git" title="Permalink to this headline">¶</a></h2>
-<p>Next, we need to set up Git on your computer (which you installed
+<p>If you want to use git and github with the command line, we need to set up Git on your computer (which you installed
 before) to work with GitHub: this page explains how to set up <a class="reference external" href="https://help.github.com/articles/set-up-git/">Git</a> for
 this purpose. Follow all the steps described on this page. That is,
 both &#8220;Setting up Git&#8221; and &#8220;Next steps: Authenticating with GitHub from
@@ -238,22 +277,6 @@ page where pandoc created the html from the markdown file without
 the css file.</li>
 </ul>
 </div>
-<div class="section" id="uploading-assignments">
-<h2>uploading assignments<a class="headerlink" href="#uploading-assignments" title="Permalink to this headline">¶</a></h2>
-<p>There are a number of ways in which you can get your assignments on github:</p>
-<ul>
-<li><p class="first">for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well</p>
-</li>
-<li><p class="first">if you created your CV off-line and need to get the relevant files on github or if you want to get your python notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):</p>
-<blockquote>
-<div><ul class="simple">
-<li><a class="reference external" href="https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m">uploading your assignments with drag-and-drop using a browser</a></li>
-<li><a class="reference external" href="https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG">uploading your assignments using the shell or terminal</a> (also see the instructions above to do this)</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-</div>
 </div>
 
 
@@ -266,10 +289,14 @@ the css file.</li>
   <ul>
 <li><a class="reference internal" href="#">GitHub</a><ul>
 <li><a class="reference internal" href="#sign-up">Sign up</a></li>
+<li><a class="reference internal" href="#create-repository">Create repository</a></li>
+<li><a class="reference internal" href="#uploading-assignments">uploading assignments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-more-sophisticated-use-of-github">OPTIONAL: More sophisticated use of github</a><ul>
 <li><a class="reference internal" href="#set-up-git">Set up Git</a></li>
 <li><a class="reference internal" href="#repository">Repository</a></li>
 <li><a class="reference internal" href="#command-line">Command line</a></li>
-<li><a class="reference internal" href="#uploading-assignments">uploading assignments</a></li>
 </ul>
 </li>
 </ul>

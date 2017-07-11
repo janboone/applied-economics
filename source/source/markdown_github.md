@@ -86,6 +86,8 @@ eh, no
 
 * in fact, it is not so great
 
+--------------
+
 * let's start with Word:
 
     * it combines editing and word processing

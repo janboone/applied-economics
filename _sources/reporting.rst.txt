@@ -5,7 +5,7 @@ Reporting your results
 Here we discuss ways to report results on the web. Markdown,
 Restructuredtext, Latex
 
-Lecture can be found :download:`here <lectures/markdown_github.html>`
+Lecture can be :download:`downloaded <markdown_github.html>` or `opened in browser <https://janboone.github.io/applied-economics/_downloads/markdown_github.html>`_
 
 
 Markdown

@@ -104,6 +104,7 @@ Your grade is determined as follows:
 **Python grade:**
 
 * there are two datacamp assignments:
+
   * you need to finish the chapter "Python Lists" before Wednesday Oct. 11 (2017) and
   * you need to finish the chapter "Numpy" before Wednesday Nov. 8 (2017)
   * you receive 1 point for each datacamp assignment that you finish in time

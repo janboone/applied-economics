@@ -28,10 +28,12 @@
 <section id="TOC">
 <ul>
 <li><a href="#/introduction">Introduction</a></li>
-<li><a href="#/office-and-word">Office and Word!</a></li>
+<li><a href="#/office-excel-and-word">Office, Excel and Word!</a></li>
 <li><a href="#/open-source-word-processing">Open source word processing</a></li>
+<li><a href="#/what-do-you-need">What do you need?</a></li>
 <li><a href="#/working-in-the-cloud">Working in the cloud</a></li>
 <li><a href="#/assignment">Assignment</a></li>
+<li><a href="#/rules-of-the-game">Rules of the game</a></li>
 </ul>
 </section>
 
@@ -40,24 +42,75 @@
 <ul>
 <li><p>in this lecture, we look at:</p>
 <ul>
-<li>why not Word?</li>
+<li>motivation to learn python</li>
+<li>why not Office?</li>
 <li>typing texts in markdown and latex</li>
-<li>pandoc</li>
 <li>creating webpages on github</li>
 <li>first assignment</li>
 </ul></li>
 </ul>
+</section><section id="motivation" class="slide level2">
+<h1><a href="#/motivation">motivation</a></h1>
+<ul>
+<li><p>in this course we teach you</p>
+<ul>
+<li>to combine rigorous economics</li>
+<li>and how to present it in an understandable way</li>
+<li>while your results can be easily reproduced</li>
+</ul></li>
+<li><p>we do this by teaching you</p>
+<ul>
+<li>a programming language: python</li>
+<li>how to create notebooks where you can explain your code and</li>
+<li>publish them on-line</li>
+</ul></li>
+</ul>
+</section><section id="examples" class="slide level2">
+<h1><a href="#/examples">examples</a></h1>
+<ul>
+<li><p>when you finish this course, you can</p>
+<ul>
+<li>solve models in python</li>
+<li>do simulations in python</li>
+<li>publish results like <a href="http://janboone.github.io/Deductible_Health_Insurance/">this</a></li>
+<li><p>examples from previous years:</p>
+<pre><code>* [first example](https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb)
+* [second example](https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb)
+* [third example](https://joelleduff.github.io/Final/STindex.html)</code></pre></li>
+<li><p>make interactive graphs like the following</p></li>
+</ul></li>
+</ul>
+</section><section id="plotly-example" class="slide level2">
+<h1><a href="#/plotly-example">plotly example</a></h1>
+<iframe src="https://plot.ly/~janboone/56.embed"
+        height="600" width="100%"
+        scrolling="no" seamless="seamless"
+        frameBorder="0">
+</iframe>
+
+
+</section><section id="finishing-the-course" class="slide level2">
+<h1><a href="#/finishing-the-course">finishing the course</a></h1>
+<ul>
+<li><p>helps you to present economics in a way that is</p>
+<ul>
+<li>understandable and</li>
+<li>reproducible</li>
+</ul></li>
+<li><p>gives a good starting point to write your thesis</p></li>
+</ul>
 </section></section>
-<section><section id="office-and-word" class="titleslide slide level1"><h1><a href="#/office-and-word">Office and Word!</a></h1></section><section id="eh-no" class="slide level2">
+<section><section id="office-excel-and-word" class="titleslide slide level1"><h1><a href="#/office-excel-and-word">Office, Excel and Word!</a></h1></section><section id="eh-no" class="slide level2">
 <h1><a href="#/eh-no">eh, no</a></h1>
 <ul>
-<li><p>you may think that Word is great for everything</p>
+<li><p>you may think that Office is great for everything</p>
 <ul>
 <li>it can do all that needs to be done</li>
 <li>you have buttons all over the screen</li>
 <li>it must be good because it is expensive!</li>
 </ul></li>
-<li><p>in fact, it is not so great:</p>
+<li><p>in fact, it is not so great</p></li>
+<li><p>let's start with Word:</p>
 <ul>
 <li>it combines editing and word processing</li>
 <li>unpleasant to type equations</li>
@@ -65,6 +118,23 @@
 <li>you can add structure, but you are not forced to</li>
 </ul></li>
 </ul>
+</section><section class="slide level2">
+
+<ul>
+<li>Excel is great for programming?</li>
+</ul>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">
+Relying on Excel for important calculations is like driving drunk: no matter how carefully you do it, a wreck is likely. <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a>
+</p>
+— Philip Stark (<span class="citation" data-cites="philipbstark">@philipbstark</span>) <a href="https://twitter.com/philipbstark/status/498683914592862208">August 11, 2014</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<pre><code>* indeed, simple things can be done in excel
+* e.g. keep track of your grades and calculate the average
+* but possibilities are limited: it is not a programming language
+* however, the main problem is reproducibility
+* if you&#39;ve done a serious project in excel, look at it again in 3 months time...</code></pre>
 </section></section>
 <section><section id="open-source-word-processing" class="titleslide slide level1"><h1><a href="#/open-source-word-processing">Open source word processing</a></h1></section><section id="markdown" class="slide level2">
 <h1><a href="#/markdown">markdown</a></h1>
@@ -109,17 +179,17 @@ a^2 + b^2 = c^2
 <ul>
 <li>if you need something, just google; e.g. &quot;google latex phi&quot; or &quot;google latex empty set&quot; etc.</li>
 </ul>
-</section><section id="pandoc" class="slide level2">
-<h1><a href="#/pandoc">pandoc</a></h1>
+</section></section>
+<section><section id="what-do-you-need" class="titleslide slide level1"><h1><a href="#/what-do-you-need">What do you need?</a></h1></section><section id="install-software" class="slide level2">
+<h1><a href="#/install-software">Install software</a></h1>
 <ul>
-<li>with pandoc you can convert markdown files into many other file formats</li>
-<li>for this course, you will convert markdown into html or pdf</li>
-<li><a href="http://pandoc.org/demos.html">pandoc website</a> contains examples of how to convert from one file format into another</li>
-<li>these commands can be quite elaborate</li>
-<li>the command to turn the markdown version of this presentation into an html file is given by</li>
+<li><a href="https://janboone.github.io/applied-economics/installing.html">here</a> you find the software that you need to install</li>
+<li><p>this includes:</p>
+<ul>
+<li>git</li>
+<li>anaconda version of python and the notebook</li>
+</ul></li>
 </ul>
-<pre><code>pandoc -s --mathjax --slide-level 2 --toc --toc-depth=1 -t revealjs markdown_github.md -V theme=solarized -o markdown_github.html
-</code></pre>
 </section></section>
 <section><section id="working-in-the-cloud" class="titleslide slide level1"><h1><a href="#/working-in-the-cloud">Working in the cloud</a></h1></section><section id="github" class="slide level2">
 <h1><a href="#/github">github</a></h1>
@@ -132,7 +202,8 @@ a^2 + b^2 = c^2
 <li>have different versions (&quot;branches&quot;) of the same project</li>
 </ul></li>
 <li>version control takes a bit of time to learn</li>
-<li><p>but once you get it, the benefits are huge!</p></li>
+<li>but once you get it, the benefits are huge!</li>
+<li><p>for this course learning git is optional</p></li>
 </ul>
 </section><section id="workflow" class="slide level2">
 <h1><a href="#/workflow">workflow</a></h1>
@@ -141,10 +212,9 @@ a^2 + b^2 = c^2
 <li><p>for a new repository, you do the following once:</p>
 <ul>
 <li>create a repository on github</li>
-<li>use the command line and create (<code>mkdir</code>) and go (<code>cd</code>) to directory of this project</li>
 <li><code>git clone</code> the repository</li>
 </ul></li>
-<li><p>when working on this project, you do the following:</p>
+<li><p>when working on this project, you either do the following:</p>
 <ul>
 <li><code>cd</code> into the directory</li>
 <li>edit the files and create new ones</li>
@@ -152,18 +222,7 @@ a^2 + b^2 = c^2
 <li><code>git commit -m &quot;First version of document&quot;</code></li>
 <li><code>git push origin master</code></li>
 </ul></li>
-</ul>
-</section><section id="branching" class="slide level2">
-<h1><a href="#/branching">branching</a></h1>
-<ul>
-<li>with branching you can make different versions of your project</li>
-<li>the &quot;default branch&quot; is called &quot;master&quot;</li>
-<li><code>git branch new_branch</code></li>
-<li><code>git checkout new_branch</code></li>
-<li><code>git commit -a -m &quot;New introduction&quot;</code></li>
-<li><code>git push origin new_branch</code></li>
-<li><code>git checkout master</code></li>
-<li><code>git merge new_branch</code></li>
+<li><p>or you use the web-interface of github</p></li>
 </ul>
 </section></section>
 <section><section id="assignment" class="titleslide slide level1"><h1><a href="#/assignment">Assignment</a></h1></section><section id="first-assignment" class="slide level2">
@@ -172,12 +231,13 @@ a^2 + b^2 = c^2
 <li>create a github account at <a href="https://github.com/">github</a></li>
 <li>sign in with your new account and create a repository <code>assignments</code> (note that when creating the repository, click on &quot;Initialize this repository with a README&quot;)</li>
 <li>use this README file in the repository to present us with the links to your assignments; like <a href="https://github.com/janboone/assignments">here</a></li>
-<li>fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRGBsM3QYzY0jEX1O4_q38kzb4VPQEW-qPVzl6fwPJwOBPzg/viewform?c=0&amp;w=1&amp;usp=send_form">google form</a></li>
-<li><p>deadline for filling in the google form is: Tuesday September 20, 2016</p></li>
+<li>fill in the <a href="https://goo.gl/forms/Le6X2HGvPxGH5jV43">google form</a></li>
+<li>deadline for filling in the google form is: Wednesday September 20, 2017</li>
+<li><p>if you do not sign up in time, you cannot follow the python track of this course!</p></li>
 <li><p>for the first assignment, you follow either of two routes</p>
 <ul>
 <li>the simple way</li>
-<li>the experienced way (to earn extra points)</li>
+<li>the experienced way</li>
 </ul></li>
 </ul>
 </section><section id="simple-way" class="slide level2">
@@ -189,7 +249,7 @@ a^2 + b^2 = c^2
 <li>click on the button <code>create new file</code></li>
 <li>as the name of this new file, type <code>CV.md</code></li>
 <li>Below <code>&lt;&gt; Edit new file</code> start typing markdown</li>
-<li>every now and again, you can type <code>Preview</code> to see what it looks like</li>
+<li>every now and again, you can click <code>Preview</code> to see what it looks like</li>
 <li><p>make sure to save your work regularly</p>
 <ul>
 <li>by pressing the <code>Commit new file</code> button at the bottom</li>
@@ -204,11 +264,34 @@ a^2 + b^2 = c^2
 <li>this is &quot;experienced&quot; because you will be working on your own computer to do this (not on-line)</li>
 <li>this means you have to clone your repository to your computer</li>
 <li>create/edit the file CV.md</li>
-<li>using pandoc you can turn this markdown file into an html file</li>
-<li>for this conversion you can use CV-style files (use google to find these)</li>
-<li>or you can use the &quot;buttondown files&quot; from the applied economics page</li>
-<li>follow the <code>Command line</code> instructions at <a href="https://janboone.github.io/applied-economics/github.html">this page</a></li>
-<li>in the README file add two links: one link to markdown version of your CV (<code>CV.md</code>) and the other link to the html version (<code>CV.html</code>) published on the gh-pages branch</li>
+<li>follow the <code>Command line</code> instructions above under &quot;workflow&quot;</li>
+<li>in the README file add a link to this markdown version of your CV (<code>CV.md</code>)</li>
+</ul>
+</section></section>
+<section><section id="rules-of-the-game" class="titleslide slide level1"><h1><a href="#/rules-of-the-game">Rules of the game</a></h1></section><section id="what-is-next" class="slide level2">
+<h1><a href="#/what-is-next">What is next?</a></h1>
+<ul>
+<li>go to <a href="http://janboone.github.io/open_source_for_economists/installing.html">this page</a> and install the relevant software</li>
+<li><p>if something goes wrong:</p>
+<ul>
+<li>do not panic</li>
+<li>google the error message that you get (you are unlikely to be the first)</li>
+<li>follow the solution that is suggested</li>
+<li>if that does not work, bring you laptop to the next lecture and we look at it together</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>everything you need to know is on <a href="https://janboone.github.io/applied-economics/index.html">the website</a></li>
+<li><p>use the links to tutorials that I provide or google yourself for tutorials on</p>
+<ul>
+<li>markdown</li>
+<li>latex</li>
+<li>github</li>
+<li>python</li>
+</ul></li>
+<li><p>the point of these lectures is that you teach yourself how to use open source software!</p></li>
 </ul>
 <!--
 

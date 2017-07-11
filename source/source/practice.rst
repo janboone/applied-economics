@@ -46,10 +46,6 @@ fact, your :ref:`assignment <assignment>` is going to be exactly this!
 Before we can do this, we need to install some software. This we do in
 the next section.
 
-***************
-
-Presentation of the :download:`first lecture <lectures/introduction.html>` and
-the :download:`source file <lectures/introduction.md>` of this presentation.
 
 
 .. _Github: https://github.com

@@ -14,7 +14,7 @@ this lecture
     * motivation to learn python
     * why not Office?
     * typing texts in markdown and latex
-    * creating webpages on github
+    * markdown files on github
 	* first assignment
 
 motivation
@@ -289,7 +289,7 @@ What is next?
 -------------
 
 * go to
-  [this page](http://janboone.github.io/open_source_for_economists/installing.html)
+  [this page](https://janboone.github.io/applied-economics/installing.html)
   and install the relevant software
 * if something goes wrong:
 

@@ -33,7 +33,7 @@ to the earlier issue and leave a comment in that "conversation".
 plan
 ----
 
-The plan for this course in the academic year 2016/2017 can be
+The plan for this course in the academic year 2017/2018 can be
 :download:`downloaded here. <AEA_Schedule_2017.pdf>`
 
 ..

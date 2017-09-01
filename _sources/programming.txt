@@ -3,6 +3,21 @@ Python
 
 .. _python:
 
+Introduction to python
+----------------------
+
+In the lecture, we first use `this notebook
+<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.html>`_ as a simple introduction.
+If you want, you can download `the notebook
+<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.ipynb>`_.
+
+Then we look at how python can help to `solve models <https://janboone.github.io/municipality_healthcare_expenditure/solving_model.html>`_
+which can also `download <https://janboone.github.io/municipality_healthcare_expenditure/solving_model.ipynb>`_.
+
+
+Python as programming language
+------------------------------
+
 We use python as programming language. I guess, a fair question is:
 why python? The non-scientific answer is: because I like it a lot.
 
@@ -24,7 +39,7 @@ ponder the state of our discipline.
 
 After this pause, take a look at some notebooks:
 
-`<https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
+`<https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks>`_
 
 
 Links and resources for python:
@@ -38,13 +53,6 @@ Links and resources for python:
 Recall that for this lecture you are supposed to have followed the `datacamp
 course. <https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1>`_
 
-Introduction to python
-----------------------
-
-In the lecture, we use `this notebook
-<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.html>`_.
-If you want, you can download `the notebook
-<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.ipynb>`_.
 
 
 

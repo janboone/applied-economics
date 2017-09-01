@@ -33,10 +33,11 @@ to the earlier issue and leave a comment in that "conversation".
 plan
 ----
 
-The plan for this course in the academic year 2016/2017 is as follows:
+The plan for this course in the academic year 2016/2017 can be
+:download:`downloaded here. <AEA_Schedule_2017.pdf>`
 
-
-.. csv-table:: Preliminary schedule, may be updated by announcements on BB:
+..
+  csv-table:: Preliminary schedule, may be updated by announcements on BB:
    :header: "day", "date", "time", "room", "teacher", "topic", "Python datacamp"
    :widths:   5,     10,     15,     30,      25,        70,       70
 
@@ -59,7 +60,7 @@ The plan for this course in the academic year 2016/2017 is as follows:
    Wed, Nov 22,  14:45-18:30,          TZ 004, Sjak, Canon,
    Wed, Nov 29,  Asset Talent Day,           , , ,
    Wed, Dec 6,   14:45-18:30,          TZ 004, Minke???, ,
-
+..
 
 
 You have to make two choices:
@@ -86,8 +87,8 @@ computer; you simply work in your webbrowser. Look at the videos and
 do the exercises. Following the planning in the datacamp column makes
 sure that you are up-to-date for the python lectures.
 
-   
-   
+
+
 grade
 -----
 

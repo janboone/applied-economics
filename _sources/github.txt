@@ -8,19 +8,13 @@ We assume that you have installed all the software on the previous
 to collaborate with others. This is also the way that you publish your
 assignments so that we can grade them.
 
-An introduction to GitHub can also be found `here <http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration>`_ 
+You will need to use github for three things:
 
-Although we will go over GitHub basics below and in class, the goal of this course is that you can find your way around open source software yourself; including finding the information on how to use it. Hence look for a GitHub tutorial on the web and read it carefully.
+* you sign up at github
+* you create a repository "assignments" at github
+* you upload assignments at github
 
-
-But basically it boils down to the following:
-
-.. image:: http://imgs.xkcd.com/comics/git.png
-   :scale: 90 %
-   :align: center
-
-
-
+We will go over each of these steps.
 
 Sign up
 -------
@@ -33,21 +27,69 @@ button.
 In step 2 choose the free account. Then move on to your dashboard
 (step 3).
 
+Create repository
+-----------------
 
+* Now create your first repository. Call this, for instance, "assignments". This is what you need to do:
+
+.. image:: /_images/github1.gif
+   :align: left
+
+
+Once you created the new repository, follow the following 4 steps on the "Create a new repository" page:
+
+	   
+.. image:: /_images/github2.png
+   :align: left
+
+Well done, you have created your first repository!
+
+The final step is to upload your assignments; e.g. your jupyter notebook.
+
+
+uploading assignments
+---------------------
+
+There are a number of ways in which you can get your assignments on github:
+
+* for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well
+* if you created your CV off-line and need to get the relevant files on github or if you want to get your jupyter notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):
+
+    * `uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
+    * `uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_ (see below for more detailed instructions)
+
+If you can replicate the steps above, you are done! If you would like to know more about github and how to use it, look at the next section (which is optional).
+
+
+
+OPTIONAL: More sophisticated use of github
+==========================================
+
+.. _optionalgithub1:
+
+This section is optional; it is not needed for the course. We will teach you how to use github from the command line. Moreover, we show you how you can convert your markdown CV into an html file and publish it on github as website. For this you need to install pandoc (and latex, if you want to use equations). Both pandoc and latex are :ref:`optional <optionalinstall>` on the :ref:`installation page <install>`.
+
+An introduction to GitHub can be found `here <http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration>`_ 
+
+One of the goals of this course is that you can find your way around open source software yourself; including finding the information on how to use it. Hence look for a GitHub tutorial on the web and read it carefully.
+
+Basically using git and github boils down to the following:
+
+.. image:: http://imgs.xkcd.com/comics/git.png
+   :scale: 90 %
+   :align: center
 
 
 Set up Git
 ----------
 
-Next, we need to set up Git on your computer (which you installed
+If you want to use git and github with the command line, we need to set up Git on your computer (which you installed
 before) to work with GitHub: this page explains how to set up Git_ for
 this purpose. Follow all the steps described on this page. That is,
 both "Setting up Git" and "Next steps: Authenticating with GitHub from
 Git". 
 
 When it comes to "Authenticating with GitHub from Git" follow the recommended route of "Connecting over HTTPS". 
-
-
 
 Repository
 ----------
@@ -113,8 +155,7 @@ Repository
 .. image:: /images/github_repo_7.png
    :scale: 90 %
    :align: center
-
-
+	   
   
 Command line
 ------------	  
@@ -248,16 +289,6 @@ On Linux and Mac computers, "~" indicates your home-directory. On most terminals
 
 
 
-uploading assignments
----------------------
-
-There are a number of ways in which you can get your assignments on github:
-
-* for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well
-* if you created your CV off-line and need to get the relevant files on github or if you want to get your python notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):
-
-    * `uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
-    * `uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_ (also see the instructions above to do this)
 
 
 .. _GitHub: https://github.com/

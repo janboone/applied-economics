@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>OPTIONAL: Using Git &mdash; Apllied Economics 1.0 documentation</title>
+    <title>OPTIONAL: Using Git &#8212; Apllied Economics 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,22 +17,27 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Second assignment" href="assignment2.html" />
     <link rel="prev" title="First Assignment" href="assignment1.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -44,7 +49,7 @@
 <span class="target" id="git"></span><p>This section is optional for the course. But, heck, you have a github account; why not learn how to use it properly? Here we give you a quick introduction to version control and how to collaborate on github.</p>
 <p>Git is a version control system. There is a bit of a learning curve,
 but once you master it, it simplifies your life considerably.</p>
-<p>As we saw <a class="reference internal" href="github.html#github1"><span>before</span></a>, it helps you to publish your work on
+<p>As we saw <a class="reference internal" href="github.html#github1"><span class="std std-ref">before</span></a>, it helps you to publish your work on
 GitHub.</p>
 <p>Second, as the name &#8220;version control&#8221; suggests, it helps you to keep
 control of different versions. Hence, there is no need anymore to call
@@ -54,7 +59,7 @@ changes, Git keeps track of the different versions.</p>
 collaborators can work on the same file. Git/GitHub offers a way to
 track changes and merge changes into the main file. Here we explain
 how this works.</p>
-<p>Note that you&#8217;ve already seen a number of Git-commands <a class="reference internal" href="github.html#optionalgithub1"><span>on this page here</span></a>
+<p>Note that you&#8217;ve already seen a number of Git-commands <a class="reference internal" href="github.html#optionalgithub1"><span class="std std-ref">on this page here</span></a>
 when we were using GitHub. Here we will explain what these commands
 actually mean.</p>
 <p>As before, there are numerous Git tutorials on the web. You can either
@@ -68,76 +73,55 @@ google or look at the following:</p>
 <h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="working-on-one-branch">
 <h3>working on one branch<a class="headerlink" href="#working-on-one-branch" title="Permalink to this headline">¶</a></h3>
-<p>Let&#8217;s create a third repository on GitHub, using <a class="reference internal" href="github.html#github1"><span>the steps here</span></a>.</p>
-<ul>
-<li><p class="first">Create a new repository, say &#8220;third-repo&#8221;.</p>
-</li>
-<li><p class="first">Go to your command line and navigate to your directory &#8220;github&#8221;</p>
-</li>
-<li><p class="first">Type at the command line: <strong class="command">git clone
+<p>Let&#8217;s create a third repository on GitHub, using <a class="reference internal" href="github.html#github1"><span class="std std-ref">the steps here</span></a>.</p>
+<ul class="simple">
+<li>Create a new repository, say &#8220;third-repo&#8221;.</li>
+<li>Go to your command line and navigate to your directory &#8220;github&#8221;</li>
+<li>Type at the command line: <strong class="command">git clone
 https://github.com/janboone/third-repo</strong> where you change
 &#8220;/janboone/&#8221; to your own user name (instead of
-&#8220;janboone&#8221;)</p>
-</li>
-<li><p class="first">the repository that you just created on GitHub is now copied
-(&#8220;cloned&#8221;) to your computer.</p>
-</li>
-<li><p class="first">Type the following to change into the directory
-&#8220;third-repo&#8221; (&#8220;cd&#8221; stands for Change Directory):</p>
-</li>
-<li><p class="first"><strong class="command">cd third-repo/</strong></p>
-</li>
-<li><p class="first">start your markdown editor (whichever one you installed) and create
+&#8220;janboone&#8221;)</li>
+<li>the repository that you just created on GitHub is now copied
+(&#8220;cloned&#8221;) to your computer.</li>
+<li>Type the following to change into the directory
+&#8220;third-repo&#8221; (&#8220;cd&#8221; stands for Change Directory):</li>
+<li><strong class="command">cd third-repo/</strong></li>
+<li>start your markdown editor (whichever one you installed) and create
 a file &#8220;document.md&#8221; in this directory &#8220;github/third-repo&#8221;. Type
-some text here.</p>
-</li>
-<li><p class="first">The following command adds all files in the directory to be tracked
-by Git:</p>
-</li>
-<li><p class="first"><strong class="command">git add .</strong></p>
-</li>
-<li><p class="first">the files are now &#8220;staged&#8221; and the following command adds these
-files to the next &#8220;commit&#8221; (with the &#8220;-m&#8221; flag, you add a message):</p>
-</li>
-<li><p class="first"><strong class="command">git commit -m &quot;First version of document&quot;</strong></p>
-<ul>
+some text here.</li>
+<li>The following command adds all files in the directory to be tracked
+by Git:</li>
+<li><strong class="command">git add .</strong></li>
+<li>the files are now &#8220;staged&#8221; and the following command adds these
+files to the next &#8220;commit&#8221; (with the &#8220;-m&#8221; flag, you add a message):</li>
+<li><strong class="command">git commit -m &quot;First version of document&quot;</strong><ul>
 <li><dl class="first docutils">
 <dt>optional: you can skip the &#8220;git add&#8221; part, if you use the &#8220;-a&#8221;</dt>
-<dd><p class="first last">flag:</p>
-</dd>
+<dd>flag:</dd>
 </dl>
 </li>
-<li><p class="first"><strong class="command">git commit -a -m &quot;First version of document&quot;</strong></p>
-</li>
+<li><strong class="command">git commit -a -m &quot;First version of document&quot;</strong></li>
 </ul>
 </li>
-<li><p class="first">if you want to see what you have changed, type either of the
-following (depending how much information you want):</p>
-<ul class="simple">
+<li>if you want to see what you have changed, type either of the
+following (depending how much information you want):<ul>
 <li><strong class="command">git log -p</strong></li>
 <li><strong class="command">git log --stat</strong></li>
 </ul>
 </li>
-<li><p class="first">the files are pushed to GitHub with the following command:</p>
-</li>
-<li><p class="first"><strong class="command">git push origin master</strong></p>
-</li>
-<li><p class="first">Go to the website: &#8220;<a class="reference external" href="http://janboone.github.io/third-repo/">http://janboone.github.io/third-repo/</a>&#8221; where
-you change &#8220;janboone&#8221; into your own github user name.</p>
-</li>
-<li><p class="first">You can see that there are 2 commits now:</p>
-</li>
+<li>the files are pushed to GitHub with the following command:</li>
+<li><strong class="command">git push origin master</strong></li>
+<li>Go to the website: &#8220;<a class="reference external" href="http://janboone.github.io/third-repo/">http://janboone.github.io/third-repo/</a>&#8221; where
+you change &#8220;janboone&#8221; into your own github user name.</li>
+<li>You can see that there are 2 commits now:</li>
 </ul>
-<a class="reference internal image-reference" href="_images/github_repo_8.png"><img alt="_images/github_repo_8.png" class="align-center" src="_images/github_repo_8.png" style="width: 935.1px; height: 649.8px;" /></a>
-<ul>
-<li><p class="first">click on &#8220;commits&#8221; and you see what they are:</p>
-<ul>
-<li><p class="first">the initial commit when we created the repository</p>
-</li>
+<a class="reference internal image-reference" href="_images/github_repo_8.png"><img alt="_images/github_repo_8.png" class="align-center" src="_images/github_repo_8.png" style="width: 935.1px; height: 649.8000000000001px;" /></a>
+<ul class="simple">
+<li>click on &#8220;commits&#8221; and you see what they are:<ul>
+<li>the initial commit when we created the repository</li>
 <li><dl class="first docutils">
 <dt>and the document file created above which we committed with the</dt>
-<dd><p class="first last">message &#8220;First version of this document&#8221;</p>
-</dd>
+<dd>message &#8220;First version of this document&#8221;</dd>
 </dl>
 </li>
 </ul>
@@ -273,21 +257,18 @@ with the master branch.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/git.txt"
+      <li><a href="_sources/git.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -298,11 +279,11 @@ with the master branch.</p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/git.txt"
+      <a href="_sources/git.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

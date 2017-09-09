@@ -6,13 +6,19 @@ Python
 Introduction to python
 ----------------------
 
-In the lecture, we first use `this notebook
-<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.html>`_ as a simple introduction.
-If you want, you can download `the notebook
-<https://janboone.github.io/applied-economics/_downloads/Intro_to_python_for_economists.ipynb>`_.
+In this lecture we look at three notebooks:
 
-Then we look at how python can help to `solve models <https://janboone.github.io/municipality_healthcare_expenditure/solving_model.html>`_
-which can also `download <https://janboone.github.io/municipality_healthcare_expenditure/solving_model.ipynb>`_.
+* Intro_to_python_for_economists.ipynb
+* solving_model.ipynb
+* Web_data.ipynb
+
+The simplest way to get access to these notebooks (and the one for next time) is to clone this repository: `<https://github.com/janboone/programming_notebooks>`_
+
+You can follow this link and click on "Clone or download" and then "Download ZIP". Once the zip-file is on your computer, you can unzip it. Then navigate towards it in the jupyter notebook to open the relevant file.
+
+The more sophisticated approach is to open a shell/terminal/command prompt and type: "git clone https://github.com/janboone/programming_notebooks.git"
+
+This creates a directory "programming_notebooks" on your computer with all the relevant files.
 
 
 Python as programming language

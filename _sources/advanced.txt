@@ -3,7 +3,18 @@ Advanced topics
 
 .. _advanced:
 
-In the lecture, we look at `the notebook <https://janboone.github.io/municipality_healthcare_expenditure/Municipality_data.html>`_ which you can `download here <https://janboone.github.io/municipality_healthcare_expenditure/Municipality_data.ipynb>`_.
+In this lecture we look at this notebook:
+
+* Municipality_data.ipynb
+
+The simplest way to get access to this notebook (if you have not done this yet) is to clone this repository: `<https://github.com/janboone/programming_notebooks>`_
+
+You can follow this link and click on "Clone or download" and then "Download ZIP". Once the zip-file is on your computer, you can unzip it. Then navigate towards it in the jupyter notebook to open the relevant file.
+
+The more sophisticated approach is to open a shell/terminal/command prompt and type: "git clone https://github.com/janboone/programming_notebooks.git"
+
+This creates a directory "programming_notebooks" on your computer with all the relevant files.
+
 
 This notebook and the resources below should give you some inspiration of what you can do for your python assignment.
 

@@ -3,13 +3,26 @@ Installing the stuff
 
 .. _install:
 
-*Disclaimer*: below we describe the software that you need to
+If you want to follow the python track in this course, you have two options:
+
+* either work on the server: log into `the jupyter server <https://russet.uvt.nl/>`_ or
+* install the software on your own computer
+
+For the whole course, you can work perfectly fine on the server. We will show you how this works. A disadvantage could be if you want to install new packages for your assignment (most students do not do this). If you are so adventurous that you want to use packages that were not discussed in class, install the software on your own computer.
+
+If, for some reason, you prefer to have the software on your computer, follow the instructions below.
+
+
+Optional:
+---------
+
+.. _optionalinstall:
+
+*Disclaimer*: below we describe the software that you can
 install for this course. Although we are not aware of any problems with these
 programs, we cannot accept responsibility in case anything goes wrong
 with your computer. Also, when you use this software, make sure
 to save regularly and back up your work.
-
-You only need to install this software if you choose the python assignment for this course.
 
 We need to install quite some software. This will be a bit of work and
 things are bound to go wrong. So switch on some music_ and go ahead!
@@ -17,15 +30,7 @@ things are bound to go wrong. So switch on some music_ and go ahead!
 This is the first hurdle that you need to take to use open source
 software. If you get an error message during installation, copy the
 error message and google it. In 99 percent of the cases this will
-solve your problem. If not; ask us in class.
-
-
-
-
-Required installs for this course:
-----------------------------------
-
-Installing the software is a bit of work which takes quite some time (for your computer, not for you). Stay with it; once you are done, you are all set for the course. If you have problems with one piece of software that you cannot resolve, simply go on with the next. The more you manage to install the better; remaining issues we sort out in class.
+solve your problem. If not; ask us in class (or use the server).
 
 * As we will be working with GitHub_, it is useful to install Git_.
 
@@ -43,25 +48,13 @@ Installing the software is a bit of work which takes quite some time (for your c
   you may want to install iTerm2_, as it is more fancy and easier to
   work with.
 * The program language that we use for this course is python_ which we
-  will use with the ipython_ or `Jupyter <https://jupyter.org/>`_
+  will use with the `Jupyter <https://jupyter.org/>`_
   notebook interface. The best way to install all this together is to
   use the anaconda_ distribution. Make sure to install python 3.X. If
   for some reason you cannot get anaconda installed, ask us in class
-  and we will help. As an alternative you can choose canopy_. If even
-  that gives problems, you can also work in the cloud with
-  `<https://mindaro.uvt.nl/>`_. This link only works as long as you
-  are a TiU student. Another disadvantage of this is that you cannot
-  install packages yourself.
-
+  and we will help.
   
 If you have installed all this: congratulations, you are done! If you experienced any problems, ask us in class. Below we give some software resources, that you can install; but you do not have to do this.
-
-
-Optional:
----------
-
-.. _optionalinstall:
-
 
 * You can install Latex_. Latex is great to write your MSc thesis
   in. For this course, you need it if you want to export a jupyter notebook and display math in html.
@@ -97,13 +90,11 @@ editors that can do this and there is a war_ between them.
   are lots of introductions to emacs on the web. Just google something
   like "emacs tutorial" and you can choose your favourite one. If you
   are wondering which emacs to install for your operating system, this
-  page may help: which-emacs_. Personally, I use emacs. But there are
+  page may help: which-emacs_. Personally, I use emacs with `scimax <https://github.com/jkitchin/scimax>`_. But there are
   lots of people who prefer:
 * vi_ as editor. Most people install vim_. Also here there are lots of
   tutorials on the web.
   
-
-
 .. _music: https://www.youtube.com/watch?v=kijpcUv-b8M
 .. _Latex: http://latex-project.org/ftp.html
 .. _Pandoc: http://pandoc.org/installing.html

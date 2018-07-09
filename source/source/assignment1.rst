@@ -11,8 +11,8 @@ First Assignment
 
   * see :ref:`this page <github1>` to guide you through these steps
   
-* fill in the `google form <https://goo.gl/forms/Le6X2HGvPxGH5jV43>`_
-* deadline for filling in the google form is: Wednesday September 20, 2017
+* fill in the `google form <https://goo.gl/forms/g4Cr85mo19Y6iJBo2>`_
+* deadline for filling in the google form is: Wednesday September 19, 2018
 
 * for the first assignment, you follow either of two routes
 

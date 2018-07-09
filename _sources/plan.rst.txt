@@ -63,9 +63,8 @@ The plan for this course in the academic year 2017/2018 can be
 ..
 
 
-You have to make two choices:
+Your main choice is:
 
-* whether to do either John's or Rob's case
 * whether to do either the canon or python
 
 There is no need to follow the lectures of the option you have not chosen. To illustrate, if you choose, say, the canon, you do not need to attend the python lectures. If you do attend the python lectures, bring your laptop so that you can work along with the notebooks in class.
@@ -77,10 +76,14 @@ python datacamp
 
 The Python datacamp column refers to the following website:
 `<https://www.datacamp.com/home#tab_python-courses>`_. For this
-course, you only need to follow the first course "Intro to Python for
-Data Science". This course is free of charge.
+course, you need to follow the courses:
 
-However, you need to sign up for datacamp via the google-form that we provide. In this way: (i) we can monitor your progress (to see whether you finish your assignments in time; see Python grade below) and (ii) you have access to all datacamp courses free of charge (also the ones that you usually have to pay for).
++ `Intro to Python for Data Science <https://www.datacamp.com/courses/intro-to-python-for-data-science>`_
++ `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_
++ `Pandas foundation <https://www.datacamp.com/courses/pandas-foundations>`_
+
+
+You need to sign up for datacamp via the google-form that we provide. In this way: (i) we can monitor your progress (to see whether you finish your assignments in time; see Python grade below) and (ii) you have access to all datacamp courses free of charge (also the ones that you usually have to pay for).
 
 To follow the datacamp course, you do not need to install python on your
 computer; you simply work in your webbrowser. Look at the videos and
@@ -92,21 +95,26 @@ sure that you are up-to-date for the python lectures.
 grade
 -----
 
+.. _grade:
+
 Your grade is determined as follows:
 
-* you chose one of the cases by either John or Rob, the assignment associated with this case counts for 0.3 of your final grade;
-* you chose whether you want to do either the canon or python, the assignment associated with either of these counts for 0.7 of your final grade.
+* you chose whether you want to do either the canon or python, the assignments associated with either of these is your final grade.
 
 
 **Python grade:**
 
 * there are two datacamp assignments:
 
-  * you need to finish the chapter "Python Lists" before Wednesday Oct. 11 (2017) and
-  * you need to finish the chapter "Numpy" before Wednesday Nov. 8 (2017)
+  * you need to finish `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_ before Wednesday Oct. 10 (2018) and
+  * you need to finish  `Pandas foundation <https://www.datacamp.com/courses/pandas-foundations>`_ before Wednesday Nov. 7 (2018)
   * you receive 1 point for each datacamp assignment that you finish in time
 
 * you do a final assignment with which you can earn at max. 8 points.
 * Hence, your overall grade for Python is at max. 10 points.
 
 The final python assignment, you can --but you do not have to-- do with one other student.
+
+The deadline for the final python assignment is: Thursday January 31st, 2019. However, if you need your grade before the end of January, you need to submit your final assignment by Thursday January 17th, 2019. Let us know by email that your assignment needs to be graded early.
+
+The resit deadline for the python assignment is: Thursday August 15th, 2019. Let us know by email that you have submitted your assignment for the resit.

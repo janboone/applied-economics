@@ -1,38 +1,31 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>OPTIONAL: Using Git &mdash; Apllied Economics 1.0 documentation</title>
-    
+    <title>OPTIONAL: Using Git &#8212; Apllied Economics 1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
-    <link rel="next" title="Second assignment" href="assignment2.html" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python" href="programming.html" />
     <link rel="prev" title="First Assignment" href="assignment1.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">  
+  </head><body>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -44,17 +37,17 @@
 <span class="target" id="git"></span><p>This section is optional for the course. But, heck, you have a github account; why not learn how to use it properly? Here we give you a quick introduction to version control and how to collaborate on github.</p>
 <p>Git is a version control system. There is a bit of a learning curve,
 but once you master it, it simplifies your life considerably.</p>
-<p>As we saw <a class="reference internal" href="github.html#github1"><span>before</span></a>, it helps you to publish your work on
+<p>As we saw <a class="reference internal" href="github.html#github1"><span class="std std-ref">before</span></a>, it helps you to publish your work on
 GitHub.</p>
-<p>Second, as the name &#8220;version control&#8221; suggests, it helps you to keep
+<p>Second, as the name “version control” suggests, it helps you to keep
 control of different versions. Hence, there is no need anymore to call
-your files &#8220;file_v2_a&#8221;. You change your files and &#8220;commit&#8221; the
+your files “file_v2_a”. You change your files and “commit” the
 changes, Git keeps track of the different versions.</p>
 <p>Third, it allows you to collaborate with (many) others. You and your
 collaborators can work on the same file. Git/GitHub offers a way to
 track changes and merge changes into the main file. Here we explain
 how this works.</p>
-<p>Note that you&#8217;ve already seen a number of Git-commands <a class="reference internal" href="github.html#optionalgithub1"><span>on this page here</span></a>
+<p>Note that you’ve already seen a number of Git-commands <a class="reference internal" href="github.html#optionalgithub1"><span class="std std-ref">on this page here</span></a>
 when we were using GitHub. Here we will explain what these commands
 actually mean.</p>
 <p>As before, there are numerous Git tutorials on the web. You can either
@@ -68,76 +61,55 @@ google or look at the following:</p>
 <h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="working-on-one-branch">
 <h3>working on one branch<a class="headerlink" href="#working-on-one-branch" title="Permalink to this headline">¶</a></h3>
-<p>Let&#8217;s create a third repository on GitHub, using <a class="reference internal" href="github.html#github1"><span>the steps here</span></a>.</p>
-<ul>
-<li><p class="first">Create a new repository, say &#8220;third-repo&#8221;.</p>
-</li>
-<li><p class="first">Go to your command line and navigate to your directory &#8220;github&#8221;</p>
-</li>
-<li><p class="first">Type at the command line: <strong class="command">git clone
+<p>Let’s create a third repository on GitHub, using <a class="reference internal" href="github.html#github1"><span class="std std-ref">the steps here</span></a>.</p>
+<ul class="simple">
+<li>Create a new repository, say “third-repo”.</li>
+<li>Go to your command line and navigate to your directory “github”</li>
+<li>Type at the command line: <strong class="command">git clone
 https://github.com/janboone/third-repo</strong> where you change
-&#8220;/janboone/&#8221; to your own user name (instead of
-&#8220;janboone&#8221;)</p>
-</li>
-<li><p class="first">the repository that you just created on GitHub is now copied
-(&#8220;cloned&#8221;) to your computer.</p>
-</li>
-<li><p class="first">Type the following to change into the directory
-&#8220;third-repo&#8221; (&#8220;cd&#8221; stands for Change Directory):</p>
-</li>
-<li><p class="first"><strong class="command">cd third-repo/</strong></p>
-</li>
-<li><p class="first">start your markdown editor (whichever one you installed) and create
-a file &#8220;document.md&#8221; in this directory &#8220;github/third-repo&#8221;. Type
-some text here.</p>
-</li>
-<li><p class="first">The following command adds all files in the directory to be tracked
-by Git:</p>
-</li>
-<li><p class="first"><strong class="command">git add .</strong></p>
-</li>
-<li><p class="first">the files are now &#8220;staged&#8221; and the following command adds these
-files to the next &#8220;commit&#8221; (with the &#8220;-m&#8221; flag, you add a message):</p>
-</li>
-<li><p class="first"><strong class="command">git commit -m &quot;First version of document&quot;</strong></p>
-<ul>
+“/janboone/” to your own user name (instead of
+“janboone”)</li>
+<li>the repository that you just created on GitHub is now copied
+(“cloned”) to your computer.</li>
+<li>Type the following to change into the directory
+“third-repo” (“cd” stands for Change Directory):</li>
+<li><strong class="command">cd third-repo/</strong></li>
+<li>start your markdown editor (whichever one you installed) and create
+a file “document.md” in this directory “github/third-repo”. Type
+some text here.</li>
+<li>The following command adds all files in the directory to be tracked
+by Git:</li>
+<li><strong class="command">git add .</strong></li>
+<li>the files are now “staged” and the following command adds these
+files to the next “commit” (with the “-m” flag, you add a message):</li>
+<li><strong class="command">git commit -m &quot;First version of document&quot;</strong><ul>
 <li><dl class="first docutils">
-<dt>optional: you can skip the &#8220;git add&#8221; part, if you use the &#8220;-a&#8221;</dt>
-<dd><p class="first last">flag:</p>
-</dd>
+<dt>optional: you can skip the “git add” part, if you use the “-a”</dt>
+<dd>flag:</dd>
 </dl>
 </li>
-<li><p class="first"><strong class="command">git commit -a -m &quot;First version of document&quot;</strong></p>
-</li>
+<li><strong class="command">git commit -a -m &quot;First version of document&quot;</strong></li>
 </ul>
 </li>
-<li><p class="first">if you want to see what you have changed, type either of the
-following (depending how much information you want):</p>
-<ul class="simple">
+<li>if you want to see what you have changed, type either of the
+following (depending how much information you want):<ul>
 <li><strong class="command">git log -p</strong></li>
 <li><strong class="command">git log --stat</strong></li>
 </ul>
 </li>
-<li><p class="first">the files are pushed to GitHub with the following command:</p>
-</li>
-<li><p class="first"><strong class="command">git push origin master</strong></p>
-</li>
-<li><p class="first">Go to the website: &#8220;<a class="reference external" href="http://janboone.github.io/third-repo/">http://janboone.github.io/third-repo/</a>&#8221; where
-you change &#8220;janboone&#8221; into your own github user name.</p>
-</li>
-<li><p class="first">You can see that there are 2 commits now:</p>
-</li>
+<li>the files are pushed to GitHub with the following command:</li>
+<li><strong class="command">git push origin master</strong></li>
+<li>Go to the website: “<a class="reference external" href="http://janboone.github.io/third-repo/">http://janboone.github.io/third-repo/</a>” where
+you change “janboone” into your own github user name.</li>
+<li>You can see that there are 2 commits now:</li>
 </ul>
-<a class="reference internal image-reference" href="_images/github_repo_8.png"><img alt="_images/github_repo_8.png" class="align-center" src="_images/github_repo_8.png" style="width: 935.1px; height: 649.8px;" /></a>
-<ul>
-<li><p class="first">click on &#8220;commits&#8221; and you see what they are:</p>
-<ul>
-<li><p class="first">the initial commit when we created the repository</p>
-</li>
+<a class="reference internal image-reference" href="_images/github_repo_8.png"><img alt="_images/github_repo_8.png" class="align-center" src="_images/github_repo_8.png" style="width: 935.1px; height: 649.8000000000001px;" /></a>
+<ul class="simple">
+<li>click on “commits” and you see what they are:<ul>
+<li>the initial commit when we created the repository</li>
 <li><dl class="first docutils">
 <dt>and the document file created above which we committed with the</dt>
-<dd><p class="first last">message &#8220;First version of this document&#8221;</p>
-</dd>
+<dd>message “First version of this document”</dd>
 </dl>
 </li>
 </ul>
@@ -145,7 +117,7 @@ you change &#8220;janboone&#8221; into your own github user name.</p>
 </ul>
 <a class="reference internal image-reference" href="_images/github_repo_9.png"><img alt="_images/github_repo_9.png" class="align-center" src="_images/github_repo_9.png" style="width: 920.7px; height: 506.7px;" /></a>
 <ul class="simple">
-<li>click on &#8220;First version of this document&#8221; and you can see what we
+<li>click on “First version of this document” and you can see what we
 changed here. That is, you see the text that you typed in your editor</li>
 </ul>
 <a class="reference internal image-reference" href="_images/github_repo_10.png"><img alt="_images/github_repo_10.png" class="align-center" src="_images/github_repo_10.png" style="width: 931.5px; height: 747.0px;" /></a>
@@ -162,7 +134,7 @@ editor. Delete some words and add some sentences etc.</li>
 <div class="section" id="branching-out">
 <h3>branching out<a class="headerlink" href="#branching-out" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>With the following command we create a new branch called &#8220;testbranch&#8221;:</li>
+<li>With the following command we create a new branch called “testbranch”:</li>
 <li><strong class="command">git branch testbranch</strong></li>
 <li>now we switch to this new branch:</li>
 <li><strong class="command">git checkout testbranch</strong></li>
@@ -173,8 +145,8 @@ editor. Delete some words and add some sentences etc.</li>
 </ul>
 <a class="reference internal image-reference" href="_images/github_repo_11.png"><img alt="_images/github_repo_11.png" class="align-center" src="_images/github_repo_11.png" style="width: 934.2px; height: 688.5px;" /></a>
 <ul class="simple">
-<li>the site notes that you pushed &#8220;testbranch&#8221;</li>
-<li>click on &#8220;branch master&#8221; and you can choose between the master
+<li>the site notes that you pushed “testbranch”</li>
+<li>click on “branch master” and you can choose between the master
 branch and the testbranch branch:</li>
 </ul>
 <a class="reference internal image-reference" href="_images/github_repo_12.png"><img alt="_images/github_repo_12.png" class="align-center" src="_images/github_repo_12.png" style="width: 917.1px; height: 686.7px;" /></a>
@@ -189,12 +161,12 @@ can change things here which will not affect the testbranch etc.<ul>
 file document.md on your computer. Hence, your file document.md on
 your computer has switched back to the previous version (i.e. the
 changes you made in testbranch have gone in this version; by typing
-&#8220;git checkout testbranch&#8221; you see the other version again)</li>
+“git checkout testbranch” you see the other version again)</li>
 <li>the following command gives an overview of your branches:</li>
 <li><strong class="command">git log --oneline --decorate --graph --all</strong></li>
 <li>Now suppose that you are happy with the changes you made in
 testbranch. Then you would like to have these changes in the master
-branch as well. For this we &#8220;merge&#8221; the changes into the master branch</li>
+branch as well. For this we “merge” the changes into the master branch</li>
 <li>first switch back to master (in case you had not done so yet):</li>
 <li><strong class="command">git checkout master</strong></li>
 <li>and merge the changes from testbranch into master:</li>
@@ -203,7 +175,7 @@ branch as well. For this we &#8220;merge&#8221; the changes into the master bran
 master branch, Git cannot merge two versions. See <a class="reference external" href="http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#Basic-Merge-Conflicts">here</a>
 on how to deal with this.</li>
 <li>if you want, you can delete the testbranch now (all changes have
-been merged into master): <strong class="command">git branch -d testbranch</strong>, but you don&#8217;t
+been merged into master): <strong class="command">git branch -d testbranch</strong>, but you don’t
 have to.</li>
 </ul>
 </div>
@@ -237,7 +209,7 @@ typing the following:</p>
 </ul>
 <p>If you would like to avoid this, an alternative is that each team
 member creates her/his own branch of the repository and everyone works
-on her/his own branch only. Then the member&#8217;s branch can be merged
+on her/his own branch only. Then the member’s branch can be merged
 with the master branch.</p>
 </div>
 </div>
@@ -266,28 +238,27 @@ with the master branch.</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="assignment1.html" title="previous chapter">First Assignment</a></li>
-      <li>Next: <a href="assignment2.html" title="next chapter">Second assignment</a></li>
+      <li>Next: <a href="programming.html" title="next chapter">Python</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/git.txt"
+      <li><a href="_sources/git.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -298,11 +269,11 @@ with the master branch.</p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/git.txt"
+      <a href="_sources/git.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

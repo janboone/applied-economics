@@ -1,36 +1,29 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Plotting health care expenditure by age group &mdash; Apllied Economics 1.0 documentation</title>
-    
+    <title>Plotting health care expenditure by age group &#8212; Apllied Economics 1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">  
+  </head><body>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -42,48 +35,48 @@
 <p>We use here the following
 <a class="reference external" href="http://www.cbs.nl/nl-NL/menu/themas/gezondheid-welzijn/cijfers/incidenteel/maatwerk/zorgkosten-vanuit-de-zorgverzekeringswet-naar-leeftijd-en-huishoudensinkomen-2012.htm">data</a>
 We convert this data to csv and load it as dataframe using pandas. Costs
-are in euro&#8217;s.</p>
+are in euro’s.</p>
 <p>This data allows us to analyze the relation between health care
 expenditure, age and income. One expects that people with a higher
-income spend more money on health care (health is a &#8220;normal good&#8221;). On
+income spend more money on health care (health is a “normal good”). On
 the other hand, people with higher incomes tend to be healthier and may
 spend less on health care. Which effect dominates?</p>
 <p>Further, one would expect that people spend more on health care as they
 get older.</p>
 <p>But people usually see their income rise as well with age. Can we show
 the effect of income and age separately in one graph?</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>
-<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">plotly.tools</span> <span class="kn">as</span> <span class="nn">tls</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
+<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">plotly.tools</span> <span class="k">as</span> <span class="nn">tls</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;zorgkostenvanuitdezorgverzekeringswetnaarleeftijdenhuishoudensinkomen2012.csv&quot;</span><span class="p">,</span> \
-                 <span class="n">sep</span><span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;zorgkostenvanuitdezorgverzekeringswetnaarleeftijdenhuishoudensinkomen2012.csv&quot;</span><span class="p">,</span> \
+                 <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you want to see what this data look like, type <code class="docutils literal"><span class="pre">df</span></code> in an empty
+<p>If you want to see what this data look like, type <code class="docutils literal notranslate"><span class="pre">df</span></code> in an empty
 cell and shift-enter.</p>
-<p>The data contains 5 age categories (&#8220;Leeftijdsklasse&#8221; in Dutch) and for
-each age category we have 5 quantiles of household income (&#8220;Kwintielen
-huishoudinkomen&#8221;).</p>
-<p>Other columns are deciles of health care expenditures (&#8220;decielen
-zorgkosten&#8221;), average health care expenditures covered by basic
-insurance (&#8220;gemiddelde zvw kosten&#8221;), average costs without primary
-physician (&#8220;gemiddelde kosten excl. huisartsenzorg&#8221;), average costs
-without primary physician and birth care (&#8220;gemiddelde kosten excl.
-huisartsenzorg en geboortezorg&#8221;), average household income (&#8220;gemiddeld
-besteedbaar huishoudensinkomen&#8221;) and number of people (&#8220;aantal
-personen&#8221;) per row in the table.</p>
+<p>The data contains 5 age categories (“Leeftijdsklasse” in Dutch) and for
+each age category we have 5 quantiles of household income (“Kwintielen
+huishoudinkomen”).</p>
+<p>Other columns are deciles of health care expenditures (“decielen
+zorgkosten”), average health care expenditures covered by basic
+insurance (“gemiddelde zvw kosten”), average costs without primary
+physician (“gemiddelde kosten excl. huisartsenzorg”), average costs
+without primary physician and birth care (“gemiddelde kosten excl.
+huisartsenzorg en geboortezorg”), average household income (“gemiddeld
+besteedbaar huishoudensinkomen”) and number of people (“aantal
+personen”) per row in the table.</p>
 <p>To see, for instance, the age categories used and the quantiles, one can
 use a command like:</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Leeftijdsklasse&#39;</span><span class="p">]))]</span>
-<span class="k">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]))]</span>
+<span class="nb">print</span> <span class="p">[</span><span class="n">age</span> <span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span> <span class="s">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span> <span class="s">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span> <span class="s">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span> <span class="s">&#39;80 jaar en ouder&#39;</span><span class="p">]</span>
-<span class="p">[</span><span class="s">&#39;1e kwintiel&#39;</span><span class="p">,</span> <span class="s">&#39;2e kwintiel&#39;</span><span class="p">,</span> <span class="s">&#39;3e kwintiel&#39;</span><span class="p">,</span> <span class="s">&#39;4e kwintiel&#39;</span><span class="p">,</span> <span class="s">&#39;5e kwintiel&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;1e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;2e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;3e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;4e kwintiel&#39;</span><span class="p">,</span> <span class="s1">&#39;5e kwintiel&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>We want to plot health care expenditures against household income. In
@@ -93,55 +86,55 @@ basic insurance.</p>
 <p>We create two dictionaries (one for income, one for health care costs).
 A dictionary contains for each age group, the vector of variables
 (income, costs resp.)</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">income_average</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">income_average</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">cost_average</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Leeftijdsklasse&#39;</span><span class="p">])):</span>
-    <span class="n">income_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s">&#39;Gemiddeld besteedbaar huishoudensinkomen&#39;</span><span class="p">]</span>\
-                                   <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> \
-                           <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
-    <span class="n">cost_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span>   <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s">&#39;Gemiddelde Zvw kosten&#39;</span><span class="p">]</span>\
-                                   <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> \
-                           <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">])):</span>
+    <span class="n">income_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s1">&#39;Gemiddeld besteedbaar huishoudensinkomen&#39;</span><span class="p">]</span>\
+                                   <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> \
+                           <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
+    <span class="n">cost_average</span><span class="p">[</span><span class="n">age</span><span class="p">]</span> <span class="o">=</span>   <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Leeftijdsklasse&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">age</span><span class="p">][</span><span class="s1">&#39;Gemiddelde Zvw kosten&#39;</span><span class="p">]</span>\
+                                   <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">income</span><span class="p">])</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> \
+                           <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))]</span>
 </pre></div>
 </div>
-<p>Plotly works with <code class="docutils literal"><span class="pre">Scatter</span></code> to combine data and characteristics of the
-plots (like &#8220;markers+lines&#8221;, the text you see when hovering over the
+<p>Plotly works with <code class="docutils literal notranslate"><span class="pre">Scatter</span></code> to combine data and characteristics of the
+plots (like “markers+lines”, the text you see when hovering over the
 plotted line).</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">age0_19</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers+lines&#39;</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age0_19</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;0 t/m 19 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
 <span class="p">)</span>
 <span class="n">age20_39</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers+lines&#39;</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;20 t/m 39 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
 <span class="p">)</span>
 
 <span class="n">age40_59</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers+lines&#39;</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;40 t/m 59 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
 <span class="p">)</span>
 <span class="n">age60_79</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers+lines&#39;</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;60 t/m 79 jaar&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
 <span class="p">)</span>
 <span class="n">age80</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
-    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers+lines&#39;</span><span class="p">,</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;80 jaar en ouder&#39;</span><span class="p">,</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">income_average</span><span class="p">[</span><span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">cost_average</span><span class="p">[</span><span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers+lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;80 jaar en ouder&#39;</span><span class="p">,</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kwintielen huishoudinkomen&#39;</span><span class="p">]))</span>
 <span class="p">)</span>
 
 
@@ -149,29 +142,29 @@ plotted line).</p>
 
 
 <span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Health care expend. vs. income for different age cohorts in the Netherlands 2012&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Health care expend. vs. income for different age cohorts in the Netherlands 2012&#39;</span><span class="p">,</span>
     <span class="n">xaxis</span><span class="o">=</span><span class="n">XAxis</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s">&#39;income&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">,</span>
         <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
-            <span class="n">family</span><span class="o">=</span><span class="s">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
+            <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
             <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
-            <span class="n">color</span><span class="o">=</span><span class="s">&#39;#7f7f7f&#39;</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7f7f7f&#39;</span>
         <span class="p">)</span>
     <span class="p">),</span>
     <span class="n">yaxis</span><span class="o">=</span><span class="n">YAxis</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s">&#39;health care expenditure&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;health care expenditure&#39;</span><span class="p">,</span>
         <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
-            <span class="n">family</span><span class="o">=</span><span class="s">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
+            <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Courier New, monospace&#39;</span><span class="p">,</span>
             <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
-            <span class="n">color</span><span class="o">=</span><span class="s">&#39;#7f7f7f&#39;</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7f7f7f&#39;</span>
         <span class="p">)</span>
     <span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span><span class="n">age0_19</span><span class="p">,</span><span class="n">age20_39</span><span class="p">,</span><span class="n">age40_59</span><span class="p">,</span><span class="n">age60_79</span><span class="p">,</span><span class="n">age80</span><span class="p">])</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
-<span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&#39;scatter income health care costs&#39;</span><span class="p">)</span>
-<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">&quot;https://plot.ly/~janboone/56&quot;</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;scatter income health care costs&#39;</span><span class="p">)</span>
+<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s2">&quot;https://plot.ly/~janboone/56&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~janboone/56.embed" height="525" width="100%"></iframe><p>By clicking on the legend, you can make lines (dis)appear. By hovering
@@ -199,21 +192,20 @@ over the lines, you can see more information.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Plotly_Healthcare_Expenditure.txt"
+      <li><a href="_sources/Plotly_Healthcare_Expenditure.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -224,11 +216,11 @@ over the lines, you can see more information.</p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/Plotly_Healthcare_Expenditure.txt"
+      <a href="_sources/Plotly_Healthcare_Expenditure.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

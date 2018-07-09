@@ -3,7 +3,7 @@ GitHub
 
 .. _github1:
 
-We assume that you have installed all the software on the previous
+We assume that you have either decided to work on the server or installed all the software on the previous
 :ref:`page <install>`. Now we start using GitHub_. GitHub allows you
 to collaborate with others. This is also the way that you publish your
 assignments so that we can grade them.
@@ -50,10 +50,9 @@ The final step is to upload your assignments; e.g. your jupyter notebook.
 uploading assignments
 ---------------------
 
-There are a number of ways in which you can get your assignments on github:
-
-* for the CV assignment that only uses markdown, you can create the CV.md file on-line and adjust the README file to create a link to this CV file on-line as well
-* if you created your CV off-line and need to get the relevant files on github or if you want to get your jupyter notebook on github, you can follow one of the following ways (depending on your media player, you may want to download the videos and then watch them):
+There are a number of ways in which you can get your assignments on
+github. Follow one of the following ways (depending on your media
+player, you may want to download the videos and then watch them):
 
     * `uploading your assignments with drag-and-drop using a browser <https://tilburgutube.uvt.nl/asset/detail/ZgVnJfSTQWPDobL3UDGgmB7m>`_
     * `uploading your assignments using the shell or terminal  <https://tilburgutube.uvt.nl/asset/detail/u2Wa4MIbMrNegaOjJR042sYG>`_ (see below for more detailed instructions)
@@ -67,7 +66,7 @@ OPTIONAL: More sophisticated use of github
 
 .. _optionalgithub1:
 
-This section is optional; it is not needed for the course. We will teach you how to use github from the command line. Moreover, we show you how you can convert your markdown CV into an html file and publish it on github as website. For this you need to install pandoc (and latex, if you want to use equations). Both pandoc and latex are :ref:`optional <optionalinstall>` on the :ref:`installation page <install>`.
+This section is optional; it is not needed for the course. We will teach you how to use github from the command line. Moreover, we show you how you can convert a markdown file (like your CV) into an html file and publish it on github as website. For this you need to install pandoc (and latex, if you want to use equations). Both pandoc and latex are :ref:`optional <optionalinstall>` on the :ref:`installation page <install>`.
 
 An introduction to GitHub can be found `here <http://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration>`_ 
 

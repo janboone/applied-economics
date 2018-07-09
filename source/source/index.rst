@@ -11,8 +11,13 @@ Welcome to Applied Economics!
 
 This website contains the material for the MSc course Applied Economics.
 
-**This website is under construction for 2017/2018**
+**This website is under construction for 2018/2019**
 
+
+For this course we use the following resources:
+
+* `Jean Tirole, Economics for the Common Good, <https://press.princeton.edu/titles/10919.html>`_
+* for students following the python track in this course: We are very happy that we partner with `datacamp <https://www.datacamp.com/>`_ for this course to teach you python. `Datacamp <https://www.datacamp.com/about>`_ offers great on-line courses for you to learn python and it allows us to track your progress...
 
 
 Contents:
@@ -21,14 +26,12 @@ Contents:
    :maxdepth: 2
 
 
-   practice			  
    installing
    plan
    github
    reporting
    assignment1
    git
-   assignment2
    programming
    advanced
    assignment3

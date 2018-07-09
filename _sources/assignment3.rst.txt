@@ -5,22 +5,19 @@ Final assignment
 
 * The python assignment you can do alone or with at max. one other
   student (i.e. max group size is 2).
-* deadline for the python assignment: January 31st, 2017
+* for the deadline for the python assignment, see :ref:`the page with the schedule <grade>`
 * `download the assignment template <https://janboone.github.io/applied-economics/_downloads/assignment_template.ipynb>`_
 * create a jupyter notebook which has extension ".ipynb". You publish
   this notebook on GitHub and add a link to your README file (created
   in assignment 1, and in the repository reported in the google form)
   so that we can find it. Note that when someone views the notebook on
   GitHub (with a decent browser), it is actually rendered as if the
-  person is running python (with the exception of plotly graphs).
-
+  person is running python (with some exceptions like plotly graphs).
 
 The idea of the assignment is that you report your findings in a
 transparent way that can easily be verified/reproduced by others.
 
-An example assignment can be found `here. <http://janboone.github.io/Deductible_Health_Insurance/>`_
-This python notebook is more elaborate than what we expect you to
-do. However, the following ingredients will be important when we
+The following ingredients will be important when we
 evaluate your assignment:
 
 * Start with a clear and transparent *question*.
@@ -51,18 +48,16 @@ evaluate your assignment:
   html. You do not have to do this, but it will impress us if you
   manage it.
 
-In December, Minke will present work she does for the Dutch government
-using python. This you can use as a starting point for your
-assignment. But you can also make the assignment based on models you
-have seen in other lectures; e.g. last year some students created a
-simulation model that was discussed in their MSc track.
-
+We will have some guest lectures of people using python in the real
+world. This you can use as a starting point for your assignment. But
+you can also make the assignment based on models you have seen in
+other lectures; e.g. last year some students created a simulation
+model that was discussed in their MSc track.
 
 ---------
 
 Examples of notebooks from previous years:
 
-* `first example <https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb>`_
-* `second example
-  <https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb>`_
-* `third example <https://joelleduff.github.io/Final/STindex.html>`_
+* `first example <https://joelleduff.github.io/Final/STindex.html>`_
+* `second example <https://joostbouten.github.io/AEA_Joost_Twan.html>`_
+

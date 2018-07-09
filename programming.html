@@ -1,38 +1,31 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Python &mdash; Apllied Economics 1.0 documentation</title>
-    
+    <title>Python &#8212; Apllied Economics 1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Apllied Economics 1.0 documentation" href="index.html" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Advanced topics" href="advanced.html" />
-    <link rel="prev" title="Second assignment" href="assignment2.html" />
+    <link rel="prev" title="OPTIONAL: Using Git" href="git.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">  
+  </head><body>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -43,16 +36,10 @@
 <h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction-to-python">
 <span id="id1"></span><h2>Introduction to python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h2>
-<p>In this lecture we look at three notebooks:</p>
-<ul class="simple">
-<li>Intro_to_python_for_economists.ipynb</li>
-<li>solving_model.ipynb</li>
-<li>Web_data.ipynb</li>
-</ul>
-<p>The simplest way to get access to these notebooks (and the one for next time) is to clone this repository: <a class="reference external" href="https://github.com/janboone/programming_notebooks">https://github.com/janboone/programming_notebooks</a></p>
-<p>You can follow this link and click on &#8220;Clone or download&#8221; and then &#8220;Download ZIP&#8221;. Once the zip-file is on your computer, you can unzip it. Then navigate towards it in the jupyter notebook to open the relevant file.</p>
-<p>The more sophisticated approach is to open a shell/terminal/command prompt and type: &#8220;git clone <a class="reference external" href="https://github.com/janboone/programming_notebooks.git">https://github.com/janboone/programming_notebooks.git</a>&#8220;</p>
-<p>This creates a directory &#8220;programming_notebooks&#8221; on your computer with all the relevant files.</p>
+<p>The simplest way to get access to the material that we use, is to clone <a class="reference external" href="https://github.com/janboone/python_economics">this repository</a></p>
+<p>You can follow this link and click on “Clone or download” and then “Download ZIP”. Once the zip-file is on your computer, you can unzip it. Then navigate towards it in the jupyter notebook to open the relevant file.</p>
+<p>The more sophisticated approach is to open a shell/terminal/command prompt and type: “git clone <a class="reference external" href="https://github.com/janboone/python_economics">https://github.com/janboone/python_economics</a>”</p>
+<p>This creates a directory “programming_notebooks” on your computer with all the relevant files.</p>
 </div>
 <div class="section" id="python-as-programming-language">
 <h2>Python as programming language<a class="headerlink" href="#python-as-programming-language" title="Permalink to this headline">¶</a></h2>
@@ -63,11 +50,11 @@ why python? The non-scientific answer is: because I like it a lot.</p>
 <li><a class="reference external" href="https://www.stat.washington.edu/~hoytak/blog/whypython.html">https://www.stat.washington.edu/~hoytak/blog/whypython.html</a></li>
 <li><a class="reference external" href="http://blog.monitor.us/2014/10/why-python-is-becoming-so-popular/">http://blog.monitor.us/2014/10/why-python-is-becoming-so-popular/</a></li>
 <li><a class="reference external" href="http://cyrille.rossant.net/why-using-python-for-scientific-computing/">http://cyrille.rossant.net/why-using-python-for-scientific-computing/</a></li>
-<li><a class="reference external" href="https://sites.google.com/site/pythonforscientists/python-vs-matlab">https://sites.google.com/site/pythonforscientists/python-vs-matlab</a></li>
+<li><a class="reference external" href="http://www.pyzo.org/python_vs_matlab.html">http://www.pyzo.org/python_vs_matlab.html</a></li>
 <li>google the question if you want more answers.</li>
 </ul>
-<p>We will program python using the ipython or jupyter notebook.
-One motivation to use the ipython notebook is based on a paper in the AER: <a class="reference external" href="https://www.youtube.com/watch?v=oP9Qcjq8UVI">https://www.youtube.com/watch?v=oP9Qcjq8UVI</a>
+<p>We will program python using the jupyter notebook.
+One motivation to use the jupyter notebook is based on a paper in the AER: <a class="reference external" href="https://www.youtube.com/watch?v=oP9Qcjq8UVI">https://www.youtube.com/watch?v=oP9Qcjq8UVI</a>
 Note that this is a presentation on a python conference having nothing to do with
 economics. The fact that this presentation uses an AER paper to
 motivate using the notebook, may induce a wee pause in which you
@@ -75,18 +62,10 @@ ponder the state of our discipline.</p>
 <p>After this pause, take a look at some notebooks:</p>
 <p><a class="reference external" href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a></p>
 <p>Links and resources for python:</p>
-<ul>
-<li><p class="first"><a class="reference external" href="http://www.cs.colostate.edu/~anderson/cs545/index.html/doku.php?id=useful_links">http://www.cs.colostate.edu/~anderson/cs545/index.html/doku.php?id=useful_links</a></p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><a class="reference external" href="https://scipy-lectures.github.io/">https://scipy-lectures.github.io/</a></li>
 <li><a class="reference external" href="http://www.physics.nyu.edu/pine/pymanual/html/pymanMaster.html">http://www.physics.nyu.edu/pine/pymanual/html/pymanMaster.html</a></li>
 </ul>
-</div></blockquote>
-</li>
-</ul>
-<p>Recall that for this lecture you are supposed to have followed the <a class="reference external" href="https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1">datacamp
-course.</a></p>
 </div>
 </div>
 
@@ -108,7 +87,7 @@ course.</a></p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="assignment2.html" title="previous chapter">Second assignment</a></li>
+      <li>Previous: <a href="git.html" title="previous chapter">OPTIONAL: Using Git</a></li>
       <li>Next: <a href="advanced.html" title="next chapter">Advanced topics</a></li>
   </ul></li>
 </ul>
@@ -116,21 +95,20 @@ course.</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/programming.txt"
+      <li><a href="_sources/programming.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -141,11 +119,11 @@ course.</a></p>
       &copy;2016, Jan Boone and Sjak Smulders.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/programming.txt"
+      <a href="_sources/programming.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

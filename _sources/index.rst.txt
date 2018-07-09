@@ -23,7 +23,7 @@ For this course we use the following resources:
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
 
    installing
@@ -33,7 +33,6 @@ Contents:
    assignment1
    git
    programming
-   advanced
    assignment3
 
 

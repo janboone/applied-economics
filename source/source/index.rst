@@ -26,8 +26,9 @@ Contents:
    :maxdepth: 1
 
 
-   installing
+
    plan
+   installing
    github
    reporting
    assignment1

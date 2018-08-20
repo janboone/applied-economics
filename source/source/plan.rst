@@ -34,7 +34,7 @@ plan
 ----
 
 The plan for this course in the academic year 2018/9 can be
-:download:`downloaded here <schedule.html>` or `click here. <schedule.html>`_
+:download:`downloaded here <schedule.html>` or `click here. <https://janboone.github.io/applied-economics/_downloads/schedule.html>`_
 
 ..
   csv-table:: Preliminary schedule, may be updated by announcements on BB:
@@ -108,7 +108,7 @@ Your grade is determined as follows:
   * `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_
   * `Pandas foundations <https://www.datacamp.com/courses/pandas-foundations>`_
   * you receive 1 point for each datacamp assignment that you finish in time
-  * see `the schedule <schedule.html>`_ and Datacamp for the deadlines
+  * see `the schedule <https://janboone.github.io/applied-economics/_downloads/schedule.html>`_ and Datacamp for the deadlines
 
 * you do a final assignment with which you can earn at max. 8 points.
 * Hence, your overall grade if you do the Python track is at max. 10 points.

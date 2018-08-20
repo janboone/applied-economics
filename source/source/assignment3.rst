@@ -5,7 +5,7 @@ Final assignment
 
 * The python assignment you can do alone or with at max. one other
   student (i.e. max group size is 2).
-* for the deadline for the python assignment, see :ref:`the page with the schedule <grade>`
+* for the deadline of the python assignment, see :ref:`the schedule. <https://janboone.github.io/applied-economics/_downloads/schedule.html>`_
 * `download the assignment template <https://janboone.github.io/applied-economics/_downloads/assignment_template.ipynb>`_
 * create a jupyter notebook which has extension ".ipynb". You publish
   this notebook on GitHub and add a link to your README file (created

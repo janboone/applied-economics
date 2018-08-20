@@ -115,6 +115,5 @@ Your grade is determined as follows:
 
 The final python assignment, you can --but you do not have to-- do with one other student.
 
-The deadline for the final python assignment is: Thursday January 31st, 2019. However, if you need your grade before the end of January, you need to submit your final assignment by Thursday January 17th, 2019. Let us know by email that your assignment needs to be graded early.
+Also the deadline for the final assignment can be found in `the schedule. <https://janboone.github.io/applied-economics/_downloads/schedule.html>`_
 
-The resit deadline for the python assignment is: Thursday August 15th, 2019. Let us know by email that you have submitted your assignment for the resit.

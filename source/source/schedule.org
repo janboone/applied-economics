@@ -39,3 +39,6 @@ From Datcamp, do the following courses:
 
 Finish the Intermediate course before September 22, 2018 and the Pandas foundations course before November 10, 2018.
 
+The deadline for the *final python assignment* is: Thursday January 31st, 2019. However, if you need your grade before the end of January, you need to submit your final assignment by Thursday January 17th, 2019. Let us know by email that your assignment needs to be graded early.
+
+The resit deadline for the python assignment is: Thursday August 15th, 2019. Let us know by email that you have submitted your assignment for the resit.

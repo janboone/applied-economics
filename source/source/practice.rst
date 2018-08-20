@@ -43,9 +43,6 @@ have done and replicate it.
 By the end of this course, you will be able to do this yourself. In
 fact, your :ref:`assignment <assignment>` is going to be exactly this!
 
-Before we can do this, we need to install some software. This we do in
-the next section.
-
 
 
 .. _Github: https://github.com

@@ -6,13 +6,9 @@ Python
 Introduction to python
 ----------------------
 
-The simplest way to get access to the material that we use, is to clone `this repository <https://github.com/janboone/python_economics>`_
+The notebook that we will use for the course is still under construction; to get a first idea of what we will do `click here. <https://janboone.github.io/python_economics/economics.html>`_
 
-You can follow this link and click on "Clone or download" and then "Download ZIP". Once the zip-file is on your computer, you can unzip it. Then navigate towards it in the jupyter notebook to open the relevant file.
-
-The more sophisticated approach is to open a shell/terminal/command prompt and type: "git clone https://github.com/janboone/python_economics"
-
-This creates a directory "programming_notebooks" on your computer with all the relevant files.
+Our philosophy of how we teach python can be found `here. <https://janboone.github.io/applied-economics/_downloads/teaching_python.html>`_
 
 
 Python as programming language

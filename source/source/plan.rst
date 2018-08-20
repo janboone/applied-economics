@@ -36,6 +36,9 @@ plan
 The plan for this course in the academic year 2018/9 can be
 :download:`downloaded here <schedule.html>` or `click here. <https://janboone.github.io/applied-economics/_downloads/schedule.html>`_
 
+**Important:** follow the steps in :ref:`assignment 1 <assignment1>`
+
+	  
 ..
   csv-table:: Preliminary schedule, may be updated by announcements on BB:
    :header: "day", "date", "time", "room", "teacher", "topic", "Python datacamp"
@@ -73,7 +76,7 @@ There is no need to follow the lectures of the option you have not chosen. To il
 python datacamp
 ---------------
 
-The Python datacamp column refers to the following website:
+The Datacamp column in the schedule refers to the following website:
 `<https://www.datacamp.com/home#tab_python-courses>`_. For this
 course, you need to follow the courses:
 
@@ -81,15 +84,12 @@ course, you need to follow the courses:
 + `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_
 + `Pandas foundation <https://www.datacamp.com/courses/pandas-foundations>`_
 
-
 You need to sign up for datacamp via the google-form that we provide. In this way: (i) we can monitor your progress (to see whether you finish your assignments in time; see Python grade below) and (ii) you have access to all datacamp courses free of charge (also the ones that you usually have to pay for).
 
 To follow the datacamp course, you do not need to install python on your
 computer; you simply work in your webbrowser. Look at the videos and
 do the exercises. Following the planning in the datacamp column makes
 sure that you are up-to-date for the python lectures.
-
-
 
 grade
 -----

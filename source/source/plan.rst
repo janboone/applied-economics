@@ -33,8 +33,8 @@ to the earlier issue and leave a comment in that "conversation".
 plan
 ----
 
-The plan for this course in the academic year 2017/2018 can be
-:download:`downloaded here. <AEA_Schedule_2017.pdf>`
+The plan for this course in the academic year 2018/9 can be
+:download:`downloaded here <schedule.html>` or `click here. <schedule.html>`_
 
 ..
   csv-table:: Preliminary schedule, may be updated by announcements on BB:
@@ -67,8 +67,7 @@ Your main choice is:
 
 * whether to do either the canon or python
 
-There is no need to follow the lectures of the option you have not chosen. To illustrate, if you choose, say, the canon, you do not need to attend the python lectures. If you do attend the python lectures, bring your laptop so that you can work along with the notebooks in class.
-
+There is no need to follow the lectures of the option you have not chosen. To illustrate, if you choose, say, the canon (taught by Sjak), you do not need to attend the python lectures (taught by Jan). If you do attend the python lectures, bring your laptop so that you can work along with the notebooks in class.
 
 
 python datacamp
@@ -104,14 +103,15 @@ Your grade is determined as follows:
 
 **Python grade:**
 
-* there are two datacamp assignments:
+* there are two datacamp assignments with deadlines:
 
-  * you need to finish `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_ before Wednesday Oct. 10 (2018) and
-  * you need to finish  `Pandas foundation <https://www.datacamp.com/courses/pandas-foundations>`_ before Wednesday Nov. 7 (2018)
+  * `Intermediate Python for Data Science <https://www.datacamp.com/courses/intermediate-python-for-data-science>`_
+  * `Pandas foundations <https://www.datacamp.com/courses/pandas-foundations>`_
   * you receive 1 point for each datacamp assignment that you finish in time
+  * see `the schedule <schedule.html>`_ and Datacamp for the deadlines
 
 * you do a final assignment with which you can earn at max. 8 points.
-* Hence, your overall grade for Python is at max. 10 points.
+* Hence, your overall grade if you do the Python track is at max. 10 points.
 
 The final python assignment, you can --but you do not have to-- do with one other student.
 

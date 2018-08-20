@@ -1,0 +1,41 @@
+#+OPTIONS: num:nil toc:nil
+
+* Schedule for 2018/2019
+
+** Lectures
+
+
+| Date       |        Time | Teacher | Location  | Topic                             | Datacamp                 |
+|------------+-------------+---------+-----------+-----------------------------------+--------------------------|
+| Wed 29 Aug | 12:45-14:30 | Jan     | CubeZ 218 | Intro python, markdown and github |                          |
+| Fri 31 Aug | 10:45-12:30 | Sjak    | CubeZ 22  |                                   | Intro (1,2)              |
+| Mon 3  Sep | 10:45-12:30 | Sjak    | CubeZ 21  |                                   | Intro (3)                |
+| Mon 10 Sep | 08:45-10:30 | Sjak    | CubeZ 21  |                                   | Intro (4)                |
+| Thu 13 Sep | 08:45-10:30 | Sjak    | CubeZ 21  |                                   | Intermediate (1,2)       |
+| Mon 17 Sep | 08:45-10:30 | Sjak    | CubeZ 21  |                                   | Intermediate (3,4)       |
+| Thu 20 Sep | 08:45-10:30 | Sjak    | CubeZ 21  |                                   | Intermediate (5)         |
+| Wed 3  Oct | 08:45-10:30 | Jan     | CubeZ 216 | Q&A python/datacamp               |                          |
+| Mon 8  Oct | 08:45-10:30 | Sjak    | CubeZ 21  |                                   | Pandas foundations (1,2) |
+| Fri 9  Nov | 12:45-14:30 | Sjak    | CubeZ 21  |                                   | Pandas foundations (3,4) |
+| Tue 13 Nov | 16:45-18:30 | Jan     | CubeZ 216 | The market                        |                          |
+| Thu 15 Nov | 12:45-14:30 | Jan     | CubeZ 220 | Asymmetric information            |                          |
+| Tue 20 Nov | 14:45-16:30 | Sjak    | CubeZ 21  |                                   |                          |
+| Tue 27 Nov | 08:45-10:30 | Jan     | CubeZ 216 | Financial crisis                  |                          |
+| Thu 29 Nov | 12:45-14:30 | Jan     | WZ 101    | Empirical research                |                          |
+| Tue 4  Dec | 08:45-10:30 | Sjak    | CubeZ 218 |                                   |                          |
+| Thu 6  Dec | 12:45-14:30 | Jan     | CubeZ 217 | Health care regulation            |                          |
+
+
+
+** Datacamp
+
+From Datcamp, do the following courses:
+
++ Intro: [[https://www.datacamp.com/courses/intro-to-python-for-data-science]], where the number refers to the chapter; i.e. Intro (3) means: finish chapter 3 "Functions and Packages" before the indicated lecture
++ Intermediate: [[https://www.datacamp.com/courses/intermediate-python-for-data-science]]
++ Pandas Foundations: [[https://www.datacamp.com/courses/pandas-foundations]]
+
+** Deadlines
+
+Finish the Intermediate course before September 22, 2018 and the Pandas foundations course before November 10, 2018.
+

@@ -1,352 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="author" content="Jan Boone" />
-  <title>Introduction Open Source</title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
-    <style type="text/css">code{white-space: pre;}</style>
-    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
+<meta charset="utf-8"/>
+<title>Python track in AEA</title>
+<meta name="author" content="(Jan Boone)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Python track in AEA</h1><h2 class="author">Jan Boone</h2><h2 class="date">Dept. of Economics, Tilburg University</h2><p class="date">Created: 2018-08-23 Thu 18:52</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-introduction">Introduction</a></li>
+<li><a href="#/slide-office-excel-and-word">Office and Excel</a></li>
+<li><a href="#/slide-open-source-word-processing">Open source word processing</a></li>
+<li><a href="#/slide-what-do-you-need">What do you need?</a></li>
+<li><a href="#/slide-working-in-the-cloud">Working in the cloud</a></li>
+<li><a href="#/slide-rules-of-the-game">Rules of the game</a></li>
+<li><a href="#/slide-assignment">Assignment 1</a></li>
+</ul>
+</div>
+</div>
+</section>
 
 <section>
-    <h1 class="title">Introduction Open Source</h1>
-    <h2 class="author">Jan Boone</h2>
-    <h3 class="date">Dept. of Economics, Tilburg University</h3>
+<section id="slide-introduction">
+<h2 id="introduction"><a id="org07b3cbf"></a>Introduction</h2>
 </section>
-<section id="TOC">
+<section id="slide-this-lecture">
+<h3 id="this-lecture"><a id="org966b8a3"></a>this lecture</h3>
 <ul>
-<li><a href="#/introduction">Introduction</a></li>
-<li><a href="#/office-excel-and-word">Office, Excel and Word!</a></li>
-<li><a href="#/open-source-word-processing">Open source word processing</a></li>
-<li><a href="#/what-do-you-need">What do you need?</a></li>
-<li><a href="#/working-in-the-cloud">Working in the cloud</a></li>
-<li><a href="#/assignment">Assignment</a></li>
-<li><a href="#/rules-of-the-game">Rules of the game</a></li>
-</ul>
-</section>
+<li>in this lecture, we look at:
 
-<section><section id="introduction" class="titleslide slide level1"><h1><a href="#/introduction">Introduction</a></h1></section><section id="this-lecture" class="slide level2">
-<h1><a href="#/this-lecture">this lecture</a></h1>
-<ul>
-<li><p>in this lecture, we look at:</p>
 <ul>
 <li>motivation to learn python</li>
-<li>why not Office?</li>
 <li>typing texts in markdown and latex</li>
 <li>markdown files on github</li>
 <li>first assignment</li>
+<li>first look at jupyter server</li>
+
 </ul></li>
+
 </ul>
-</section><section id="motivation" class="slide level2">
-<h1><a href="#/motivation">motivation</a></h1>
+
+</section>
+<section id="slide-motivation">
+<h3 id="motivation"><a id="org3d75d0b"></a>motivation</h3>
 <ul>
-<li><p>in this course we teach you</p>
+<li>in this course we teach you
+
 <ul>
 <li>to combine rigorous economics</li>
 <li>and how to present it in an understandable way</li>
 <li>while your results can be easily reproduced</li>
+
 </ul></li>
-<li><p>we do this by teaching you</p>
+
+<li>in the python track we do this by teaching you
+
 <ul>
 <li>a programming language: python</li>
 <li>how to create notebooks where you can explain your code and</li>
 <li>publish them on-line</li>
+
 </ul></li>
+
 </ul>
-</section><section id="examples" class="slide level2">
-<h1><a href="#/examples">examples</a></h1>
+
+
+</section>
+<section id="slide-examples">
+<h3 id="examples"><a id="orgf6bfad8"></a>things to learn</h3>
 <ul>
-<li><p>when you finish this course, you can</p>
+<li>when you finish this course, you can
+
 <ul>
 <li>solve models in python</li>
 <li>do simulations in python</li>
-<li>publish results like <a href="http://janboone.github.io/Deductible_Health_Insurance/">this</a></li>
-<li>examples from previous years</li>
-<li><a href="https://github.com/bartdegeus/assignment-3/blob/master/assignment-3.ipynb">first example</a></li>
-<li><a href="https://github.com/numeraire92/third-assignment/blob/master/Dahal_Nguyen_Huy_Obilor_-_Agent_based_modeling_approach_of_the_Greenwood-Jovanovic_model.ipynb">second example</a></li>
-<li><p><a href="https://joelleduff.github.io/Final/STindex.html">third example</a></p></li>
-<li><p>make interactive graphs like the following</p></li>
+<li>create a file or notebook like <a href="https://janboone.github.io/python_economics/economics.html">this</a></li>
+
 </ul></li>
+
 </ul>
-</section><section id="plotly-example" class="slide level2">
-<h1><a href="#/plotly-example">plotly example</a></h1>
-<iframe src="https://plot.ly/~janboone/56.embed"
-        height="600" width="100%"
-        scrolling="no" seamless="seamless"
-        frameBorder="0">
-</iframe>
 
 
-</section><section id="finishing-the-course" class="slide level2">
-<h1><a href="#/finishing-the-course">finishing the course</a></h1>
+</section>
+<section id="slide-finishing-the-course">
+<h3 id="finishing-the-course"><a id="org2165899"></a>finishing the course</h3>
 <ul>
-<li><p>helps you to present economics in a way that is</p>
+<li>helps you to present economics in a way that is
+
 <ul>
 <li>understandable and</li>
 <li>reproducible</li>
+
 </ul></li>
-<li><p>gives a good starting point to write your thesis</p></li>
-</ul>
-</section></section>
-<section><section id="office-excel-and-word" class="titleslide slide level1"><h1><a href="#/office-excel-and-word">Office, Excel and Word!</a></h1></section><section id="eh-no" class="slide level2">
-<h1><a href="#/eh-no">eh, no</a></h1>
-<ul>
-<li><p>you may think that Office is great for everything</p>
-<ul>
-<li>it can do all that needs to be done</li>
-<li>you have buttons all over the screen</li>
-<li>it must be good because it is expensive!</li>
-</ul></li>
-<li><p>in fact, it is not so great</p></li>
-</ul>
-</section><section class="slide level2">
 
-<ul>
-<li><p>let's start with Word:</p>
-<ul>
-<li>it combines editing and word processing</li>
-<li>unpleasant to type equations</li>
-<li>focused on printing texts</li>
-<li>you can add structure, but you are not forced to</li>
-</ul></li>
-</ul>
-</section><section class="slide level2">
+<li>gives a good starting point to write your thesis</li>
+<li>check <a href="https://janboone.github.io/applied-economics/index.html">the website</a> and Blackboard for relevant information</li>
 
-<ul>
-<li>Excel is great for programming?</li>
 </ul>
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">
-Relying on Excel for important calculations is like driving drunk: no matter how carefully you do it, a wreck is likely. <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a>
-</p>
-— Philip Stark (<span class="citation" data-cites="philipbstark">@philipbstark</span>) <a href="https://twitter.com/philipbstark/status/498683914592862208">August 11, 2014</a>
-</blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</section>
+</section>
+<section>
+<section id="slide-office-excel-and-word">
+<h2 id="office-excel-and-word"><a id="orgad115c8"></a>Office and Excel</h2>
+</section>
+<section id="slide-org21552e8">
+<h3 id="org21552e8">Excel is great for programming?</h3>
+<ul>
+<li><a href="https://twitter.com/philipbstark/status/498683914592862208">check this</a></li>
+<li>indeed, simple things can be done in excel</li>
+<li>e.g. keep track of your grades and calculate the average</li>
+<li>but possibilities are limited: it is not a programming language</li>
+<li>however, the main problem is reproducibility</li>
+<li>if you've done a serious project in excel, look at it again in 3 months time&#x2026;</li>
+
+</ul>
 
 
-</section><section id="excel" class="slide level2">
-<h1><a href="#/excel">Excel</a></h1>
-<pre><code>* indeed, simple things can be done in excel
-* e.g. keep track of your grades and calculate the average
-* but possibilities are limited: it is not a programming language
-* however, the main problem is reproducibility
-* if you&#39;ve done a serious project in excel, look at it again in 3 months time...</code></pre>
-</section></section>
-<section><section id="open-source-word-processing" class="titleslide slide level1"><h1><a href="#/open-source-word-processing">Open source word processing</a></h1></section><section id="markdown" class="slide level2">
-<h1><a href="#/markdown">markdown</a></h1>
+</section>
+</section>
+<section>
+<section id="slide-open-source-word-processing">
+<h2 id="open-source-word-processing"><a id="org51b04e5"></a>Open source word processing</h2>
+</section>
+<section id="slide-markdown">
+<h3 id="markdown"><a id="org8c01f53"></a>markdown</h3>
 <ul>
 <li>markdown allows you to create structure in a simple way</li>
 <li>examples are:</li>
+
 </ul>
-<pre><code>
-    this is a heading
-    =================
 
-    subheading
-    ----------
+<pre class="example">
 
-    * first bullet
-    * second bullet
+        this is a heading
+        =================
 
-    [link text](actual link, e.g. http://www.etc)
+        subheading
+        ----------
 
-    ![Alt text for image](/path/to/img.jpg &quot;Optional title&quot;)
-</code></pre>
+        * first bullet
+        * second bullet
+
+        [link text](actual link, e.g. http://www.etc)
+
+        ![Alt text for image](/path/to/img.jpg "Optional title")
+</pre>
+
 <ul>
 <li>look on the web for other syntax like footnotes etc.</li>
 <li>equations you can type in latex</li>
+
 </ul>
-</section><section id="latex" class="slide level2">
-<h1><a href="#/latex">latex</a></h1>
+
+</section>
+<section id="slide-latex">
+<h3 id="latex"><a id="orgea6c6cc"></a>latex</h3>
 <ul>
 <li>latex is great word processing software</li>
 <li>you should consider writing your thesis in latex</li>
 <li>but for now, we focus on writing math in latex</li>
 <li>you can guess what the following will do:</li>
-</ul>
-<pre><code>$x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
 
-\begin{equation}
-
-a^2 + b^2 = c^2
-
-\end{equation}
-</code></pre>
-<ul>
-<li>if you need something, just google; e.g. &quot;google latex phi&quot; or &quot;google latex empty set&quot; etc.</li>
 </ul>
-</section></section>
-<section><section id="what-do-you-need" class="titleslide slide level1"><h1><a href="#/what-do-you-need">What do you need?</a></h1></section><section id="install-software" class="slide level2">
-<h1><a href="#/install-software">Install software</a></h1>
+
+<pre class="example">
+    $x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
+
+    \begin{equation}
+
+    a^2 + b^2 = c^2
+
+    \end{equation}
+</pre>
+
 <ul>
-<li><a href="https://janboone.github.io/applied-economics/installing.html">here</a> you find the software that you need to install</li>
-<li><p>this includes:</p>
-<ul>
-<li>git</li>
-<li>anaconda version of python and the notebook</li>
-</ul></li>
+<li>if you need something, just google; e.g. "google latex phi" or
+"google latex empty set" etc.</li>
+
 </ul>
-</section></section>
-<section><section id="working-in-the-cloud" class="titleslide slide level1"><h1><a href="#/working-in-the-cloud">Working in the cloud</a></h1></section><section id="github" class="slide level2">
-<h1><a href="#/github">github</a></h1>
+
+</section>
+</section>
+<section>
+<section id="slide-what-do-you-need">
+<h2 id="what-do-you-need"><a id="org08450bf"></a>What do you need?</h2>
+</section>
+<section id="slide-install-software">
+<h3 id="install-software"><a id="org3a5e9ec"></a>Install software</h3>
 <ul>
-<li><p>github allows you to</p>
+<li>you do not need to install anything for the course</li>
+<li>you will be working on the <a href="https://russet.uvt.nl/hub/home">jupyter server</a></li>
+<li>if you want to install things on your own computer: <a href="https://janboone.github.io/applied-economics/installing.html">here</a>
+you find the relevant instructions</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-working-in-the-cloud">
+<h2 id="working-in-the-cloud"><a id="orgdd23c2b"></a>Working in the cloud</h2>
+</section>
+<section id="slide-github">
+<h3 id="github"><a id="org853008d"></a>github</h3>
+<ul>
+<li>github allows you to
+
 <ul>
 <li>publish web pages (gh-pages)</li>
-<li>work &quot;in the cloud&quot; with version control</li>
+<li>work "in the cloud" with version control</li>
 <li>collaborate in the cloud</li>
-<li>have different versions (&quot;branches&quot;) of the same project</li>
+<li>have different versions ("branches") of the same project</li>
+
 </ul></li>
+
 <li>version control takes a bit of time to learn</li>
 <li>but once you get it, the benefits are huge!</li>
-<li><p>for this course learning git is optional</p></li>
+<li>for this course learning git is optional</li>
+<li>you can just drag and drop your notebooks on github as described <a href="https://janboone.github.io/applied-economics/github.html">here</a></li>
+
 </ul>
-</section><section id="workflow" class="slide level2">
-<h1><a href="#/workflow">workflow</a></h1>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-rules-of-the-game">
+<h2 id="rules-of-the-game"><a id="org8ddc390"></a>Rules of the game</h2>
+</section>
+<section id="slide-orgd094d10">
+<h3 id="orgd094d10">to learn python we use <a href="https://www.datacamp.com/home">datacamp</a> and lectures:</h3>
 <ul>
-<li>sign up at github (this you do once...)</li>
-<li><p>for a new repository, you do the following once:</p>
-<ul>
-<li>create a repository on github</li>
-<li><code>git clone</code> the repository</li>
-</ul></li>
-<li><p>when working on this project, you either do the following:</p>
-<ul>
-<li><code>cd</code> into the directory</li>
-<li>edit the files and create new ones</li>
-<li><code>git add .</code></li>
-<li><code>git commit -m &quot;First version of document&quot;</code></li>
-<li><code>git push origin master</code></li>
-</ul></li>
-<li><p>or you use the web-interface of github</p></li>
+<li>you need to finish the datacamp courses in time (2 points of your final grade)</li>
+<li>see the <a href="https://janboone.github.io/applied-economics/_downloads/schedule.html">schedule</a> for the deadlines</li>
+<li>for the python part, attend my lectures in the <a href="https://janboone.github.io/applied-economics/_downloads/schedule.html">schedule</a> (no need to attend Sjak's lectures; except for this Friday)</li>
+<li>in fact, you do not need to attend my lectures</li>
+<li>but if you do attend the lectures, you participate actively</li>
+
 </ul>
-</section></section>
-<section><section id="assignment" class="titleslide slide level1"><h1><a href="#/assignment">Assignment</a></h1></section><section id="first-assignment" class="slide level2">
-<h1><a href="#/first-assignment">first assignment</a></h1>
+
+</section>
+<section id="slide-org2b2e41f">
+<h3 id="org2b2e41f">to get a grade for the python track:</h3>
 <ul>
-<li>create a github account at <a href="https://github.com/">github</a></li>
-<li>sign in with your new account and create a repository <code>assignments</code> (note that when creating the repository, click on &quot;Initialize this repository with a README&quot;)</li>
-<li>use this README file in the repository to present us with the links to your assignments; like <a href="https://github.com/janboone/assignments">here</a></li>
-<li>fill in the <a href="https://goo.gl/forms/Le6X2HGvPxGH5jV43">google form</a></li>
-<li>deadline for filling in the google form is: Wednesday September 20, 2017</li>
-<li><p>if you do not sign up in time, you cannot follow the python track of this course!</p></li>
-<li><p>for the first assignment, you follow either of two routes</p>
-<ul>
-<li>the simple way</li>
-<li>the experienced way</li>
-</ul></li>
+<li>finish assignment 1 (see below) before the deadline</li>
+<li>attend the career services workshops (see Sjak's lecture on Friday)</li>
+<li>read <a href="https://press.princeton.edu/titles/10919.html">Tirole's book</a> to get ideas on how to work with economics "in the real world"; this will help you with the final assignment and with your thesis</li>
+<li>datacamp assignments</li>
+<li><a href="https://janboone.github.io/applied-economics/assignment3.html">final assignment</a></li>
+<li>deadlines for the final assignment are also in the <a href="https://janboone.github.io/applied-economics/_downloads/schedule.html">schedule</a>.</li>
+
 </ul>
-</section><section id="simple-way" class="slide level2">
-<h1><a href="#/simple-way">simple way</a></h1>
+
+
+</section>
+</section>
+<section>
+<section id="slide-assignment">
+<h2 id="assignment"><a id="org8d772bc"></a>Assignment 1</h2>
+</section>
+<section id="slide-first-assignment">
+<h3 id="first-assignment"><a id="orgc2c8cdc"></a><span class="todo TODO">TODO</span> </h3>
 <ul>
-<li>the reason why this is &quot;simple&quot;, is because everything happens on-line</li>
-<li>in the web-browser, go to your repository <code>assignments</code></li>
-<li>make sure that you are signed in (with your github account)</li>
-<li>click on the button <code>create new file</code></li>
-<li>as the name of this new file, type <code>CV.md</code></li>
-<li>Below <code>&lt;&gt; Edit new file</code> start typing markdown</li>
-<li>every now and again, you can click <code>Preview</code> to see what it looks like</li>
-<li><p>make sure to save your work regularly</p>
-<ul>
-<li>by pressing the <code>Commit new file</code> button at the bottom</li>
-<li>you can add a message explaining what you change in each &quot;commit&quot;</li>
-</ul></li>
-<li>as an example of such a CV --in progress-- see <a href="https://github.com/janboone/assignments/blob/master/CV.md">this one</a></li>
-<li><p>once you are finished, copy the web address of your CV into the README file, as I have done <a href="https://github.com/janboone/assignments">here</a></p></li>
+<li>follow and finish <a href="https://janboone.github.io/applied-economics/assignment1.html">these four steps</a></li>
+<li>type your first python and markdow at the <a href="https://russet.uvt.nl/hub/home">jupyter server</a></li>
+
 </ul>
-</section><section id="experienced-way" class="slide level2">
-<h1><a href="#/experienced-way">experienced way</a></h1>
-<ul>
-<li>this is &quot;experienced&quot; because you will be working on your own computer to do this (not on-line)</li>
-<li>this means you have to clone your repository to your computer</li>
-<li>create/edit the file CV.md</li>
-<li>follow the <code>Command line</code> instructions above under &quot;workflow&quot;</li>
-<li>or <a href="https://janboone.github.io/applied-economics/github.html#optional-more-sophisticated-use-of-github">here</a> for more elaborate instructions</li>
-<li>in the README file add a link to this markdown version of your CV (<code>CV.md</code>)</li>
-</ul>
-</section></section>
-<section><section id="rules-of-the-game" class="titleslide slide level1"><h1><a href="#/rules-of-the-game">Rules of the game</a></h1></section><section id="what-is-next" class="slide level2">
-<h1><a href="#/what-is-next">What is next?</a></h1>
-<ul>
-<li>go to <a href="https://janboone.github.io/applied-economics/installing.html">this page</a> and install the relevant software</li>
-<li><p>if something goes wrong:</p>
-<ul>
-<li>do not panic</li>
-<li>google the error message that you get (you are unlikely to be the first)</li>
-<li>follow the solution that is suggested</li>
-<li>if that does not work, bring you laptop to the next lecture and we look at it together</li>
-</ul></li>
-</ul>
-</section><section class="slide level2">
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
 
-<ul>
-<li>everything you need to know is on <a href="https://janboone.github.io/applied-economics/index.html">the website</a></li>
-<li><p>use the links to tutorials that I provide or google yourself for tutorials on</p>
-<ul>
-<li>markdown</li>
-<li>latex</li>
-<li>github</li>
-<li>python</li>
-</ul></li>
-<li><p>the point of these lectures is that you teach yourself how to use open source software!</p></li>
-</ul>
-<!--
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
 
-How to turn this markdown file into a presentation:
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
 
-pandoc -s --mathjax --slide-level 2 --toc --toc-depth=1 -t revealjs markdown_github.md -V theme=solarized -o markdown_github.html
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
 
-pandoc --slide-level 2 --toc --toc-depth=1 -t beamer markdown_github.md -V theme:Montpellier -o markdown_github.pdf
-
-
-
-
-new slide:
-
-------------
-
-
--->
-
-
-</section></section>
-    </div>
-  </div>
-
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.min.js"></script>
-
-  <script>
-
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        theme: 'solarized', // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
-//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
-    </script>
-  </body>
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
 </html>

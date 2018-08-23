@@ -1,4 +1,4 @@
-% Introduction Open Source
+% Python track Applied Economic Analysis
 % Jan Boone 
 % Dept. of Economics, Tilburg University
 

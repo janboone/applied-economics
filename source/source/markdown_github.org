@@ -84,11 +84,13 @@
   :CUSTOM_ID: open-source-word-processing
   :END:
 
+
 ** markdown
    :PROPERTIES:
    :CUSTOM_ID: markdown
    :END:
 
+-  see Tirole (2017: 447) for an explanation why open source is so powerful
 -  markdown allows you to create structure in a simple way
 -  examples are:
 
@@ -182,8 +184,10 @@
 
   - you need to finish the datacamp courses in time (2 points of your final grade)
   - see the [[https://janboone.github.io/applied-economics/_downloads/schedule.html][schedule]] for the deadlines
-  - for the python part, attend my lectures in the [[https://janboone.github.io/applied-economics/_downloads/schedule.html][schedule]] (no need to attend Sjak's lectures; except for this Friday)
-  - in fact, you do not need to attend my lectures
+  - for the python part, attend my lectures in the [[https://janboone.github.io/applied-economics/_downloads/schedule.html][schedule]]
+    - from Sjak's lectures you have to attend 31st August
+    - from Marion's lectures you have to attend 10, 17 and 20th September
+  - if you want to learn everything on your own, you do not need to attend my lectures
   - but if you do attend the lectures, you participate actively
 
 ** to get a grade for the python track:

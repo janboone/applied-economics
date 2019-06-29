@@ -1,0 +1,3 @@
++ copy template to repos.
++ correct link to template under Final Assignment: put this together with notebook in the master branch
++ link to first lecture

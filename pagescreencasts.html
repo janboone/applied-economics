@@ -39,6 +39,56 @@
 <b>Under construction</b>
 </p>
 
+<p>
+This page contains the screencasts for the python track of the course <a href="index.html#ID-beb61442-dd2e-4caa-b977-d6c6cef8f95c">Applied Economic Analysis</a>.
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org497358f">How are the screencasts supposed to help?</a>
+<ul>
+<li><a href="#org7f1ff35">Why are there screencasts?</a></li>
+<li><a href="#org1cd22d2">Suggested use of the screencasts</a></li>
+<li><a href="#org8d7425b">Prerequisite knowledge</a></li>
+<li><a href="#orgb6eb796">Libraries we use</a></li>
+</ul>
+</li>
+<li><a href="#org3bcecee">Compare jupyter notebook/lab and emacs</a>
+<ul>
+<li><a href="#org8f82f7e">Why am I using emacs</a></li>
+<li><a href="#orgde2db62">Jupyter vs Emacs</a></li>
+</ul>
+</li>
+<li><a href="#org41eab9a">The market</a>
+<ul>
+<li><a href="#org7ebd93e">why do we love the market?</a></li>
+<li><a href="#orga37a3dc">why do others not love the market?</a></li>
+</ul>
+</li>
+<li><a href="#org505fe19">Asymmetric information</a>
+<ul>
+<li><a href="#org3874d54">adverse selection</a></li>
+<li><a href="#orga900b16">moral hazard</a></li>
+</ul>
+</li>
+<li><a href="#org21ee854">Financial crisis</a>
+<ul>
+<li><a href="#org0f53094">why is there a problem in financial markets?</a></li>
+<li><a href="#org435cea5">why these bonus contracts?</a></li>
+</ul>
+</li>
+<li><a href="#org9e26136">Using Python for empirical research</a>
+<ul>
+<li><a href="#orgcfef45a">API's to get data</a></li>
+<li><a href="#org367f575">hacker statistics</a></li>
+</ul>
+</li>
+<li><a href="#org376ba9e">Regulation in healthcare markets</a></li>
+</ul>
+</div>
+</div>
 
 <div id="outline-container-org497358f" class="outline-2">
 <h2 id="org497358f">How are the screencasts supposed to help?</h2>
@@ -136,7 +186,7 @@ Things you should be familiar with is the syntax of python (e.g. the role of spa
 </div>
 
 <div id="outline-container-org3bcecee" class="outline-2">
-<h2 id="org3bcecee"><span class="todo TODO">TODO</span> Compare jupyter notebook/lab and emacs</h2>
+<h2 id="org3bcecee">Compare jupyter notebook/lab and emacs</h2>
 <div class="outline-text-2" id="text-org3bcecee">
 </div>
 <div id="outline-container-org8f82f7e" class="outline-3">
@@ -159,8 +209,9 @@ Further, Emacs makes it easier to give a presentation in the screencast than jup
 <li>evaluating a code cell with python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)</li>
 <li>to get help on a function, type e.g. <code>np.arange?</code> in a code cell and evaluate the cell</li>
 <li>to type text in a jupyter notebook, turn a code-cell into a Markdown cell; in Emacs you can simply type text</li>
-<li>to create a new code cell in jupyter: press a (new cell above) or b (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the Esc key); in Emacs (and org-mode version &gt;= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)</li>
-<li>use the Tab key to complete function, variable etc. names. Works both in jupyter and Emacs.</li>
+<li>to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the Esc key); in Emacs (and org-mode version &gt;= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)</li>
+<li>use the Tab key to complete function, variable etc. names. Works both in jupyter and Emacs</li>
+<li>to get greek letters in a code block of a jupyter notebook, use the latex expression for the greek letter and type TAB; e.g.type <code>\alpha</code> and then press TAB</li>
 <li>add <code>%matplotlib inline</code> after importing <code>matplotlib.pyplot</code> to get the figures in the notebook/file itself</li>
 </ul>
 </div>
@@ -464,6 +515,153 @@ Questions you should be able to answer:
 
 <div id="outline-container-org21ee854" class="outline-2">
 <h2 id="org21ee854">Financial crisis</h2>
+<div class="outline-text-2" id="text-org21ee854">
+</div>
+<div id="outline-container-org0f53094" class="outline-3">
+<h3 id="org0f53094">why is there a problem in financial markets?</h3>
+<div class="outline-text-3" id="text-org0f53094">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/petP6Bdf8Pk" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>limited liability</li>
+<li>relu activation function</li>
+<li>first mention of "broadcasting" (but no need to understand it)</li>
+<li>draw two dimensional array (that is a matrix) from a normal distribution</li>
+<li>we calculate the mean across the rows of a two dimensional array with <code>axis=0</code>; <code>axis=1</code> calculates the mean across columns</li>
+</ul>
+
+<p>
+Question you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>rewrite the code with the relu function for the case where the firm has equity equal to 10; your plot should be the same as the one in the notebook with <code>equity=10</code>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org435cea5" class="outline-3">
+<h3 id="org435cea5">why these bonus contracts?</h3>
+<div class="outline-text-3" id="text-org435cea5">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/-BzxZU8f1pU" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>for the derivation of some results we use <a href="https://www.gnu.org/software/emacs/manual/html_mono/calc.html">Emacs calc</a>; you do not need to know how this works, but you should be able to replicate the derivations</li>
+<li>if you want to do symbolic math yourself on the computer, you can consider using <a href="https://www.sympy.org/en/">SymPy</a> in a jupyter notebook but we do not cover SymPy in this course</li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>the video covers the second subsection of "why these bonus contracts?" in the notebook; you should be able to cover the first subsection "moral hazard"</li>
+<li>the second subsection "moral hazard and adverse selection" defines the function <code>profit</code> in a different way; you should be able to follow what it does and plot the probability of the average outcome (\(q\)) against the top trader's outside option.</li>
+<li>as the outside option for the top trader (high type) increases, why does the bank not increase \(w\) and \(b\) in such a way that \(R=w/b\) remains constant? Then risk taking by the top trader would be unaffected. Why would this be (too) expensive for the bank?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e26136" class="outline-2">
+<h2 id="org9e26136">Using Python for empirical research</h2>
+<div class="outline-text-2" id="text-org9e26136">
+</div>
+<div id="outline-container-orgcfef45a" class="outline-3">
+<h3 id="orgcfef45a">API's to get data</h3>
+<div class="outline-text-3" id="text-orgcfef45a">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/pstyrBrwXqw" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of API <a href="https://wbdata.readthedocs.io/en/stable/">wbdata</a> to access World Bank's databases</li>
+<li>use of <code>wb.search_indicators</code> to find indicators on a certain topic</li>
+<li>create a dictionary of indicators and column names and then download these data into a pandas' dataframe</li>
+<li>we do this for two sets of indicators and then use <code>pd.merge</code> to merge these dataframes</li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>use <code>pd.merge?</code> to find out what <code>how</code> and <code>suffixes</code> can do in a <code>pd.merge</code> statement</li>
+<li>use the wbdata documentation to find the different themes on which the World bank has data</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org367f575" class="outline-3">
+<h3 id="org367f575">hacker statistics</h3>
+<div class="outline-text-3" id="text-org367f575">
+</div>
+<div id="outline-container-org8ccdecd" class="outline-4">
+<h4 id="org8ccdecd">high school puzzles</h4>
+<div class="outline-text-4" id="text-org8ccdecd">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/s1stRzO8a0Q" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>program a statistical problem with coin throws in python</li>
+<li>repeat this 10,000 times to see what the properties are of such an experiment</li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>program the experiment with a dark cupboard containing 6 red socks and 14 blue socks. You randomly draw 2 socks (without replacement) from the cupboard. What is the probability that you draw two matching socks from the cupboard? Note that this you can calculate yourself, so you can check whether your code gives the right answer: \(\frac{6}{20} \frac{5}{19} + \frac{14}{20} \frac{13}{19}\)</li>
+<li>solve this section in the notebook: which of the two experiments lasts longer on average? Why?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcb22117" class="outline-4">
+<h4 id="orgcb22117">statistics</h4>
+<div class="outline-text-4" id="text-orgcb22117">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/aaDtTmNlWiY" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>distribution and standard deviation of a sample mean</li>
+<li>simulating a hypothesis test</li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>what is the "statistical name" for <code>np.std(mus)</code> in the video?</li>
+<li>what is the idea behind the hypothesis test in the video?</li>
+<li>finish the statistics section in the notebook</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org376ba9e" class="outline-2">
+<h2 id="org376ba9e">Regulation in healthcare markets</h2>
 </div>
 </div>
 <div id="postamble" class="status">

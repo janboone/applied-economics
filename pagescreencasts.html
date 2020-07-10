@@ -39,8 +39,9 @@
 <b>Under construction</b>
 </p>
 
+
 <p>
-This page contains the screencasts for the python track of the course <a href="index.html#ID-beb61442-dd2e-4caa-b977-d6c6cef8f95c">Applied Economic Analysis</a>.
+This page contains the screencasts for the python track of the course <a href="index.html#python_track_AEA">AEA</a>
 </p>
 
 <div id="table-of-contents">
@@ -53,6 +54,11 @@ This page contains the screencasts for the python track of the course <a href="i
 <li><a href="#org1cd22d2">Suggested use of the screencasts</a></li>
 <li><a href="#org8d7425b">Prerequisite knowledge</a></li>
 <li><a href="#orgb6eb796">Libraries we use</a></li>
+</ul>
+</li>
+<li><a href="#Short_introduction_to_JupyterLab">Short introduction to JupyterLab</a>
+<ul>
+<li><a href="#org55e2c30">getting the repository in colab</a></li>
 </ul>
 </li>
 <li><a href="#org3bcecee">Compare jupyter notebook/lab and emacs</a>
@@ -85,7 +91,13 @@ This page contains the screencasts for the python track of the course <a href="i
 <li><a href="#org367f575">hacker statistics</a></li>
 </ul>
 </li>
-<li><a href="#org376ba9e">Regulation in healthcare markets</a></li>
+<li><a href="#org376ba9e">Regulation in healthcare markets</a>
+<ul>
+<li><a href="#org42617ae">getting the data ready</a></li>
+<li><a href="#org4ccf362">plot and model</a></li>
+<li><a href="#upload_data_on_the_university_server">upload data on the university server</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -106,7 +118,7 @@ The way we solve this in class is to give plenty of time to solve the questions 
 </p>
 
 <p>
-We cannot do this with a screencast. Chances are, you understand how fast-forward works. Hence, the screencasts give you hints on how to finish the notebook but it does not give you step-by-step answers for each question.
+We cannot do this with a screencast. Chances are, you understand how fast-forward works on the video. Hence, the screencasts give you hints on how to finish the notebook but it does not give you step-by-step answers for each question. If you still get stuck, ask us during the tutorials.
 </p>
 </div>
 
@@ -114,7 +126,7 @@ We cannot do this with a screencast. Chances are, you understand how fast-forwar
 <h3 id="org7f1ff35">Why are there screencasts?</h3>
 <div class="outline-text-3" id="text-org7f1ff35">
 <p>
-The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
 </p>
 </div>
 </div>
@@ -146,7 +158,7 @@ As this is not possible with a screencast, here are some tips on how to deal wit
 Python error messages:
 </p>
 <ul class="org-ul">
-<li>start reading the error message at the end; hence scroll down in your notebook to see the last line. This will usually give a clue of what is happening</li>
+<li>start reading the error message at the end; hence scroll down in your notebook to see the last line of the error message. This will usually give a clue of what is happening</li>
 <li>if you do not know what the last line means, use copy/paste to google it or go to <a href="https://stackoverflow.com/">stackoverflow</a> directly</li>
 <li>reading "upwards" from the last line, you can trace how the error was generated</li>
 </ul>
@@ -185,6 +197,97 @@ Things you should be familiar with is the syntax of python (e.g. the role of spa
 </div>
 </div>
 
+<div id="outline-container-orgee0901e" class="outline-2">
+<h2 id="Short_introduction_to_JupyterLab">Short introduction to JupyterLab</h2>
+<div class="outline-text-2" id="text-Short_introduction_to_JupyterLab">
+<p>
+You can use JupyterLab on the Tilburg University server. But you can also install it locally on your computer using the <a href="https://www.anaconda.com/products/individual">Anaconda distribution</a>. The basics of the following introduction are the same in both cases (and for google colab).
+</p>
+
+<p>
+The video was recorded using an older version of the website; but it will look similar in your year.
+</p>
+
+<p>
+The goal of this video is to give you an introduction to JupyterLab; not an introduction to python. So, do not worry if you do not understand the python code that is typed and evaluated.
+</p>
+
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/EFOmmjnYGHs" frameborder="0" allowfullscreen>Introduction to JupyterLab</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>using <code>git</code> to "clone" the <code>applied-economics</code> repository on JupyterLab;</li>
+<li>difference between a code cell and a markdown cell in a jupyter notebook;</li>
+<li>you can use the menu at the top to switch between Markdown and Code;</li>
+<li>you evaluate both a code cell and a markdown cell by pressing the SHIFT and ENTER keys at the same time;</li>
+<li>if you want to edit an evaluated markdown cell, go to the cell and press ENTER; or double click on the cell with your mouse;</li>
+<li>how to create headings (using <code>#</code>) and bullet lists (using <code>*</code>) in markdown;</li>
+<li>create a link in markdown;</li>
+<li>how to type math in markdown using <a href="https://www.latex-project.org/">latex</a> and the delimiters <code>$ $</code></li>
+<li>in a code cell, you can type python code:
+<ul class="org-ul">
+<li>this can be useful if you want to make notes on your datacamp courses</li>
+<li>type and evaluate the python code (from datacamp) and explain what the code does in a markdown cell;</li>
+</ul></li>
+<li>if you have long variable or function names, use the TAB key to complete the names;</li>
+<li>this also works if you want to type functions associated with a library like <code>numpy</code>
+<ul class="org-ul">
+<li>e.g.type <code>np.ara</code> and then TAB to see the completions;</li>
+</ul></li>
+<li>apply the numpy <code>sum</code> function to an array <code>my_list</code>: <code>np.sum(my_list</code>) or <code>my_list.sum()</code></li>
+<li>create a plot using <code>matplotlib.pyplot</code> and add labels to the axes, a title to the figure and a legend.</li>
+<li>when you are finished with a notebook, you can close the file and do not forget to close the kernel as well (see the video on how to do this)
+<ul class="org-ul">
+<li>if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate python code anymore.</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you can try before continuing:
+</p>
+<ul class="org-ul">
+<li>in a markdown cell, we can create \(\alpha\) by typing latex <code>$\alpha$</code>; now in a code cell type <code>\alpha</code> and then the TAB key; this gives you the <i>variable</i> \(\alpha\);</li>
+<li>typing in a code cell \(\alpha = 5\) gives this variable \(\alpha\) the value 5;</li>
+<li>plot the function \(f(x)=x^3\) on the interval \([-1,1]\).</li>
+</ul>
+
+<p>
+If you want to know more about the use of JupyterLab, there are a number of introductions to JupyterLab on the web. Here is one (start video at 9 minutes): <a href="https://www.youtube.com/watch?time_continue=152&amp;v=Gzun8PpyBCo&amp;feature=emb_logo">https://www.youtube.com/watch?time_continue=152&amp;v=Gzun8PpyBCo&amp;feature=emb_logo</a>
+</p>
+
+<p>
+You can also google "jupyterlab introduction" and the <a href="https://jupyterlab.readthedocs.io/en/stable/">documentation</a> can be useful as well.
+</p>
+</div>
+
+<div id="outline-container-org55e2c30" class="outline-3">
+<h3 id="org55e2c30">getting the repository in colab</h3>
+<div class="outline-text-3" id="text-org55e2c30">
+<p>
+If for some reason you would like to use the notebook on <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">google colab</a> (e.g. because the university server is temporarily down), the following video shows how to import the applied economics repository into colab.
+</p>
+
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/LVt0yagCwD8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in the video:
+</p>
+<ul class="org-ul">
+<li>go to google colab; then from the menu: File =&gt; Upload notebook</li>
+<li>in pop-up window click on the GitHub tab and copy/paste the web address of the github repository that you would like to upload; in our case <code>https://github.com/janboone/applied-economics</code></li>
+<li>if you want to install a new library in colab, e.g. wbdata, type <code>!pip install wbdata</code></li>
+<li>install all libraries such that you can run the cell with import statements without errors</li>
+</ul>
+</div>
+</div>
+</div>
+
 <div id="outline-container-org3bcecee" class="outline-2">
 <h2 id="org3bcecee">Compare jupyter notebook/lab and emacs</h2>
 <div class="outline-text-2" id="text-org3bcecee">
@@ -205,13 +308,16 @@ Further, Emacs makes it easier to give a presentation in the screencast than jup
 <div id="outline-container-orgde2db62" class="outline-3">
 <h3 id="orgde2db62">Jupyter vs Emacs</h3>
 <div class="outline-text-3" id="text-orgde2db62">
+<p>
+When you see my use Emacs in the videos, you can spot some differences with JupyterLab:
+</p>
 <ul class="org-ul">
 <li>evaluating a code cell with python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)</li>
 <li>to get help on a function, type e.g. <code>np.arange?</code> in a code cell and evaluate the cell</li>
 <li>to type text in a jupyter notebook, turn a code-cell into a Markdown cell; in Emacs you can simply type text</li>
-<li>to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the Esc key); in Emacs (and org-mode version &gt;= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)</li>
-<li>use the Tab key to complete function, variable etc. names. Works both in jupyter and Emacs</li>
-<li>to get greek letters in a code block of a jupyter notebook, use the latex expression for the greek letter and type TAB; e.g.type <code>\alpha</code> and then press TAB</li>
+<li>to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the ESC key); in Emacs (and org-mode version &gt;= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)</li>
+<li>use the TAB key to complete function, variable etc. names. Works both in jupyter and Emacs</li>
+<li>to get greek letters in a code block of a jupyter notebook, use the latex expression for the greek letter (without the delimiters <code>$ $</code>) and type TAB; e.g.type <code>\alpha</code> and then press TAB</li>
 <li>add <code>%matplotlib inline</code> after importing <code>matplotlib.pyplot</code> to get the figures in the notebook/file itself</li>
 </ul>
 </div>
@@ -662,6 +768,110 @@ Questions you should be able to answer:
 
 <div id="outline-container-org376ba9e" class="outline-2">
 <h2 id="org376ba9e">Regulation in healthcare markets</h2>
+<div class="outline-text-2" id="text-org376ba9e">
+<p>
+In this lecture we analyze Dutch healthcare data from <a href="https://www.vektis.nl/open-data">Vektis</a> using <code>pandas</code>, <code>matplotlib</code> and <code>pymc3</code>.
+</p>
+</div>
+
+<div id="outline-container-org42617ae" class="outline-3">
+<h3 id="org42617ae">getting the data ready</h3>
+<div class="outline-text-3" id="text-org42617ae">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/X6XNd2NaBpg" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>importing data directly from the web using <code>urllib;</code>
+<ul class="org-ul">
+<li>see subsection <a href="#upload_data_on_the_university_server">upload data on the university server</a> below to see how to get your data on the university server when using JupyterLab;</li>
+</ul></li>
+<li>how to read in a csv file as a dataframe using <code>pd.read_csv()</code>;</li>
+<li>how to rename columns in a pandas' dataframe using a dictionary;</li>
+<li>how create a new column/variable which equals the sum of a list of columns;</li>
+<li>using <code>axis</code> to specify whether an action is supposed to be applied across rows (<code>axis=0</code>) or columns (<code>axis=1</code>);</li>
+<li>using <code>df.replace()</code> to replace values in a dataframe, again using a dictionary;</li>
+<li>change the type of a column/variable using <code>.astype();</code></li>
+<li>using <code>numpy</code> functions on columns;</li>
+<li>using a <code>groupby</code> to aggregate data to the level specified by the list of columns in the groupby
+<ul class="org-ul">
+<li>in the video we aggregate to age/gender categories, aggregating over postal-code observations.</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>what is the average expenditure (not log expenditure) across ages and postal codes for men and women?</li>
+<li>what is the average expenditure per age category (across gender and postal codes)?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4ccf362" class="outline-3">
+<h3 id="org4ccf362">plot and model</h3>
+<div class="outline-text-3" id="text-org4ccf362">
+<p>
+This screencast is not meant as an introduction into Bayesian analysis and <code>pymc3</code>. It just shows that this can be done in python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
+</p>
+
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/xfWdNgC6ckw" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>plot average log expenditure across age for both women and men;</li>
+<li>create a simple Bayesian model of age-fixed effects using <code>pymc3</code>;</li>
+<li>sample from the posterior distribution of the model;</li>
+<li>plot predicted and observed expenditures for women against age.</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>plot average expenditure (averaged across gender) against age;</li>
+<li>do the <code>pymc3</code> model for men instead of women.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org47c85f1" class="outline-3">
+<h3 id="upload_data_on_the_university_server">upload data on the university server</h3>
+<div class="outline-text-3" id="text-upload_data_on_the_university_server">
+<p>
+In the screencast above we downloaded the data directly using <code>urllib.request.retrieve()</code>. The screencast below shows how to this "by hand" to get the data in university server environment.
+</p>
+
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/o-j86QStDWg" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>download data from a website to a local folder on your computer;</li>
+<li>upload from this folder to the university server;</li>
+<li>create a new folder <code>data</code> on the university server.</li>
+</ul>
+
+<p>
+Questions you should be able to answer:
+</p>
+<ul class="org-ul">
+<li>upload the data set for 2011 on the university server.</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">

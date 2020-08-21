@@ -1,7 +1,7 @@
 + copy template to repos.
 + correct link to template under Final Assignment: put this together with notebook in the master branch
 + link to first lecture
-+ describe procedure for final assignment via github classes:
++ describe procedure for final assignment via github classes: 
   + at start of year: google form for who wants access to datacamp
   + include github account name
   + at the end of the year google form:

@@ -793,7 +793,11 @@ Topics we cover in this video:
 <li>how create a new column/variable which equals the sum of a list of columns;</li>
 <li>using <code>axis</code> to specify whether an action is supposed to be applied across rows (<code>axis=0</code>) or columns (<code>axis=1</code>);</li>
 <li>using <code>df.replace()</code> to replace values in a dataframe, again using a dictionary;</li>
-<li>change the type of a column/variable using <code>.astype();</code></li>
+<li>change the type of a column/variable using <code>.astype();</code>
+<ul class="org-ul">
+<li>depending on the versions of the packages you are using <code>df['age'].astype(int)</code> can give an error</li>
+<li>if this happens, use <code>df['age'].astype("Float64").astype(int)</code> instead;</li>
+</ul></li>
 <li>using <code>numpy</code> functions on columns;</li>
 <li>using a <code>groupby</code> to aggregate data to the level specified by the list of columns in the groupby
 <ul class="org-ul">

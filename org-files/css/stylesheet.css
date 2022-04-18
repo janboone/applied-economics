@@ -1,0 +1,493 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Roboto+Mono'); */
+
+/* Quicksand typefaces */
+@font-face {
+    font-display: swap;
+    font-family: Quicksand;
+    src: url(https://diego.codes/fonts/Quicksand/Quicksand-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Quicksand;
+    src: url(https://diego.codes/fonts/Quicksand/Quicksand-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Nunito typefaces */
+@font-face {
+    font-display: swap;
+    font-family: Nunito;
+    src: url(https://diego.codes/fonts/Nunito/Nunito-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Nunito;
+    src: url(https://diego.codes/fonts/Nunito/Nunito-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Nunito;
+    src: url(https://diego.codes/fonts/Nunito/Nunito-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Nunito;
+    src: url(https://diego.codes/fonts/Nunito/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Roboto Mono typefaces */
+@font-face {
+    font-display: swap;
+    font-family: Roboto Mono;
+    src: url(https://diego.codes/fonts/Roboto_Mono/RobotoMono-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roboto Mono;
+    src: url(https://diego.codes/fonts/Roboto_Mono/RobotoMono-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roboto Mono;
+    src: url(https://diego.codes/fonts/Roboto_Mono/RobotoMono-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Roboto Mono;
+    src: url(https://diego.codes/fonts/Roboto_Mono/RobotoMono-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden] {
+    display: none;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body p, body ul{
+	font-size: 1.2rem;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b,
+strong {
+    font-weight: bold;
+}
+dfn {
+    font-style: italic;
+}
+mark {
+    background: #3f9f9f;
+    color: #fffff8;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 85%;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.figure p {
+	color: #657b83;
+	text-align: center;
+	font-size: 90%;
+	font-style: italic;
+}
+
+
+svg:not(:root) {
+    overflow: hidden;
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    padding: 0;
+}
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin: auto;
+}
+html {
+    font-family: 'Nunito', sans-serif;
+}
+pre,
+code {
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+div.banner{
+	font-family: 'Quicksand', sans-serif;
+    /* font-weight: bold; */
+	text-align: left;
+	color: #657b83;
+    padding-bottom: 1em;
+	margin-bottom: .5em;
+    /* border-bottom: 1px dashed #93a1a1; */
+}
+#name{
+	color: #657b83;
+	text-decoration: none;
+	font-size: 30px;
+}
+/* @media all and (max-width: 650px) { */
+/*   #name { */
+/*     font-size: 3em; */
+/*   } */
+/* } */
+#name:hover {
+    color: #3f9f9f;
+}
+p#subtitle{
+	font-size: 2em;
+    visible: false;
+}
+
+.subtitle{
+	font-size: 0.5em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding-top: 0.6em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
+}
+html {
+    background-color: #fffff8;
+    color: #2f2f2f;
+    margin: 1em;
+}
+body {
+    font-size: 13pt;
+    margin: 0 auto;
+    max-width: 765px;
+    padding: 1em;
+}
+code {
+    background-color: #fdf6e3;
+	font-size: 85%;
+    padding: 2px;
+	border-radius: 0.3em;
+}
+a {
+    text-decoration: none;
+    color: #3f8f8f;
+}
+a:visited {
+    color: #2f6f6f;
+}
+a:hover {
+    text-decoration: underline;
+    color: #3f9f9f;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #657b83;
+}
+.title{
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+}
+pre {
+    background-color: #fdf6e3;
+    color: #657b83;
+    border: 1pt solid #93a1a1;
+    padding: 1em;
+    box-shadow: 2pt 2pt 4pt #93a1a1;
+}
+pre code {
+    background-color: #fdf6e3;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.7rem;
+}
+h3 {
+    font-size: 1.3rem;
+}
+h4 {
+    font-size: 1.2rem;
+}
+h5 {
+    font-size: 1.1rem;
+}
+h6 {
+    font-size: 1rem;
+}
+p, h1, h2, h3, h4, h5, h6, ul  {
+    /* max-width: 700px; */
+    /* margin: 0 auto; */
+    -moz-hyphens: auto;
+
+}
+.figure {
+    max-width: 765px;
+    margin: 0 auto;
+}
+.tag {
+    background-color: #93a1a1;
+    color: #3f9f9f;
+    padding: 0 0.2em;
+}
+.org-ref-bib-h1,
+.footnotes {
+	font-size: 1.4rem;
+	font-style: italic;
+}
+
+#footer {
+	width: 100%;
+	font-size: 1.2em;
+	margin-bottom: 3em;
+	margin-top: 15%;
+}
+
+#footer ul {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height:2em;
+	margin: 0;
+	padding: 0;
+}
+#footer li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+#footer a {
+	color: #657b83;
+}
+
+#footer a:hover {
+	color: #3f9f9f;
+}
+
+#license-note {
+	color: #657b83;
+	text-align: center;
+	font-size: 75%;
+	padding-top: 3em;
+}
+
+/* Fallback for other elements from solarized-css */
+.todo,
+.next,
+.done {
+    color: #fdf6e3;
+    background-color: #dc322f;
+    padding: 0 0.2em;
+}
+.tag {
+    -webkit-border-radius: 0.35em;
+    -moz-border-radius: 0.35em;
+    border-radius: 0.35em;
+}
+.TODO {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #2aa198;
+}
+.NEXT {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #268bd2;
+}
+.ACTIVE {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #268bd2;
+}
+.DONE {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #859900;
+}
+.WAITING {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #cb4b16;
+}
+.HOLD {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #d33682;
+}
+.NOTE {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #d33682;
+}
+.CANCELLED {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-color: #859900;
+}
+
+
+span{
+  width:100%;
+  height:0.1em;
+  display:inline-block;
+}

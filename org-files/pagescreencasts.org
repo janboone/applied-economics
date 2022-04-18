@@ -1,0 +1,426 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+#+Title: Screencasts for the python track in Applied Economic Analysis
+#+Author: Jan Boone
+#+OPTIONS: toc:2 timestamp:nil toc:nil
+
+*Under construction*
+
+
+This page contains the screencasts for the python track of the course [[file:index.org::#python_track_AEA][AEA]]
+
+#+TOC: headlines 2
+
+* How are the screencasts supposed to help?
+  :PROPERTIES:
+  :ID:       how_are_screencasts_supposed_to_help
+  :END:
+
+For the python part of the course we use [[https://github.com/janboone/applied-economics][this notebook]]. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed.
+
+For students without a programming background (like most economics students) it can be intimidating or frustrating to start typing code. Reasons include not knowing how to do it perfectly or getting scared when there is an error message. Obviously, this is not necessary nor helpful when trying to learn a programming language. But the upshot is that some students do not try anything, sit back and type the correct answers when given to them. Needless to say, you do not learn how to program in python by typing in the correct answers given in class.
+
+The way we solve this in class is to give plenty of time to solve the questions yourself. In economics terminology: by keeping you in class, we reduce your opportunity costs to zero. Hence, you might as well type in some code and press Shift-Enter.
+
+We cannot do this with a screencast. Chances are, you understand how fast-forward works on the video. Hence, the screencasts give you hints on how to finish the notebook but it does not give you step-by-step answers for each question. If you still get stuck, ask us during the tutorials.
+
+** Why are there screencasts?
+
+The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+
+** Suggested use of the screencasts
+
+Just watching the screencasts is not going to be very useful for you. The best way to use them is as follows:
+
++ first read the relevant section in the notebook and try to solve the questions by yourself
++ if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what problems to look for in the video
++ type along with what we do in the screencast. Pause the video if you need more time to type
++ experiment with the code that we give you in the video either during the video or after watching it; try different numerical values, use different syntax or a different library; if you get an error, google it to see what is going on etc.
++ in general, play around with the python code; that is the best way to understand and learn the language
+
+With screencasts there is --obviously-- no interaction between teachers and students. This is a problem when you run into an error message. In class students then immediately raise their hand to understand what is happening.
+
+As this is not possible with a screencast, here are some tips on how to deal with error messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
+
+Python error messages:
++ start reading the error message at the end; hence scroll down in your notebook to see the last line of the error message. This will usually give a clue of what is happening
++ if you do not know what the last line means, use copy/paste to google it or go to [[https://stackoverflow.com/][stackoverflow]] directly
++ reading "upwards" from the last line, you can trace how the error was generated 
+
+** Prerequisite knowledge
+
+*Economics*: this introduction to python is part of an MSc degree in Economics. Hence, we assume that you know what utility is and how utility (and producer surplus, if relevant)
+adds up to welfare. You know how demand and supply curves are derived. What market power is, how a Cournot model is solved. Concepts like asymmetric information, adverse selection and moral hazard ring a bell. You know what risk is and how it can be measured. You know what the [[https://www.worldbank.org/][World Bank]] is, as later on we will use their data. You have done introductions to statistics and econometrics. Generally speaking, you understand the economics parts of the notebooks, though not necessarily their python implementation.
+
+*Python*: before you start with the notebook and the screencasts you need some basic knowledge of python. You can use [[https://www.datacamp.com/][Datacamp]], [[https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-][Socratica]], or introduction videos to python, numpy etc. from one of the big python conferences, like [[https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC][SciPy 2019]] or [[https://www.youtube.com/playlist?list=PLPbTDk1hBo3xof51R8pk3kP1BVBuMYP9c][PyCon 2019]].
+
+Things you should be familiar with is the syntax of python (e.g. the role of spaces), how to import libraries (difference between ~import numpy as np, import numpy, from numpy import *~), how to define a function, use of datatypes like lists, tuples, dictionaries, ~numpy~ arrays (what is the difference between adding lists (using "+") and adding numpy arrays), you understand slicing notation for arrays and lists, the use of masks to select data from an array, you are able to plot a function or data points with ~matplotlib~, you can read data into a dataframe with ~pandas~ and then manipulate this data (define new columns/variables).
+
+** Libraries we use
+
++ numpy: basic number crunching and vector manipulation
++ pymc3: to generate random numbers and do Bayesian analysis
++ tensorflow (2.0 or later): to generate random numbers; here used mainly to "have seen it"; we use it more in a later course on data science
++ scipy: scientific python
++ matplotlib: to make plots
+
+* Short introduction to JupyterLab
+  :PROPERTIES:
+  :CUSTOM_ID: Short_introduction_to_JupyterLab
+  :END:
+
+You can use JupyterLab on the Tilburg University server. But you can also install it locally on your computer using the [[https://www.anaconda.com/products/individual][Anaconda distribution]]. The basics of the following introduction are the same in both cases (and for google colab).
+
+The video was recorded using an older version of the website; but it will look similar in your year.
+
+The goal of this video is to give you an introduction to JupyterLab; not an introduction to python. So, do not worry if you do not understand the python code that is typed and evaluated.
+
+[[yt:EFOmmjnYGHs][Introduction to JupyterLab]]
+
+Topics we cover in this video:
++ using ~git~ to "clone" the ~applied-economics~ repository on JupyterLab;
++ difference between a code cell and a markdown cell in a jupyter notebook;
++ you can use the menu at the top to switch between Markdown and Code;
++ you evaluate both a code cell and a markdown cell by pressing the SHIFT and ENTER keys at the same time;
++ if you want to edit an evaluated markdown cell, go to the cell and press ENTER; or double click on the cell with your mouse;
++ how to create headings (using ~#~) and bullet lists (using ~*~) in markdown;
++ create a link in markdown;
++ how to type math in markdown using [[https://www.latex-project.org/][latex]] and the delimiters ~$ $~
++ in a code cell, you can type python code:
+  + this can be useful if you want to make notes on your datacamp courses
+  + type and evaluate the python code (from datacamp) and explain what the code does in a markdown cell;
++ if you have long variable or function names, use the TAB key to complete the names;
++ this also works if you want to type functions associated with a library like ~numpy~
+  + e.g.type ~np.ara~ and then TAB to see the completions;
++ apply the numpy ~sum~ function to an array ~my_list~: ~np.sum(my_list~) or ~my_list.sum()~
++ create a plot using ~matplotlib.pyplot~ and add labels to the axes, a title to the figure and a legend.
++ when you are finished with a notebook, you can close the file and do not forget to close the kernel as well (see the video on how to do this)
+  + if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate python code anymore.
+
+Questions you can try before continuing:
++ in a markdown cell, we can create $\alpha$ by typing latex ~$\alpha$~; now in a code cell type ~\alpha~ and then the TAB key; this gives you the /variable/ $\alpha$;
++ typing in a code cell $\alpha = 5$ gives this variable $\alpha$ the value 5;
++ plot the function $f(x)=x^3$ on the interval $[-1,1]$.
+
+If you want to know more about the use of JupyterLab, there are a number of introductions to JupyterLab on the web. Here is one (start video at 9 minutes): https://www.youtube.com/watch?time_continue=152&v=Gzun8PpyBCo&feature=emb_logo
+
+You can also google "jupyterlab introduction" and the [[https://jupyterlab.readthedocs.io/en/stable/][documentation]] can be useful as well.
+
+** getting the repository in colab
+
+If for some reason you would like to use the notebook on [[https://colab.research.google.com/notebooks/intro.ipynb#recent=true][google colab]] (e.g. because the university server is temporarily down), the following video shows how to import the applied economics repository into colab.
+
+[[yt:LVt0yagCwD8]]
+
+Topics we cover in the video:
++ go to google colab; then from the menu: File => Upload notebook
++ in pop-up window click on the GitHub tab and copy/paste the web address of the github repository that you would like to upload; in our case ~https://github.com/janboone/applied-economics~
++ if you want to install a new library in colab, e.g. wbdata, type ~!pip install wbdata~
++ install all libraries such that you can run the cell with import statements without errors
+
+* Compare jupyter notebook/lab and emacs
+
+** Why am I using emacs
+
+As explained [[id:how_are_screencasts_supposed_to_help][above]], one of the worries is that students sit back and copy/paste whatever is done in the videos. To force them to make more of an effort, I do not use jupyter notebooks in the screencasts. Hence, a bit more "mental processing" is needed to follow along. This is also the reason that we do not publish the notebooks from the videos. Students need to type along with the video; not copy/paste from the final file.
+
+Further, Emacs makes it easier to give a presentation in the screencast than jupyter notebooks, e.g. by folding sections that are finished and by giving completion on latex snippets.
+
+** Jupyter vs Emacs
+
+When you see my use Emacs in the videos, you can spot some differences with JupyterLab:
++ evaluating a code cell with python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)
++ to get help on a function, type e.g. ~np.arange?~ in a code cell and evaluate the cell
++ to type text in a jupyter notebook, turn a code-cell into a Markdown cell; in Emacs you can simply type text
++ to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the ESC key); in Emacs (and org-mode version >= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)
++ use the TAB key to complete function, variable etc. names. Works both in jupyter and Emacs
++ to get greek letters in a code block of a jupyter notebook, use the latex expression for the greek letter (without the delimiters ~$ $~) and type TAB; e.g.type ~\alpha~ and then press TAB
++ add ~%matplotlib inline~ after importing ~matplotlib.pyplot~ to get the figures in the notebook/file itself
+
+* The market
+
+** why do we love the market?
+
+[[yt:naYoM7cezSE][Allocating goods to consumers]]
+
+Topics we cover in this video:
++ optimal way to allocate a fixed number of products among a set of consumers
++ use of ~np.arange~ to generate a vector of numbers
++ ~np.random.normal~ and ~tf.random.normal~ to generate a vector of random numbers
++ sort a vector of numbers
++ use slicing to select a subset of entries in a vector $x$, e.g. ~x[:5]~
++ use ~format~ to format the output in a print statement
++ sum entries in a vector
+
+Questions you should be able to answer before continuing:
++ what is the welfare maximizing way to allocate $m$ products among $n>m$ consumers?
++ how can you calculate the Lagrange multiplier in the optimization problem at the end of the video using python?
++ why do we get an error if we would use ~tf.random.normal(50,10,2)~? hint: use ~tf.random.normal?~
+
+*** market outcome
+
+ [[yt:8ywVw9lIMmM][Equilibrium price and welfare]]
+
+ Topics we cover:
+ + define a (demand) function
+ + booleans False/True represented as 0/1 and can be summed
+ + use of ~scipy~'s ~optimize.fsolve~ to find the zero of a function (if you want more information about this function, use ~sp.optimize.fsolve?~)
+   + [[https://www.youtube.com/watch?v=KeRNoXWs_y0&t=2s][another example]] of the use of =fsolve=
+   + if you are interested, see [[https://www.youtube.com/watch?v=_1bOzIYcDaA][this video]] on a comparison of =fsolve= and =root= to solve equations
+ + use of ~lambda~ to create an anonymous function (i.e. function without a name)
+ + plot the demand function with ~plt.plot~; use ~plt.vlines~ to plot a vertical line
+ + instead of slicing, we used a boolean mask to select valuations which exceed the equilibrium ~price~: ~valuations[valuations>price]~
+
+*** elastic demand and supply
+
+ You should be able to do this section in the notebook yourself. If not, then check the videos above once more.
+
+** why do others not love the market?
+
+*** income distribution
+
+[[yt:tyqtrIAx898][Income distribution]]
+
+Topics we cover in this video:
++ multiply boolean masks (~afford~ and ~wtp~ in the video) to generate the AND condition: demand consists of people who are willing to pay price $p$ for the good AND who can afford to pay $p$.
+
+Questions you should be able to answer:
++ show --using python-- that welfare in the market (~welfare_2~) is below the max. possible welfare
++ the assignment in the notebook: run the model with the income distribution two times and show that higher income inequality can lead to lower welfare in the market. That is, there is an efficiency argument for income redistribution in a market context.
+
+*** market power
+
+You should be able to do the market power section on your own. It shows a graph suggesting the monopoly price is lower than the perfect competition price. In this context this is simply wrong. The question is: what is wrong in the python code?
+
+Hence, test parts of the code to understand where things are going wrong. To solve this problem, you may want to look at the function ~min~. That is, evaluate ~min?~ and e.g. ~min(3,8)~.
+
+**** merger simulation
+
+We split the merger simulation section into different subsections/videos.
+
+***** Cournot
+
+[[yt:LiOqDkj9wWw][Cournot]]
+
+Topics we cover in the video:
++ define the reaction function in Python for a simple Cournot model
++ use ~sp.optimize.fminbound~ on "minus profits" because Python has no maximization routines
+  + if you are interested: [[https://www.youtube.com/watch?v=2HMKU2nHAbE][more information]] on minimization in pyhton
++ use ~fsolve~ on the function ~fixed_point~ to find the equilibrium outcome (both firms have output equal to the optimal reaction to the other firm's output level)
++ this corresponds to the point where the reaction functions intersect in $(q_1,q_2)$ space
+
+Questions you should be able to answer:
++ which of the two lines drawn in the video is the reaction function of firm 1?
++ show that the equilibrium outcome for the case where $c_1=0.1,c_2=0.2$ has $(q_1,q_2)= (0.33333333, 0.23333333)$
+
+***** Pandas
+
+[[yt:8nHpZ-1MidE][Pandas]]
+
+Topics we cover in the video:
++ create a 2 dimensional vector with draws from a normal distribution; note that in the notebook you only need a 1 dimensional draw (for the merged firm's cost level)
+  + the rows are states of the world, the first column is firm 1's cost level, the second column firm 2's costs
++ create a Pandas dataframe with ~pd.DataFrame~ and a dictionary of the form: ~{'column name': vector with values}~
++ define new columns in the dataframe
++ two ways you can refer to a column in a dataframe: e.g. ~df.Q~ and ~df['Q']~; note that you cannot use the former if there are spaces in the column name
+
+Questions you should be able to answer:
++ instead of defining ~q1,q2~ separately, define the vector ~q~ as follows and use this vector to create the dataframe ~df~ (hint: use ~q.shape~)
+#+begin_src
+costs = tf.random.normal([50,2],0.2,0.05).numpy()
+q = np.array([sp.optimize.fsolve(lambda x: fixed_point(x,costs[i]),[0,0]) for i in range(50)])
+#+end_src
+
+***** OPTIONAL: Cournot with variable $n$
+
+This section is optional. If this is your first Python course, skip this section for now (and come back to it later).
+
+[[yt:xyaXz2L1F_Q][Optional Cournot video]]
+
+In our previous Cournot model (and in the notebook), we defined the function ~reaction~ in such a way that it is specific to the number of firms in the market. This video introduces a function reaction that is more general. It makes the code more readable but also a bit more complicated.
+
+If you want to take this a step further, look at [[https://numpy.org/doc/stable/reference/generated/numpy.vectorize.html?highlight=vectorize#numpy.vectorize][numpy's vectorize.]]
+
+Topic we cover:
++ ~np.zeros_like(c)~ for an array ~c~
+
+Questions you should be able to answer:
++ predict/explain what is printed if you evaluate the following code block:
+#+begin_src
+i = 3
+mask = np.arange(6) != i
+print(mask)
+print(np.arange(6)[mask])
+print(np.sum(np.arange(6)[mask]))
+#+end_src
+
+
+*** external effects
+
+This section you should be able to do on your own. If not, watch again the video's above.
+
+It provides another reason why markets may not generate max. welfare in the real world.
+
+* Asymmetric information
+
+Here we consider two standard forms of asymmetric information: adverse selection and moral hazard.
+
+** adverse selection
+
+[[yt:GeVGCJmq9PE]]
+
+Topics we cover in the video:
++ drawing samples from a uniform distribution
++ in jupyter notebook/lab you can introduce a greek letter, say $\rho$, by typing ~\rho~ and then the TAB key
++ selecting the last, say 3 elements from a vector $x$ by slicing: ~x[-3:]~
++ downward sloping supply curve in a perfectly competitive insurance market
+
+Questions you should be able to answer:
++ the assignment in the adverse selection section in the notebook: the effect of income on insurance demand
+
+** moral hazard
+
+[[yt:saST6igsR6Y]]
+
+Topics we cover in the video:
++ we use ~pymc3~ for random draws from a log-normal distribution 
++ the government maximizes welfare over marginal tax rates $\tau$ while each agent in the economy maximizes work effort for a given $\tau$
+  + we have an optimization problem "over" optimization problems
+
+Questions you should be able to answer:
++ what will be the optimal tax rate with $\rho=1$ (you will verify this in the notebook)
++ the assignment in the moral hazard section in the notebook: use Rawls' criterion as welfare function for the government
+
+* Financial crisis
+
+** why is there a problem in financial markets?
+
+
+[[yt:petP6Bdf8Pk]]
+
+Topics we cover in this video:
++ limited liability
++ relu activation function
++ first mention of "broadcasting" (but no need to understand it)
++ draw two dimensional array (that is a matrix) from a normal distribution
++ we calculate the mean across the rows of a two dimensional array with ~axis=0~; ~axis=1~ calculates the mean across columns
+
+Question you should be able to answer:
++ rewrite the code with the relu function for the case where the firm has equity equal to 10; your plot should be the same as the one in the notebook with ~equity=10~.
+
+** why these bonus contracts?
+
+[[yt:-BzxZU8f1pU]]
+
+Topics we cover in this video:
++ for the derivation of some results we use [[https://www.gnu.org/software/emacs/manual/html_mono/calc.html][Emacs calc]]; you do not need to know how this works, but you should be able to replicate the derivations
++ if you want to do symbolic math yourself on the computer, you can consider using [[https://www.sympy.org/en/index.html][SymPy]] in a jupyter notebook but we do not cover SymPy in this course
+
+Questions you should be able to answer:
++ the video covers the second subsection of "why these bonus contracts?" in the notebook; you should be able to cover the first subsection "moral hazard"
++ the second subsection "moral hazard and adverse selection" defines the function ~profit~ in a different way; you should be able to follow what it does and plot the probability of the average outcome ($q$) against the top trader's outside option.
++ as the outside option for the top trader (high type) increases, why does the bank not increase $w$ and $b$ in such a way that $R=w/b$ remains constant? Then risk taking by the top trader would be unaffected. Why would this be (too) expensive for the bank?
+
+* Using Python for empirical research
+
+** API's to get data
+
+[[yt:pstyrBrwXqw]]
+
+Topics we cover in this video:
++ use of API [[https://wbdata.readthedocs.io/en/stable/][wbdata]] to access World Bank's databases
++ use of ~wb.search_indicators~ to find indicators on a certain topic
++ create a dictionary of indicators and column names and then download these data into a pandas' dataframe
++ we do this for two sets of indicators and then use ~pd.merge~ to merge these dataframes
+
+Questions you should be able to answer:
++ use ~pd.merge?~ to find out what ~how~ and ~suffixes~ can do in a ~pd.merge~ statement
++ use the wbdata documentation to find the different themes on which the World bank has data
+
+** hacker statistics
+
+*** high school puzzles
+
+[[yt:s1stRzO8a0Q]]
+
+Topics we cover in this video:
++ program a statistical problem with coin throws in python
++ repeat this 10,000 times to see what the properties are of such an experiment
+
+Questions you should be able to answer:
++ program the experiment with a dark cupboard containing 6 red socks and 14 blue socks. You randomly draw 2 socks (without replacement) from the cupboard. What is the probability that you draw two matching socks from the cupboard? Note that this you can calculate yourself, so you can check whether your code gives the right answer: $\frac{6}{20} \frac{5}{19} + \frac{14}{20} \frac{13}{19}$
++ solve this section in the notebook: which of the two experiments lasts longer on average? Why?
+
+*** statistics
+
+[[yt:aaDtTmNlWiY]]
+
+Topics we cover in this video:
++ distribution and standard deviation of a sample mean
++ simulating a hypothesis test
+
+Questions you should be able to answer:
++ what is the "statistical name" for ~np.std(mus)~ in the video?
++ what is the idea behind the hypothesis test in the video?
++ finish the statistics section in the notebook
+
+
+* Regulation in healthcare markets
+
+In this lecture we analyze Dutch healthcare data from [[https://www.vektis.nl/open-data][Vektis]] using ~pandas~, ~matplotlib~ and ~pymc3~.
+
+** getting the data ready
+
+[[yt:X6XNd2NaBpg]]
+
+Topics we cover in this video:
++ importing data directly from the web using ~urllib;~
+  + see subsection [[#upload_data_on_the_university_server][upload data on the university server]] below to see how to get your data on the university server when using JupyterLab;
++ how to read in a csv file as a dataframe using ~pd.read_csv()~;
++ how to rename columns in a pandas' dataframe using a dictionary;
++ how create a new column/variable which equals the sum of a list of columns;
++ using ~axis~ to specify whether an action is supposed to be applied across rows (~axis=0~) or columns (~axis=1~);
++ using ~df.replace()~ to replace values in a dataframe, again using a dictionary;
++ change the type of a column/variable using ~.astype();~
+  - depending on the versions of the packages you are using ~df['age'].astype(int)~ can give an error
+  - if this happens, use ~df['age'].astype("Float64").astype(int)~ instead;
++ using ~numpy~ functions on columns;
++ using a ~groupby~ to aggregate data to the level specified by the list of columns in the groupby
+  + in the video we aggregate to age/gender categories, aggregating over postal-code observations.
+
+Questions you should be able to answer:
++ what is the average expenditure (not log expenditure) across ages and postal codes for men and women?
++ what is the average expenditure per age category (across gender and postal codes)?
+
+** plot and model
+
+This screencast is not meant as an introduction into Bayesian analysis and ~pymc3~. It just shows that this can be done in python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
+
+[[yt:xfWdNgC6ckw]]
+
+Topics we cover in this video:
++ plot average log expenditure across age for both women and men;
++ create a simple Bayesian model of age-fixed effects using ~pymc3~;
++ sample from the posterior distribution of the model;
++ plot predicted and observed expenditures for women against age.
+
+
+Questions you should be able to answer:
++ plot average expenditure (averaged across gender) against age;
++ do the ~pymc3~ model for men instead of women.
+
+** upload data on the university server
+   :PROPERTIES:
+   :CUSTOM_ID:       upload_data_on_the_university_server
+   :END:
+
+In the screencast above we downloaded the data directly using ~urllib.request.retrieve()~. The screencast below shows how to this "by hand" to get the data in university server environment.
+
+[[yt:o-j86QStDWg]]
+
+Topics we cover in this video:
++ download data from a website to a local folder on your computer;
++ upload from this folder to the university server;
++ create a new folder ~data~ on the university server.
+
+Questions you should be able to answer:
++ upload the data set for 2011 on the university server. 

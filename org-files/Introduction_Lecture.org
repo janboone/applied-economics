@@ -1,0 +1,223 @@
+#+SETUPFILE: ./org-html-themes/org/theme-bigblow.setup
+#+TITLE: Python track in AEA
+#+AUTHOR: Jan Boone
+#+DATE: Dept. of Economics, Tilburg University
+#+OPTIONS: toc:1 num:nil timestamp:nil
+
+* Introduction
+  :PROPERTIES:
+  :CUSTOM_ID: introduction
+  :END:
+
+** this lecture
+   :PROPERTIES:
+   :CUSTOM_ID: this-lecture
+   :END:
+
+- in this lecture, we look at:
+
+  - motivation to learn python
+  - typing texts in markdown and latex
+  - markdown files on github
+  - first assignment
+  - first look at jupyter server
+
+** motivation
+   :PROPERTIES:
+   :CUSTOM_ID: motivation
+   :END:
+
+-  in this course we teach you
+
+   -  to combine rigorous economics
+   -  and how to present it in an understandable way
+   -  while your results can be easily reproduced
+
+-  in the python track we do this by teaching you
+
+   -  a programming language: python
+   -  how to create notebooks where you can explain your code and
+   -  publish them on-line
+
+** things to learn
+   :PROPERTIES:
+   :CUSTOM_ID: examples
+   :END:
+
+- when you finish this course, you can
+
+  - solve models in python
+  - do simulations in python
+  - create a file or notebook like [[https://github.com/janboone/applied-economics/blob/master/economics_notebook.ipynb][this]]
+
+** finishing the course
+   :PROPERTIES:
+   :CUSTOM_ID: finishing-the-course
+   :END:
+
+- helps you to present economics in a way that is
+
+   -  understandable and
+   -  reproducible
+
+- gives a good starting point to write your thesis
+- check [[file:index.org][the website]] and Canvas for relevant information
+
+* Office and Excel
+  :PROPERTIES:
+  :CUSTOM_ID: office-excel-and-word
+  :END:
+
+**  Excel is great for programming?
+
++ [[https://twitter.com/philipbstark/status/498683914592862208][check this]]
++ indeed, simple things can be done in excel
++ e.g. keep track of your grades and calculate the average
++ but possibilities are limited: it is not a programming language
++ however, the main problem is reproducibility
++ if you've done a serious project in excel, look at it again in 3 months time...
+
+
+* Open source word processing
+  :PROPERTIES:
+  :CUSTOM_ID: open-source-word-processing
+  :END:
+
+
+** markdown
+   :PROPERTIES:
+   :CUSTOM_ID: markdown
+   :END:
+
+- see Tirole (2017: 447) for an explanation why open source is so powerful
+- markdown allows you to create structure in a simple way
+- This is illustrated in a screencast: [[file:pagescreencasts.org::#Short_introduction_to_JupyterLab][Short introduction to JupyterLab]]
+- examples are:
+
+#+BEGIN_EXAMPLE
+
+        # this is a heading
+
+        ## subheading
+
+        * first bullet
+        * second bullet
+
+        [link text](actual link, e.g. http://www.etc)
+
+        ![Alt text for image](/path/to/img.jpg "Optional title")
+#+END_EXAMPLE
+
+-  look on the web for other syntax like footnotes etc.
+-  equations you can type in latex
+
+** latex
+   :PROPERTIES:
+   :CUSTOM_ID: latex
+   :END:
+
+-  latex is great word processing software
+-  you should consider writing your thesis in latex
+-  but for now, we focus on writing math in latex
+-  you can guess what the following will do:
+
+#+BEGIN_EXAMPLE
+    $x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
+
+    \begin{equation}
+
+    a^2 + b^2 = c^2
+
+    \end{equation}
+#+END_EXAMPLE
+
+-  if you need something, just google; e.g. google "latex phi" or
+   google "latex empty set" etc.
+
+* What do you need?
+  :PROPERTIES:
+  :CUSTOM_ID: what-do-you-need
+  :END:
+
+** Install software
+   :PROPERTIES:
+   :CUSTOM_ID: install-software
+   :END:
+
+- you do not need to install anything for the course
+- you will be working on the [[https://jupyterlab.uvt.nl/][jupyter lab server]]
+- if you also want to install things on your computer, use the [[https://www.anaconda.com/distribution/][anaconda distribution]]
+
+* Working in the cloud
+  :PROPERTIES:
+  :CUSTOM_ID: working-in-the-cloud
+  :END:
+
+** github
+   :PROPERTIES:
+   :CUSTOM_ID: github
+   :END:
+
+- github allows you to
+
+  - publish web pages (gh-pages)
+  - work "in the cloud" with version control
+  - collaborate in the cloud
+  - have different versions ("branches") of the same project
+
+- version control takes a bit of time to learn
+- but once you get it, the benefits are huge!
+- for this course learning git is optional
+- you can just drag and drop your notebooks on github as we will practice in class
+- you need github to submit your final python assignment (using github classroom)
+
+* Rules of the game
+  :PROPERTIES:
+  :CUSTOM_ID: rules-of-the-game
+  :END:
+
+** to learn python we use [[https://www.datacamp.com/home][datacamp]], [[https://janboone.github.io/applied-economics/pagescreencasts.html][screencasts]] and lectures:
+
+  - you need to finish the datacamp courses and screencasts in time
+  - otherwise you will be lost during the lectures
+  - see the [[file:index.org::#lecture_schedule_AEA][Lecture schedule]] for the planning
+  - for the python part, attend my lectures in the Lecture schedule
+  - if you want to learn everything on your own, you do not need to attend my lectures
+  - but if you do attend the lectures, you participate actively
+  - you do not learn python by passively typing in answers!
+
+
+** lecture format
+
++ in the lectures we will answer questions that you ask us
++ in order to prepare these answers, it is useful if you create an issue via [[https://github.com/janboone/applied-economics/issues][this link]]
+  + using the link, create an "issue" where you explain what your question is: what did you try and why did it not work?
+    + hence not a something like "I do not know the answer to: *Question* Calculate the total welfare that this planner can achieve. Denote this value ~max_welfare~."
+    + but "I tried to calculate total welfare in the following way ... but then I get the following error ..."
++ for us to be able to prepare these answers, submit the issue on the Friday before the week in which we discuss the topic
+
+** suggested workflow
+
++ follow the Datacamp courses and make notes of what you learn at Datacamp in a notebook on the jupyterlab server
+  + in this way it is easy to refer back to useful code snippets that you see on Datacamp
++ go through the notebook and try to answer the questions and assignments
++ if you get stuck with a problem, watch the corresponding screencast for this part
++ if you still cannot figure it out, create an issue on github to ask us
++ we will answer your questions in class
+
+** to get a grade for the python track:
+
+  - finish assignment 1 (see below) before the deadline
+  - attend the career services workshops
+  - read [[https://press.princeton.edu/titles/10919.html][Tirole's book]] to get ideas on how to work with economics "in the real world"; this will help you with the final assignment and with your thesis
+  - [[file:index.org::#final_assignment_AEA][Final Assignment]]
+  - [[file:index.org::#deadlines_AEA][Deadlines]] for the final assignment
+
+
+* Assignment 1
+  :PROPERTIES:
+  :CUSTOM_ID: assignment
+  :END:
+
++ follow and finish the four steps under [[file:index.org::#assignment_1_AEA][Assignment 1]]
++ type your first python and markdow at the [[https://jupyterlab.uvt.nl/][jupyter lab server]] and follow along with the screencast: [[file:pagescreencasts.org::#Short_introduction_to_JupyterLab][Short introduction to JupyterLab]]

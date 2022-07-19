@@ -4,13 +4,14 @@
 #+OPTIONS: toc:2 timestamp:nil toc:nil todo:nil
 #+EXPORT_EXCLUDE_TAGS: noexport
 
-This website contains the material for the MSc course Applied Economics.
+This website contains the material for the MSc course Applied Economics 1.
 
-**This website is under construction for 2021/2022**
+**This website is under construction for 2022/2023**
 
 This year the course is taught by:
 + Jan Boone
-+ Sjak Smulders
++ Mery Ferrando
++ Joyce Ladenstein
 + Barbora Písecká
 
 
@@ -22,10 +23,9 @@ This year the course is taught by:
 For this course we use the following resources:
 
 + Jean Tirole, [[https://press.princeton.edu/titles/10919.html][Economics for the Common Good]],
-+ for students following the python track in this course: We are very happy that we partner with [[https://www.datacamp.com/][datacamp]] for this course to teach you python. [[https://www.datacamp.com/about][Datacamp]] offers great on-line courses for you to learn python.
++ [[https://www.datacamp.com/about][Datacamp]]
 
 #+TOC: headlines 2
-
 
 * Screencasts
   :PROPERTIES:
@@ -39,9 +39,9 @@ For this course a series of screencasts is available. The screencasts can be fou
 
 Since we have recorded screencasts, we will not repeat these during the lectures. The lectures are meant for interaction (only).
 
-** For the python track, we will use the following format:
+** we will use the following format:
 
-+ in the lectures we will answer questions that you ask us
++ in the python lectures we will answer questions that you ask us
 + in order to prepare these answers, it is useful if you create an issue via [[https://github.com/janboone/applied-economics/issues][this link]]
   + using the link, create an "issue" where you explain what your question is: what did you try and why did it not work?
     + hence not a something like "I do not know the answer to: *Question* Calculate the total welfare that this planner can achieve. Denote this value ~max_welfare~."
@@ -56,75 +56,48 @@ Since we have recorded screencasts, we will not repeat these during the lectures
 A suggested workflow for the python track is:
 + follow the Datacamp courses and make notes of what you learn at Datacamp in a notebook on the jupyterlab server
   + in this way it is easy to refer back to useful code snippets that you see on Datacamp
-+ go through the notebook and try to answer the questions and assignments
-+ if you get stuck with a problem, watch the corresponding screencast for this part. It gives hints and ways to solve the problems
++ go through the jupyter notebook for the lecture and try to answer the questions and assignments
++ if you get stuck with a problem, watch the corresponding screencast for this part. It gives hints and ways to solve the questions in the notebook
 + if you still cannot figure it out, create an issue on github to ask us
 + we will answer your questions in class
 
-Hence, sitting back and hoping to copy all answers during the lectures is not going to work. This is a bad strategy anyway: you learn python by trying (and failing) to code; not by copy/paste-ing the correct code.
+Two weeks in November will be focused on gender economics. In the lectures Mery will discuss some papers on this topic. There is a notebook where the models discussed are simulated in Python. These notebooks are then discussed at the end of the week. The notebooks will teach you something about gender economics and Python. At the same time, they show you what we expect you to do in the final assignment for this course: take an existing theory paper and solve the model in Python and simulate outcomes of the model.
 
-** For the canon track, we will use the following format:
+We highly recommend that you read the book by Jean Tirole to get an idea how you can communicate economic models to a non-economic audience. This will be useful both for your final assignment and for writing your MSc thesis.
 
-Over the semester, you write – in a team – a “canon” in which you collect and explain insights from economics on a particular societal problem (e.g. Housing crisis, Pandemics).
-
-To guide you in this work, the course teaches you how to “see economics everywhere” and communicate insights from economics to non-economists. You develop your skills and build up all the elements of the canon through:
-
-+ reading the book by Tirole, Economics for the common good https://press.princeton.edu/books/hardcover/9780691175164/economics-for-the-common-good,
-+ making assignments,
-+ actively participating in our classes.
-+ In the lectures we will:
-  + have group discussions
-  + develop material and practice economic analysis for your canon assignment
-  + answer questions about the course resources (book and video material)
-  + discuss progress and answer questions about assignments (proto-canon and canon)
-
-A suggested workflow for the canon track is:
-
-+ to prepare for lecture: read the Tirole book chapters associated to the upcoming lecture
-+ attend lecture on campus and participate,
-+ do the assignment within one week after the lecture.
-+ if needed, send a question or material to j.a.smulders@uvt.nl
-+ to get grades (protocanon assignment S1 and final canon) and to get feedback (assignment S2-7), stick to deadlines
-
+*Remark:* We have been teaching this course for a couple of years now. Every year there are a number of students who attend the lectures without preparing anything and watch the screencasts without trying to program themselves. We live in a free country and you choose how to spend your time. However, this strategy does not work well. You actually end up spending far more time on finishing the course than when you follow the planning we suggest below. The reason is as follows: learning a programming language is frustrating. You learn by making mistakes and then trying to figure out what goes wrong. When you make these mistakes during the semester, you are well covered: we are there to help you. When you make these mistakes for the first time when trying to finish your assignment before the deadline, you are in trouble. We will try to help you but not within an hour, or within a day. And because you need to finish before the deadline, you have to figure everything out by yourself under time pressure. Not a pleasant experience and one you can easily avoid. But the choice is yours.
 
 ** Lecture schedule
    :PROPERTIES:
    :CUSTOM_ID:       lecture_schedule_AEA
    :END:
 
-At the moment, it is not clear whether the lectures will be live/online or hybrid. We have rooms booked for all lectures, so hopefully we can do things live in the classroom. But during the semester corona restrictions may force us to teach online.
+At the moment, we believe that the all lectures will be on campus. If we would need to switch to on-line lectures, we will let you know via Canvas
 
-If we will teach online, we use zoom and the links and passwords for these lectures will be published on Canvas.
+| day |       date |        time | staff          | room         | Topic                                          | Datacamp             |
+|-----+------------+-------------+----------------+--------------+------------------------------------------------+----------------------|
+| Tue | 2022-08-30 | 14:45-16:30 | Boone, J.      | CZ 114 (99)  | Intro python, markdown, github, jupyterlab     |                      |
+| Thu | 2022-09-01 | 14:45-16:30 | VERVALT        | AZ 201 (97)  |                                                | Intro (1,2)          |
+| Wed | 2022-09-07 | 16:45-18:30 | Ladenstein, J  | CZ 7 (96)    | Plenary Career Session: see Canvas for details | Intro (3,4)          |
+| Mon | 2022-09-12 | 14:45-18:30 | Ladenstein, J. | RTZ 202 (32) | Career workshops: see Canvas for details       | Intermediate (1,2)   |
+| Mon | 2022-09-12 | 14:45-18:30 | Boomaars, J.   | RTZ 203 (32) | Career workshops: see Canvas for details       |                      |
+| Tue | 2022-09-13 | 12:45-16:30 | Ladenstein, J. | RTZ 103 (32) | Career workshops: see Canvas for details       | Intermediate (3,4,5) |
+| Tue | 2022-09-13 | 12:45-16:30 | Boomaars, J.   | RTZ 501 (32) | Career workshops: see Canvas for details       |                      |
+| Wed | 2022-09-21 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | The market                                     | Pandas (1,2)         |
+| Thu | 2022-09-29 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | Asymmetric information                         | Pandas (3,4)         |
+| Tue | 2022-10-11 | 10:45-12:30 | Boone, J.      | CZ 9 (97)    | Financial crisis                               |                      |
+| Tue | 2022-11-08 | 10:45-12:30 | Boone, J.      | CZ 9 (97)    | Empirical research                             |                      |
+| Wed | 2022-11-16 | 10:45-12:30 | Boone, J.      | AZ 201 (97)  | Healthcare and regulation                      |                      |
+| Mon | 2022-11-21 | 10:45-12:30 | Ferrando, M.   | AZ 201 (97)  | Lecture gender economics                       |                      |
+| Fri | 2022-11-25 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | notebook gender economics                      |                      |
+| Mon | 2022-11-28 | 10:45-12:30 | Ferrando, M.   | AZ 201 (97)  | Lecture gender economics                       |                      |
+| Fri | 2022-12-02 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | notebook gender economics                      |                      |
+| Wed | 2022-12-07 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | Q&A                                            |                      |
 
-Please keep an eye on the Canvas page where we will keep you posted on whether a lecture will be on campus or online.
 
-| week | day |       date |        time | Staff       | room            | Topic                                                                     | Tirole   | Datacamp           |
-|------+-----+------------+-------------+-------------+-----------------+---------------------------------------------------------------------------+----------+--------------------|
-|   35 | Tue | 2021-08-31 | 14:45-16:30 | Smulders*   | CZ 120 (hybrid) | Canon 0: intro                                                            |          |                    |
-|   35 | Fri | 2021-09-03 | 14:45-16:30 | Boone*      | zoom (only)     | Intro python, markdown, github, jupyterlab                                |          |                    |
-|   36 | Fri | 2021-09-10 | 14:45-16:30 | Smulders    | DZ 2            | Canon 1: The economist                                                    | 1,2,3,4  | Intro (1,2)        |
-|   37 | Tue | 2021-09-14 | 12:45-14:30 | Ladenstein* | MDZ 20          | Plenary Career Session                                                    |          | Intro (3)          |
-|   37 | Fri | 2021-09-17 | 14:45-16:30 | Smulders    | DZ 2            | Canon 2: Jobs                                                             | 6,7,9    | Intro (4)          |
-|   38 | Mon | 2021-09-20 | 13:45-17:30 | *           | RTZ 202         | Career Orientation & Preparation - Personal Branding & Networking         |          | Intermediate (1,2) |
-|   38 | Mon | 2021-09-20 | 13:45-17:30 | *           | RTZ 501         | Career Orientation & Preparation - Personal Branding & Networking         |          |                    |
-|   38 | Mon | 2021-09-20 | 13:45-17:30 | *           | RTZ 103         | Career Orientation & Preparation - How to prepare for Assessments         |          |                    |
-|   38 | Fri | 2021-09-24 | 13:45-17:30 | *           | RTZ 102         | Career Orientation & Preparation - How to prepare for Assessments         |          |                    |
-|   38 | Fri | 2021-09-24 | 13:45-17:30 | *           | RTZ 303         | Career Orientation & Preparation - Talent Management                      |          |                    |
-|   38 | Fri | 2021-09-24 | 13:45-17:30 | *           | RTZ 202         | Career Orientation & Preparation - LinkedIn & Networking through LinkedIn |          | Intermediate (3,4) |
-|   40 | Fri | 2021-10-08 | 14:45-16:30 | Boone       | DZ 1            | Q&A python/Datacamp                                                       |          | Intermediate (5)   |
-|   41 | Fri | 2021-10-15 | 14:45-16:30 | Smulders    | DZ 2            | Canon 3: Climate                                                          | 8,16     | Pandas (1,2)       |
-|   45 | Fri | 2021-11-12 | 14:45-16:30 | Smulders    | DZ 2            | Canon 4: Finance                                                          | 10,11,12 | Pandas (3,4)       |
-|   46 | Wed | 2021-11-17 | 16:45-18:30 | Boone       | CZ 121          | The market                                                                |          |                    |
-|   46 | Fri | 2021-11-19 | 14:45-16:30 | Boone       | DZ 1            | Asymmetric information                                                    |          |                    |
-|   47 | Fri | 2021-11-26 | 14:45-16:30 | Smulders    | DZ 2            | Canon 5: regulation                                                       | 13,17    |                    |
-|   48 | Wed | 2021-12-01 | 16:45-18:30 | Boone       | CZ 121          | Financial crisis                                                          |          |                    |
-|   48 | Fri | 2021-12-03 | 14:45-16:30 | Boone       | DZ 1            | Empirical research                                                        |          |                    |
-|   49 | Wed | 2021-12-08 | 16:45-18:30 | Boone       | CZ 121          | Health care regulation                                                    |          |                    |
-|   49 | Fri | 2021-12-10 | 14:45-16:30 | Smulders    | DZ 2            | Canon 6: Behavior                                                         | 5,15     |                    |
 
-"*" indicates that everyone has to attend this lecture (irrespective of whether you do the canon or python track).
 
-** First Python Lecture
+** First Lecture
 
 [[file:./Introduction_Lecture.org::#introduction][Introduction Lecture]]
 
@@ -133,17 +106,14 @@ Please keep an eye on the Canvas page where we will keep you posted on whether a
     :CUSTOM_ID:       assignment_1_AEA
     :END:
 
-Do the following four steps:
-+ create a github account on [[https://github.com/][github]] (you need this for the next step)
-+ fill in this [[https://forms.gle/bUS3sZZYgM4y1wdJ7][google form]] before **Friday September 17, 2021**
-  + note that you need to login on google with your TiU credentials when you fill in the form
-  + e.g. make sure that your browser is not logged in with your gmail-address
-  + if necessary, create an incognito/private window
+Do the following three steps:
++ create a github account on [[https://github.com/][github]] (you need this account to submit your final assignment)
+  + we advise you to do this before **Friday September 16, 2022**
 + go to
   + [[https://jupyterlab.uvt.nl/][jupyter lab]]
     + IT suggests that you use the Firefox browser to access jupyter lab
     + sometimes it helps to access jupyter lab with an incognito/private window
-  + or --if all else fails-- you can use [[https://colab.research.google.com/][google's colab]]
+    + or --if all else fails-- you can use [[https://colab.research.google.com/][google's colab]]
 + create a new python notebook and type the following code in the first cell:
 #+BEGIN_SRC ipython
 %%bash
@@ -151,7 +121,7 @@ Do the following four steps:
 git clone https://github.com/janboone/applied-economics
 #+END_SRC
 + then press the Shift key and Enter key at the same time
-+ this creates a folder on the server `applied-economics` that contains the material for the python part of the course.
++ this creates a folder on the server `applied-economics` that contains the material for the course.
 + Note: you can only run this command once. If you run it again, you get an error since the folder already exists.
 
 *** Final assignment
@@ -168,20 +138,21 @@ From Datacamp, do the following courses:
 + Intermediate: [[https://www.datacamp.com/courses/intermediate-python-for-data-science]]
 + Pandas: https://learn.datacamp.com/courses/data-manipulation-with-pandas
 
-It is up to you how to combine the Datacamp courses with the [[file:./pagescreencasts.org][Screencasts]]. We suggest to finish the Datacamp Intro course first. As there is no economics on Datacamp, some students prefer to start with the screencasts after the Intro. Others prefer to finish all the Datacamp courses before they start on the screencasts, so that they have seen all the python and pandas material.
+These courses teach you the basic Python syntax. In the lectures and notebook for the course, we use parts of Python more specific to economics; e.g. commands to solve equations, equilibria etc. These parts of the course complement each other. It is not the case that all Python that we use, you will first see in Datacamp.
+
+It is up to you how to combine the Datacamp courses with the [[file:./pagescreencasts.org][Screencasts]]. We suggest to finish the Datacamp Intro course first. As there is no economics on Datacamp, some students prefer to start with the screencasts after the Intro. Others prefer to finish more Datacamp courses before they start on the screencasts. Just see what works for you. But make sure you follow the planning above, otherwise you might get lost if you are too far behind and the lectures will not be as useful to you.
 
 ** Deadlines
    :PROPERTIES:
    :CUSTOM_ID: deadlines_AEA
    :END:
 
-We recommend that you finish the Intermediate course before October 10, 2021 and the Pandas course before November 12, 2021.
+- The deadline for the *final python assignment* is: Monday December 19, 2022. Your grade is determined by this final assignment (only).
+- The resit deadline for the python assignment is: Monday May 15th, 2023. Let us know by email that you have submitted your assignment for the resit.
 
-The deadline for the *final python assignment* is: Friday January 28th, 2022. However, if you need your grade before the end of January, you need to submit your final assignment by Friday January 14th, 2022. Let us know by email that your assignment needs to be graded early.
+Follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
-If you do the python track in this course, your grade is determined by the final assignment (only).
-
-The resit deadline for the python assignment is: Friday August 26th, 2022. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+Also note the rules for the resit assignment in case you submitted an assignment for the first exam opportunity (you cannot use the same paper twice for your assignment).
 
 ** Questions
 
@@ -219,7 +190,7 @@ The resit deadline for the python assignment is: Friday August 26th, 2022. Let u
 
 + The python assignment you can do alone or with at max. one other student (i.e. max group size is 2).
 + for the deadline of the python assignment, see [[Deadlines]] above
-+ on Canvas we give you the link to the github repos. with the ~assignment_template.ipynb~
++ on Canvas we will give you the link to the github repos. with the ~assignment_template.ipynb~
 + once you have "cloned" the applied-economics repository, you can see there the ~assignment_template.ipynb~ notebook. This gives you an idea of the template for the final assignment
 + to submit your final assignment:
   + do not change the name of the ~assignment_template.ipynb~ notebook
@@ -268,66 +239,59 @@ The idea of the assignment is that you report your findings in a transparent way
 
 The following ingredients will be important when we evaluate your assignment:
 
-+ Start with a clear and transparent *question*.
-+ There are a lot of interesting economic questions for which you do not need programming to find the answer. However, as an important part of this course is programming in python, we want to see some programming. So choose a question where you can show off your programming skills!
++ Start from a theory paper; e.g. one you have read for another course.
++ Briefly describe what the paper does and what the main results are.
++ Then formulate a clear and transparent *question* that cannot be immediately answered by the paper.
+  + Extend the paper's model (a bit) using the fact that you will simulate the model and do not need to provide an analytical solution.
+    + note: we do not expect a major extension of the model; just a small change and use simulations to show how results differ due to this adaptation of the model.
+    + hint: choose a question/extension where you can show off your programming skills!
 + Briefly *motivate* why this question is interesting.
-+ Explain the *method* or data that you use to answer the question.
 + Give the *answer* that you find (as a preview).
 + Mention the main *assumptions* that you need to get this answer.
-+ When you use information, create a link to this information. The reader then only needs to click to find the relevant information.
-+ If you use data, present graphs of the data.
-+ Include the data in your github respository so that we can replicate your analysis.
-+ If you use equations, use latex to make them easy to read.
++ Use latex to introduce and explain the model of the paper. Describe the main equations (using latex) of the model.
++ When you use information (e.g. a literature reference), create a link to this information. The reader then only needs to click to find the relevant information.
++ Describe your (small) extension of the model.
++ Explain how you move from the analytical equations of the paper to Python code.
++ Solve for the equilibrium using Python.
++ Simulate outcomes by using different values for parameters and save the outcomes of the simulations in a pandas dataframe.
 + Explain your code, the reader --think of your fellow students-- must be able to easily follow what you are doing.
++ Present graphs of your simulation results.
++ Discuss what the figures show (e.g. $x$ is increasing in $y$) and explain the economic intuition for this relation (between $x$ and $y$).
 + Present a clear conclusion/answer to your question.
-+ Programming is great to do *sensitivity analysis*, just do the same you did before, but now with different parameter values.
-+ Include some *discussion* of what you find and elements on which you need additional information.
++ Finish with a brief *discussion* of your results.
 
-Two remarks:
+Remark:
 + you can copy code from the web; but
   + make sure that you explain the code that you use so that another student of the course understands it and can use it;
-  + give the reference of the code that you copy;
-+ use *common sense*: it is not always necessary to have a full blown economic model, but we do expect you to think!
-  + in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression". For each step that you program, ask yourself why this step makes sense and then explain this in your notebook.
+  + give the reference of the code that you copy.
 
 
 ** resit of final assignment
 
-The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question; if you are using data, choose a new data set. Simply adjusting your first submission based on our feedback will be not be enough.
-
-Simply adjusting your first submission based on our feedback will be not be enough. 
+The resit of the final assignment needs to start from a new paper compared to the one you handed in before. Simply adjusting your first submission based on our feedback will be not be enough.
 
 Otherwise, follow the procedure above on how to submit the assignment and fill in the google form.
 
 
-** examples of assignments from previous years
-
-+ [[https://joelleduff.github.io/Final/STindex.html][first example]]
-+ [[https://joostbouten.github.io/AEA_Joost_Twan.html][second example]]
-+ [[https://github.com/koenbosch/Assignments/blob/master/KOEN%20VAN%20DEN%20BOSCH%20MARTIJN%20BLOEMBERG%20PYTHON%20ASSIGNMENT%20AEA1.ipynb][third example]]
-+ [[https://github.com/RoelSchoen/assignments][fourth example]]
-+ [[https://colab.research.google.com/github/aetknaapen/assignments/blob/master/Python_assignment_final.ipynb][fifth example]]
-
 * Python as programming language
 
-We use python as programming language. I guess, a fair question is:
-why python? The non-scientific answer is: because I like it a lot.
+We use Python as programming language. A fair question is:
+why Python? The non-scientific answer is: because we like it a lot.
 
-Other answers, better motivated than my own, include:
+Other answers, better motivated than this, include:
 
 - https://www.datacamp.com/community/blog/python-scientific-computing-case
 - https://developer.ibm.com/blogs/use-python-for-scientific-research/
 - google the question if you want more answers.
 
-We will program python using the jupyter notebook. One motivation to use the jupyter notebook is based on a paper in the AER:
+We will program Python using the jupyter notebook. One motivation to use the jupyter notebook is based on a paper in the AER:
 
 [[yt:oP9Qcjq8UVI]]
 
-Note that this is a presentation on a python conference having nothing to do with economics. The fact that this presentation uses an AER paper to motivate using the notebook, may induce a wee pause in which you ponder the state of our discipline.
+Note that this is a presentation on a Python conference having nothing to do with economics. The fact that this presentation uses an AER paper to motivate using the notebook (instead of an excel file), may induce a pause in which you ponder the state of our discipline.
 
 After this pause, take a look at some notebooks:
-
-[[https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks]]
+- https://github.com/jupyter/jupyter/wiki
 
 
 Links and resources for python:

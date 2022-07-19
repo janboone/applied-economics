@@ -6,7 +6,7 @@
 *Under construction*
 
 
-This page contains the screencasts for the python track of the course [[file:index.org::#python_track_AEA][AEA]]
+This page contains the screencasts for the course [[file:index.org::#python_track_AEA][AEA]]
 
 #+TOC: headlines 2
 
@@ -15,47 +15,43 @@ This page contains the screencasts for the python track of the course [[file:ind
   :ID:       how_are_screencasts_supposed_to_help
   :END:
 
-For the python part of the course we use [[https://github.com/janboone/applied-economics][this notebook]]. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed.
+We use [[https://github.com/janboone/applied-economics][this notebook]] for the course. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed.
 
-For students without a programming background (like most economics students) it can be intimidating or frustrating to start typing code. Reasons include not knowing how to do it perfectly or getting scared when there is an error message. Obviously, this is not necessary nor helpful when trying to learn a programming language. But the upshot is that some students do not try anything, sit back and type the correct answers when given to them. Needless to say, you do not learn how to program in python by typing in the correct answers given in class.
+For students without a programming background (like most economics students) it can be intimidating or frustrating to start typing code. Reasons include not knowing how to do it perfectly or getting scared when there is an error message. Obviously, this is not necessary nor helpful when trying to learn a programming language. But the upshot is that some students do not try anything, sit back and type the correct answers when given to them. Needless to say, you do not learn how to program in Python by typing in the correct answers given in class.
 
-The way we solve this in class is to give plenty of time to solve the questions yourself. In economics terminology: by keeping you in class, we reduce your opportunity costs to zero. Hence, you might as well type in some code and press Shift-Enter.
-
-We cannot do this with a screencast. Chances are, you understand how fast-forward works on the video. Hence, the screencasts give you hints on how to finish the notebook but it does not give you step-by-step answers for each question. If you still get stuck, ask us during the tutorials.
+Hence, the screencasts give you hints on how to finish the notebook but they do not give you step-by-step answers for each question. If you get stuck, ask us during the tutorials.
 
 ** Why are there screencasts?
 
-The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. Now that we have them, we use them as complements to the classes taught.
 
 ** Suggested use of the screencasts
 
 Just watching the screencasts is not going to be very useful for you. The best way to use them is as follows:
 
 + first read the relevant section in the notebook and try to solve the questions by yourself
-+ if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what problems to look for in the video
++ if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what issues to look for in the video
 + type along with what we do in the screencast. Pause the video if you need more time to type
 + experiment with the code that we give you in the video either during the video or after watching it; try different numerical values, use different syntax or a different library; if you get an error, google it to see what is going on etc.
-+ in general, play around with the python code; that is the best way to understand and learn the language
++ in general, play around with the Python code; that is the best way to understand and learn the language
 
-With screencasts there is --obviously-- no interaction between teachers and students. This is a problem when you run into an error message. In class students then immediately raise their hand to understand what is happening.
-
-As this is not possible with a screencast, here are some tips on how to deal with error messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
+When you get an error message, here are some tips on how to deal with such messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
 
 Python error messages:
 + start reading the error message at the end; hence scroll down in your notebook to see the last line of the error message. This will usually give a clue of what is happening
 + if you do not know what the last line means, use copy/paste to google it or go to [[https://stackoverflow.com/][stackoverflow]] directly
-+ reading "upwards" from the last line, you can trace how the error was generated 
++ reading "upwards" from the last line, you can trace how the error was generated; that is, which parts of your code caused the error. 
 
 ** Prerequisite knowledge
 
 *Economics*: this introduction to python is part of an MSc degree in Economics. Hence, we assume that you know what utility is and how utility (and producer surplus, if relevant)
-adds up to welfare. You know how demand and supply curves are derived. What market power is, how a Cournot model is solved. Concepts like asymmetric information, adverse selection and moral hazard ring a bell. You know what risk is and how it can be measured. You know what the [[https://www.worldbank.org/][World Bank]] is, as later on we will use their data. You have done introductions to statistics and econometrics. Generally speaking, you understand the economics parts of the notebooks, though not necessarily their python implementation.
+adds up to welfare. You know how demand and supply curves are derived. What market power is, how a Cournot model is solved. Concepts like asymmetric information, adverse selection and moral hazard ring a bell. You know what risk is and how it can be measured. You know what the [[https://www.worldbank.org/][World Bank]] is, as later on we will use their data. You have done introductions to statistics and econometrics. Generally speaking, you understand the economics parts of the notebooks, though not necessarily their Python implementation.
 
-*Python*: before you start with the notebook and the screencasts you need some basic knowledge of python. You can use [[https://www.datacamp.com/][Datacamp]], [[https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-][Socratica]], or introduction videos to python, numpy etc. from one of the big python conferences, like [[https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC][SciPy 2019]] or [[https://www.youtube.com/playlist?list=PLPbTDk1hBo3xof51R8pk3kP1BVBuMYP9c][PyCon 2019]].
+*Python*: before you start with the notebook and the screencasts you need some basic knowledge of Python. You can use [[https://www.datacamp.com/][Datacamp]], [[https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-][Socratica]], or introduction videos to Python, numpy etc. from one of the big python conferences, like [[https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC][SciPy 2019]] or [[https://www.youtube.com/playlist?list=PLPbTDk1hBo3xof51R8pk3kP1BVBuMYP9c][PyCon 2019]] or more recent events.
 
-Things you should be familiar with is the syntax of python (e.g. the role of spaces), how to import libraries (difference between ~import numpy as np, import numpy, from numpy import *~), how to define a function, use of datatypes like lists, tuples, dictionaries, ~numpy~ arrays (what is the difference between adding lists (using "+") and adding numpy arrays), you understand slicing notation for arrays and lists, the use of masks to select data from an array, you are able to plot a function or data points with ~matplotlib~, you can read data into a dataframe with ~pandas~ and then manipulate this data (define new columns/variables).
+Things you should be familiar with is the syntax of Python (e.g. the role of spaces), how to import libraries (difference between ~import numpy as np, import numpy, from numpy import *~), how to define a function, use of datatypes like lists, tuples, dictionaries, ~numpy~ arrays (what is the difference between adding lists (using "+") and adding numpy arrays), you understand slicing notation for arrays and lists, the use of masks to select data from an array, you are able to plot a function or data points with ~matplotlib~, you can read data into a dataframe with ~pandas~ and then manipulate this data (define new columns/variables).
 
-** Libraries we use
+** Libraries we use regularly
 
 + numpy: basic number crunching and vector manipulation
 + pymc3: to generate random numbers and do Bayesian analysis
@@ -72,7 +68,7 @@ You can use JupyterLab on the Tilburg University server. But you can also instal
 
 The video was recorded using an older version of the website; but it will look similar in your year.
 
-The goal of this video is to give you an introduction to JupyterLab; not an introduction to python. So, do not worry if you do not understand the python code that is typed and evaluated.
+The goal of this video is to give you an introduction to JupyterLab; not an introduction to Python. So, do not worry if you do not understand (yet) the Python code that is typed and evaluated.
 
 [[yt:EFOmmjnYGHs][Introduction to JupyterLab]]
 
@@ -85,16 +81,16 @@ Topics we cover in this video:
 + how to create headings (using ~#~) and bullet lists (using ~*~) in markdown;
 + create a link in markdown;
 + how to type math in markdown using [[https://www.latex-project.org/][latex]] and the delimiters ~$ $~
-+ in a code cell, you can type python code:
++ in a code cell, you can type Python code:
   + this can be useful if you want to make notes on your datacamp courses
-  + type and evaluate the python code (from datacamp) and explain what the code does in a markdown cell;
+  + type and evaluate the Python code (from datacamp) and explain what the code does in a markdown cell;
 + if you have long variable or function names, use the TAB key to complete the names;
 + this also works if you want to type functions associated with a library like ~numpy~
   + e.g.type ~np.ara~ and then TAB to see the completions;
 + apply the numpy ~sum~ function to an array ~my_list~: ~np.sum(my_list~) or ~my_list.sum()~
 + create a plot using ~matplotlib.pyplot~ and add labels to the axes, a title to the figure and a legend.
 + when you are finished with a notebook, you can close the file and do not forget to close the kernel as well (see the video on how to do this)
-  + if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate python code anymore.
+  + if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate Python code anymore.
 
 Questions you can try before continuing:
 + in a markdown cell, we can create $\alpha$ by typing latex ~$\alpha$~; now in a code cell type ~\alpha~ and then the TAB key; this gives you the /variable/ $\alpha$;
@@ -127,8 +123,8 @@ Further, Emacs makes it easier to give a presentation in the screencast than jup
 
 ** Jupyter vs Emacs
 
-When you see my use Emacs in the videos, you can spot some differences with JupyterLab:
-+ evaluating a code cell with python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)
+When you see me use Emacs in the videos, you can spot some differences with JupyterLab:
++ evaluating a code cell with Python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)
 + to get help on a function, type e.g. ~np.arange?~ in a code cell and evaluate the cell
 + to type text in a jupyter notebook, turn a code-cell into a Markdown cell; in Emacs you can simply type text
 + to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the ESC key); in Emacs (and org-mode version >= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)
@@ -393,7 +389,7 @@ Questions you should be able to answer:
 
 ** plot and model
 
-This screencast is not meant as an introduction into Bayesian analysis and ~pymc3~. It just shows that this can be done in python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
+This screencast is not meant as an introduction into Bayesian analysis and ~pymc3~. It just shows that this can be done in Python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
 
 [[yt:xfWdNgC6ckw]]
 

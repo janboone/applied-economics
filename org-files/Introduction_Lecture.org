@@ -1,5 +1,5 @@
 #+SETUPFILE: ./org-html-themes/org/theme-bigblow.setup
-#+TITLE: Python track in AEA
+#+TITLE: AEA 1
 #+AUTHOR: Jan Boone
 #+DATE: Dept. of Economics, Tilburg University
 #+OPTIONS: toc:1 num:nil timestamp:nil
@@ -17,6 +17,7 @@
 - in this lecture, we look at:
 
   - motivation to learn python
+  - overview of the course
   - typing texts in markdown and latex
   - markdown files on github
   - first assignment
@@ -33,11 +34,11 @@
    -  and how to present it in an understandable way
    -  while your results can be easily reproduced
 
--  in the python track we do this by teaching you
+-  we do this by teaching you
 
-   -  a programming language: python
+   -  a programming language: Python
    -  how to create notebooks where you can explain your code and
-   -  publish them on-line
+   -  publish them on-line, e.g. on github
 
 ** things to learn
    :PROPERTIES:
@@ -46,9 +47,10 @@
 
 - when you finish this course, you can
 
-  - solve models in python
-  - do simulations in python
+  - solve models in Python
+  - do simulations in Python
   - create a file or notebook like [[https://github.com/janboone/applied-economics/blob/master/economics_notebook.ipynb][this]]
+  - go on to the Datascience course next semester
 
 ** finishing the course
    :PROPERTIES:
@@ -63,6 +65,15 @@
 - gives a good starting point to write your thesis
 - check [[file:index.org][the website]] and Canvas for relevant information
 
+* Overview of the course
+
+- Python
+- Career Services offers training; e.g. for job interviews
+  - this compulsory
+  - see AEA1 on Canvas for details
+- Gender economics
+
+
 * Office and Excel
   :PROPERTIES:
   :CUSTOM_ID: office-excel-and-word
@@ -70,7 +81,6 @@
 
 **  Excel is great for programming?
 
-+ [[https://twitter.com/philipbstark/status/498683914592862208][check this]]
 + indeed, simple things can be done in excel
 + e.g. keep track of your grades and calculate the average
 + but possibilities are limited: it is not a programming language
@@ -117,8 +127,8 @@
    :END:
 
 -  latex is great word processing software
--  you should consider writing your thesis in latex
--  but for now, we focus on writing math in latex
+-  many students write their thesis in latex
+-  here we focus on writing math in latex
 -  you can guess what the following will do:
 
 #+BEGIN_EXAMPLE
@@ -181,10 +191,11 @@
   - you need to finish the datacamp courses and screencasts in time
   - otherwise you will be lost during the lectures
   - see the [[file:index.org::#lecture_schedule_AEA][Lecture schedule]] for the planning
-  - for the python part, attend my lectures in the Lecture schedule
   - if you want to learn everything on your own, you do not need to attend my lectures
   - but if you do attend the lectures, you participate actively
-  - you do not learn python by passively typing in answers!
+  - you do not learn Python by passively typing in answers!
+  - you have to attend Joyce's career services classes
+  - Mery's lectures on gender economics, coupled with the Python classes in the same week, give you an idea of what we expect in the final assignment
 
 
 ** lecture format
@@ -192,7 +203,7 @@
 + in the lectures we will answer questions that you ask us
 + in order to prepare these answers, it is useful if you create an issue via [[https://github.com/janboone/applied-economics/issues][this link]]
   + using the link, create an "issue" where you explain what your question is: what did you try and why did it not work?
-    + hence not a something like "I do not know the answer to: *Question* Calculate the total welfare that this planner can achieve. Denote this value ~max_welfare~."
+    + hence not something like "I do not know the answer to: *Question* Calculate the total welfare that this planner can achieve. Denote this value ~max_welfare~."
     + but "I tried to calculate total welfare in the following way ... but then I get the following error ..."
 + for us to be able to prepare these answers, submit the issue on the Friday before the week in which we discuss the topic
 
@@ -219,5 +230,5 @@
   :CUSTOM_ID: assignment
   :END:
 
-+ follow and finish the four steps under [[file:index.org::#assignment_1_AEA][Assignment 1]]
-+ type your first python and markdow at the [[https://jupyterlab.uvt.nl/][jupyter lab server]] and follow along with the screencast: [[file:pagescreencasts.org::#Short_introduction_to_JupyterLab][Short introduction to JupyterLab]]
++ follow and finish the steps under [[file:index.org::#assignment_1_AEA][Assignment 1]]
++ type your first Python and markdow at the [[https://jupyterlab.uvt.nl/][jupyter lab server]] and follow along with the screencast: [[file:pagescreencasts.org::#Short_introduction_to_JupyterLab][Short introduction to JupyterLab]]

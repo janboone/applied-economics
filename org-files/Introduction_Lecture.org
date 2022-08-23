@@ -67,11 +67,15 @@
 
 * Overview of the course
 
-- Python
-- Career Services offers training; e.g. for job interviews
-  - this compulsory
+- Python (most of the time)
+  - programming economic models, e.g. market outcome, asymmetric information, oligopoly
+  - simulating outcomes and interpreting these results
+- Career Services offers training:
+  - these classes are compulsory!
   - see AEA1 on Canvas for details
-- Gender economics
+- Gender economics taught by Mery Ferrando:
+  - helps you to understand gender economics and
+  - what we have in mind for the final assignment
 
 
 * Office and Excel
@@ -170,7 +174,7 @@
 
 - github allows you to
 
-  - publish web pages (gh-pages)
+  - publish web pages
   - work "in the cloud" with version control
   - collaborate in the cloud
   - have different versions ("branches") of the same project

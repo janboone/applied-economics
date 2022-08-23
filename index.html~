@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Applied Economic Analysis</title>
+<meta name="author" content="Jan Boone" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Applied Economic Analysis</h1>
+<p>
+This website contains the material for the MSc course Applied Economics.
+</p>
+
+<p>
+<b><b>This website is under construction for 2021/2022</b></b>
+</p>
+
+<p>
+This year the course is taught by:
+</p>
+<ul class="org-ul">
+<li>Jan Boone</li>
+<li>Sjak Smulders</li>
+<li>Barbora Písecká</li>
+</ul>
+
+
+<div id="outline-container-python_track_AEA" class="outline-2">
+<h2 id="python_track_AEA">Python track AEA</h2>
+<div class="outline-text-2" id="text-python_track_AEA">
+<p>
+For this course we use the following resources:
+</p>
+
+<ul class="org-ul">
+<li>Jean Tirole, <a href="https://press.princeton.edu/titles/10919.html">Economics for the Common Good</a>,</li>
+<li>for students following the python track in this course: We are very happy that we partner with <a href="https://www.datacamp.com/">datacamp</a> for this course to teach you python. <a href="https://www.datacamp.com/about">Datacamp</a> offers great on-line courses for you to learn python.</li>
+</ul>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#python_track_AEA">Python track AEA</a></li>
+<li><a href="#screencasts_AEA">Screencasts</a></li>
+<li><a href="#orgce54bab">Organisation of the course</a>
+<ul>
+<li><a href="#org45a2db4">For the python track, we will use the following format:</a></li>
+<li><a href="#org0183f7e">For the canon track, we will use the following format:</a></li>
+<li><a href="#lecture_schedule_AEA">Lecture schedule</a></li>
+<li><a href="#org6ebe1fb">First Python Lecture</a></li>
+<li><a href="#orgbcbed2e">Datacamp</a></li>
+<li><a href="#deadlines_AEA">Deadlines</a></li>
+<li><a href="#org75e9e0c">Questions</a></li>
+</ul>
+</li>
+<li><a href="#final_assignment_AEA">Final Assignment</a>
+<ul>
+<li><a href="#org28d2998">what we are looking for</a></li>
+<li><a href="#org1f5da30">resit of final assignment</a></li>
+<li><a href="#orgd3956ca">examples of assignments from previous years</a></li>
+</ul>
+</li>
+<li><a href="#org32499cc">Python as programming language</a>
+<ul>
+<li><a href="#orgb888a61">Jupyter notebooks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-screencasts_AEA" class="outline-2">
+<h2 id="screencasts_AEA">Screencasts</h2>
+<div class="outline-text-2" id="text-screencasts_AEA">
+<p>
+For this course a series of screencasts is available. The screencasts can be found on this <a href="./pagescreencasts.html">webpage.</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgce54bab" class="outline-2">
+<h2 id="orgce54bab">Organisation of the course</h2>
+<div class="outline-text-2" id="text-orgce54bab">
+<p>
+Since we have recorded screencasts, we will not repeat these during the lectures. The lectures are meant for interaction (only).
+</p>
+</div>
+
+<div id="outline-container-org45a2db4" class="outline-3">
+<h3 id="org45a2db4">For the python track, we will use the following format:</h3>
+<div class="outline-text-3" id="text-org45a2db4">
+<ul class="org-ul">
+<li>in the lectures we will answer questions that you ask us</li>
+<li>in order to prepare these answers, it is useful if you create an issue via <a href="https://github.com/janboone/applied-economics/issues">this link</a>
+<ul class="org-ul">
+<li>using the link, create an "issue" where you explain what your question is: what did you try and why did it not work?
+<ul class="org-ul">
+<li>hence not a something like "I do not know the answer to: <b>Question</b> Calculate the total welfare that this planner can achieve. Denote this value <code>max_welfare</code>."</li>
+<li>but "I tried to calculate total welfare in the following way &#x2026; but then I get the following error &#x2026;"</li>
+<li>describing your question like this, helps you better understand what your problem is</li>
+<li>and it helps us to answer the question in class.</li>
+</ul></li>
+</ul></li>
+<li>for us to be able to prepare these answers, submit the issue on the Friday before the week in which we discuss the topic
+<ul class="org-ul">
+<li>hence, finish the sections in the week before they are discussed in class</li>
+<li>if you can solve everything yourself, there is no need to attend the lecture (but you are, of course, welcome to do so)</li>
+<li>this is one of the advantages of programming: you can see for yourself whether it works or not.</li>
+</ul></li>
+</ul>
+
+<p>
+A suggested workflow for the python track is:
+</p>
+<ul class="org-ul">
+<li>follow the Datacamp courses and make notes of what you learn at Datacamp in a notebook on the jupyterlab server
+<ul class="org-ul">
+<li>in this way it is easy to refer back to useful code snippets that you see on Datacamp</li>
+</ul></li>
+<li>go through the notebook and try to answer the questions and assignments</li>
+<li>if you get stuck with a problem, watch the corresponding screencast for this part. It gives hints and ways to solve the problems</li>
+<li>if you still cannot figure it out, create an issue on github to ask us</li>
+<li>we will answer your questions in class</li>
+</ul>
+
+<p>
+Hence, sitting back and hoping to copy all answers during the lectures is not going to work. This is a bad strategy anyway: you learn python by trying (and failing) to code; not by copy/paste-ing the correct code.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0183f7e" class="outline-3">
+<h3 id="org0183f7e">For the canon track, we will use the following format:</h3>
+<div class="outline-text-3" id="text-org0183f7e">
+<p>
+Over the semester, you write – in a team – a “canon” in which you collect and explain insights from economics on a particular societal problem (e.g. Housing crisis, Pandemics).
+</p>
+
+<p>
+To guide you in this work, the course teaches you how to “see economics everywhere” and communicate insights from economics to non-economists. You develop your skills and build up all the elements of the canon through:
+</p>
+
+<ul class="org-ul">
+<li>reading the book by Tirole, Economics for the common good <a href="https://press.princeton.edu/books/hardcover/9780691175164/economics-for-the-common-good">https://press.princeton.edu/books/hardcover/9780691175164/economics-for-the-common-good</a>,</li>
+<li>making assignments,</li>
+<li>actively participating in our classes.</li>
+<li>In the lectures we will:
+<ul class="org-ul">
+<li>have group discussions</li>
+<li>develop material and practice economic analysis for your canon assignment</li>
+<li>answer questions about the course resources (book and video material)</li>
+<li>discuss progress and answer questions about assignments (proto-canon and canon)</li>
+</ul></li>
+</ul>
+
+<p>
+A suggested workflow for the canon track is:
+</p>
+
+<ul class="org-ul">
+<li>to prepare for lecture: read the Tirole book chapters associated to the upcoming lecture</li>
+<li>attend lecture on campus and participate,</li>
+<li>do the assignment within one week after the lecture.</li>
+<li>if needed, send a question or material to j.a.smulders@uvt.nl</li>
+<li>to get grades (protocanon assignment S1 and final canon) and to get feedback (assignment S2-7), stick to deadlines</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-lecture_schedule_AEA" class="outline-3">
+<h3 id="lecture_schedule_AEA">Lecture schedule</h3>
+<div class="outline-text-3" id="text-lecture_schedule_AEA">
+<p>
+At the moment, it is not clear whether the lectures will be live/online or hybrid. We have rooms booked for all lectures, so hopefully we can do things live in the classroom. But during the semester corona restrictions may force us to teach online.
+</p>
+
+<p>
+If we will teach online, we use zoom and the links and passwords for these lectures will be published on Canvas.
+</p>
+
+<p>
+Please keep an eye on the Canvas page where we will keep you posted on whether a lecture will be on campus or online.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">week</th>
+<th scope="col" class="org-left">day</th>
+<th scope="col" class="org-right">date</th>
+<th scope="col" class="org-right">time</th>
+<th scope="col" class="org-left">Staff</th>
+<th scope="col" class="org-left">room</th>
+<th scope="col" class="org-left">Topic</th>
+<th scope="col" class="org-left">Tirole</th>
+<th scope="col" class="org-left">Datacamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">35</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2021-08-31</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders*</td>
+<td class="org-left">CZ 120 (hybrid)</td>
+<td class="org-left">Canon 0: intro</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">35</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-03</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Boone*</td>
+<td class="org-left">zoom (only)</td>
+<td class="org-left">Intro python, markdown, github, jupyterlab</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">36</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-10</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 1: The economist</td>
+<td class="org-left">1,2,3,4</td>
+<td class="org-left">Intro (1,2)</td>
+</tr>
+
+<tr>
+<td class="org-right">37</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2021-09-14</td>
+<td class="org-right">12:45-14:30</td>
+<td class="org-left">Ladenstein*</td>
+<td class="org-left">MDZ 20</td>
+<td class="org-left">Plenary Career Session</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Intro (3)</td>
+</tr>
+
+<tr>
+<td class="org-right">37</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-17</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 2: Jobs</td>
+<td class="org-left">6,7,9</td>
+<td class="org-left">Intro (4)</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Mon</td>
+<td class="org-right">2021-09-20</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 202</td>
+<td class="org-left">Career Orientation &amp; Preparation - Personal Branding &amp; Networking</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Intermediate (1,2)</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Mon</td>
+<td class="org-right">2021-09-20</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 501</td>
+<td class="org-left">Career Orientation &amp; Preparation - Personal Branding &amp; Networking</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Mon</td>
+<td class="org-right">2021-09-20</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 103</td>
+<td class="org-left">Career Orientation &amp; Preparation - How to prepare for Assessments</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-24</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 102</td>
+<td class="org-left">Career Orientation &amp; Preparation - How to prepare for Assessments</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-24</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 303</td>
+<td class="org-left">Career Orientation &amp; Preparation - Talent Management</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-09-24</td>
+<td class="org-right">13:45-17:30</td>
+<td class="org-left">*</td>
+<td class="org-left">RTZ 202</td>
+<td class="org-left">Career Orientation &amp; Preparation - LinkedIn &amp; Networking through LinkedIn</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Intermediate (3,4)</td>
+</tr>
+
+<tr>
+<td class="org-right">40</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-10-08</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">DZ 1</td>
+<td class="org-left">Q&amp;A python/Datacamp</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Intermediate (5)</td>
+</tr>
+
+<tr>
+<td class="org-right">41</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-10-15</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 3: Climate</td>
+<td class="org-left">8,16</td>
+<td class="org-left">Pandas (1,2)</td>
+</tr>
+
+<tr>
+<td class="org-right">45</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-11-12</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 4: Finance</td>
+<td class="org-left">10,11,12</td>
+<td class="org-left">Pandas (3,4)</td>
+</tr>
+
+<tr>
+<td class="org-right">46</td>
+<td class="org-left">Wed</td>
+<td class="org-right">2021-11-17</td>
+<td class="org-right">16:45-18:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">CZ 121</td>
+<td class="org-left">The market</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">46</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-11-19</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">DZ 1</td>
+<td class="org-left">Asymmetric information</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">47</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-11-26</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 5: regulation</td>
+<td class="org-left">13,17</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">48</td>
+<td class="org-left">Wed</td>
+<td class="org-right">2021-12-01</td>
+<td class="org-right">16:45-18:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">CZ 121</td>
+<td class="org-left">Financial crisis</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">48</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-12-03</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">DZ 1</td>
+<td class="org-left">Empirical research</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">49</td>
+<td class="org-left">Wed</td>
+<td class="org-right">2021-12-08</td>
+<td class="org-right">16:45-18:30</td>
+<td class="org-left">Boone</td>
+<td class="org-left">CZ 121</td>
+<td class="org-left">Health care regulation</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">49</td>
+<td class="org-left">Fri</td>
+<td class="org-right">2021-12-10</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Smulders</td>
+<td class="org-left">DZ 2</td>
+<td class="org-left">Canon 6: Behavior</td>
+<td class="org-left">5,15</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+"*" indicates that everyone has to attend this lecture (irrespective of whether you do the canon or python track).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ebe1fb" class="outline-3">
+<h3 id="org6ebe1fb">First Python Lecture</h3>
+<div class="outline-text-3" id="text-org6ebe1fb">
+<p>
+<a href="./Introduction_Lecture.html#introduction">Introduction Lecture</a>
+</p>
+</div>
+
+<div id="outline-container-assignment_1_AEA" class="outline-4">
+<h4 id="assignment_1_AEA">Assignment 1</h4>
+<div class="outline-text-4" id="text-assignment_1_AEA">
+<p>
+Do the following four steps:
+</p>
+<ul class="org-ul">
+<li>create a github account on <a href="https://github.com/">github</a> (you need this for the next step)</li>
+<li>fill in this <a href="https://forms.gle/bUS3sZZYgM4y1wdJ7">google form</a> before <b><b>Friday September 17, 2021</b></b>
+<ul class="org-ul">
+<li>note that you need to login on google with your TiU credentials when you fill in the form</li>
+<li>e.g. make sure that your browser is not logged in with your gmail-address</li>
+<li>if necessary, create an incognito/private window</li>
+</ul></li>
+<li>go to
+<ul class="org-ul">
+<li><a href="https://jupyterlab.uvt.nl/">jupyter lab</a>
+<ul class="org-ul">
+<li>IT suggests that you use the Firefox browser to access jupyter lab</li>
+<li>sometimes it helps to access jupyter lab with an incognito/private window</li>
+</ul></li>
+<li>or &#x2013;if all else fails&#x2013; you can use <a href="https://colab.research.google.com/">google's colab</a></li>
+</ul></li>
+<li>create a new python notebook and type the following code in the first cell:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-ipython">%%bash
+
+git clone https://github.com/janboone/applied-economics
+</pre>
+</div>
+<ul class="org-ul">
+<li>then press the Shift key and Enter key at the same time</li>
+<li>this creates a folder on the server `applied-economics` that contains the material for the python part of the course.</li>
+<li>Note: you can only run this command once. If you run it again, you get an error since the folder already exists.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfaadee7" class="outline-4">
+<h4 id="orgfaadee7">Final assignment</h4>
+<div class="outline-text-4" id="text-orgfaadee7">
+<ul class="org-ul">
+<li>instructions for the final assignment can be found below.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbcbed2e" class="outline-3">
+<h3 id="orgbcbed2e">Datacamp</h3>
+<div class="outline-text-3" id="text-orgbcbed2e">
+<p>
+You can get access to Datacamp via the <a href="https://www.tilburguniversity.edu/students/skills/programming">university website</a>.
+</p>
+
+<p>
+From Datacamp, do the following courses:
+</p>
+
+<ul class="org-ul">
+<li>Intro: <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">https://www.datacamp.com/courses/intro-to-python-for-data-science</a></li>
+<li>Intermediate: <a href="https://www.datacamp.com/courses/intermediate-python-for-data-science">https://www.datacamp.com/courses/intermediate-python-for-data-science</a></li>
+<li>Pandas: <a href="https://learn.datacamp.com/courses/data-manipulation-with-pandas">https://learn.datacamp.com/courses/data-manipulation-with-pandas</a></li>
+</ul>
+
+<p>
+It is up to you how to combine the Datacamp courses with the <a href="./pagescreencasts.html">Screencasts</a>. We suggest to finish the Datacamp Intro course first. As there is no economics on Datacamp, some students prefer to start with the screencasts after the Intro. Others prefer to finish all the Datacamp courses before they start on the screencasts, so that they have seen all the python and pandas material.
+</p>
+</div>
+</div>
+
+<div id="outline-container-deadlines_AEA" class="outline-3">
+<h3 id="deadlines_AEA">Deadlines</h3>
+<div class="outline-text-3" id="text-deadlines_AEA">
+<p>
+We recommend that you finish the Intermediate course before October 10, 2021 and the Pandas course before November 12, 2021.
+</p>
+
+<p>
+The deadline for the <b>final python assignment</b> is: Friday January 28th, 2022. However, if you need your grade before the end of January, you need to submit your final assignment by Friday January 14th, 2022. Let us know by email that your assignment needs to be graded early.
+</p>
+
+<p>
+If you do the python track in this course, your grade is determined by the final assignment (only).
+</p>
+
+<p>
+The resit deadline for the python assignment is: Friday August 26th, 2022. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org75e9e0c" class="outline-3">
+<h3 id="org75e9e0c">Questions</h3>
+<div class="outline-text-3" id="text-org75e9e0c">
+<p>
+If you have questions/comments about this course, go to the <a href="https://github.com/janboone/applied-economics/issues">issues page</a>
+open a new issue (with the green "New issue" button) and type your
+question. Use a title that is informative (e.g. not "question", but
+"question about the second assignment"). Go to the next box ("Leave a comment")
+and type your question. Then click on "Submit new issue". We will
+answer your question as quickly as possible.
+</p>
+
+<p>
+The advantages of the issue page include:
+</p>
+
+<ul class="org-ul">
+<li>if you have a question, other students may have it as well; in this
+way we answer the questions in a way that everyone can see it. Also
+before asking the question, you may want to check whether it was
+asked/answered before on the issue page</li>
+<li>we answer your question more quickly than when you email us</li>
+<li>you increase your knowledge of github!</li>
+</ul>
+
+<p>
+Only when you need to include privately sensitive information ("my cat
+has passed away"), you can send an email.
+</p>
+
+<p>
+In order to post issues, you need to create a github account (which
+you need anyway to follow this course).
+</p>
+
+<p>
+Note that if your question is related to another issue, you can react
+to the earlier issue and leave a comment in that "conversation".
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-final_assignment_AEA" class="outline-2">
+<h2 id="final_assignment_AEA">Final Assignment</h2>
+<div class="outline-text-2" id="text-final_assignment_AEA">
+<ul class="org-ul">
+<li>The python assignment you can do alone or with at max. one other student (i.e. max group size is 2).</li>
+<li>for the deadline of the python assignment, see <a href="#deadlines_AEA">Deadlines</a> above</li>
+<li>on Canvas we give you the link to the github repos. with the <code>assignment_template.ipynb</code></li>
+<li>once you have "cloned" the applied-economics repository, you can see there the <code>assignment_template.ipynb</code> notebook. This gives you an idea of the template for the final assignment</li>
+<li>to submit your final assignment:
+<ul class="org-ul">
+<li>do not change the name of the <code>assignment_template.ipynb</code> notebook</li>
+<li>fill in this <a href="https://forms.gle/QQxvEwYWAUwbZLBp9">google form</a></li>
+<li>push the final notebook on the github classroom repository</li>
+</ul></li>
+</ul>
+</div>
+
+
+<div id="outline-container-org28d2998" class="outline-3">
+<h3 id="org28d2998">what we are looking for</h3>
+<div class="outline-text-3" id="text-org28d2998">
+<p>
+The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others. The intended audience is your fellow students. They should be able to understand the code you write together with the explanations that you give for this code.
+</p>
+
+<p>
+The following ingredients will be important when we evaluate your assignment:
+</p>
+
+<ul class="org-ul">
+<li>Start with a clear and transparent <b>question</b>.</li>
+<li>There are a lot of interesting economic questions for which you do not need programming to find the answer. However, as an important part of this course is programming in python, we want to see some programming. So choose a question where you can show off your programming skills!</li>
+<li>Briefly <b>motivate</b> why this question is interesting.</li>
+<li>Explain the <b>method</b> or data that you use to answer the question.</li>
+<li>Give the <b>answer</b> that you find (as a preview).</li>
+<li>Mention the main <b>assumptions</b> that you need to get this answer.</li>
+<li>When you use information, create a link to this information. The reader then only needs to click to find the relevant information.</li>
+<li>If you use data, present graphs of the data.</li>
+<li>Include the data in your github respository so that we can replicate your analysis.</li>
+<li>If you use equations, use latex to make them easy to read.</li>
+<li>Explain your code, the reader &#x2013;think of your fellow students&#x2013; must be able to easily follow what you are doing.</li>
+<li>Present a clear conclusion/answer to your question.</li>
+<li>Programming is great to do <b>sensitivity analysis</b>, just do the same you did before, but now with different parameter values.</li>
+<li>Include some <b>discussion</b> of what you find and elements on which you need additional information.</li>
+</ul>
+
+<p>
+Two remarks:
+</p>
+<ul class="org-ul">
+<li>you can copy code from the web; but
+<ul class="org-ul">
+<li>make sure that you explain the code that you use so that another student of the course understands it and can use it;</li>
+<li>give the reference of the code that you copy;</li>
+</ul></li>
+<li>use <b>common sense</b>: it is not always necessary to have a full blown economic model, but we do expect you to think!
+<ul class="org-ul">
+<li>in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression". For each step that you program, ask yourself why this step makes sense and then explain this in your notebook.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org1f5da30" class="outline-3">
+<h3 id="org1f5da30">resit of final assignment</h3>
+<div class="outline-text-3" id="text-org1f5da30">
+<p>
+The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question; if you are using data, choose a new data set. Simply adjusting your first submission based on our feedback will be not be enough.
+</p>
+
+<p>
+Simply adjusting your first submission based on our feedback will be not be enough. 
+</p>
+
+<p>
+Otherwise, follow the procedure above on how to submit the assignment and fill in the google form.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd3956ca" class="outline-3">
+<h3 id="orgd3956ca">examples of assignments from previous years</h3>
+<div class="outline-text-3" id="text-orgd3956ca">
+<ul class="org-ul">
+<li><a href="https://joelleduff.github.io/Final/STindex.html">first example</a></li>
+<li><a href="https://joostbouten.github.io/AEA_Joost_Twan.html">second example</a></li>
+<li><a href="https://github.com/koenbosch/Assignments/blob/master/KOEN%20VAN%20DEN%20BOSCH%20MARTIJN%20BLOEMBERG%20PYTHON%20ASSIGNMENT%20AEA1.ipynb">third example</a></li>
+<li><a href="https://github.com/RoelSchoen/assignments">fourth example</a></li>
+<li><a href="https://colab.research.google.com/github/aetknaapen/assignments/blob/master/Python_assignment_final.ipynb">fifth example</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org32499cc" class="outline-2">
+<h2 id="org32499cc">Python as programming language</h2>
+<div class="outline-text-2" id="text-org32499cc">
+<p>
+We use python as programming language. I guess, a fair question is:
+why python? The non-scientific answer is: because I like it a lot.
+</p>
+
+<p>
+Other answers, better motivated than my own, include:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.datacamp.com/community/blog/python-scientific-computing-case">https://www.datacamp.com/community/blog/python-scientific-computing-case</a></li>
+<li><a href="https://developer.ibm.com/blogs/use-python-for-scientific-research/">https://developer.ibm.com/blogs/use-python-for-scientific-research/</a></li>
+<li>google the question if you want more answers.</li>
+</ul>
+
+<p>
+We will program python using the jupyter notebook. One motivation to use the jupyter notebook is based on a paper in the AER:
+</p>
+
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/oP9Qcjq8UVI" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Note that this is a presentation on a python conference having nothing to do with economics. The fact that this presentation uses an AER paper to motivate using the notebook, may induce a wee pause in which you ponder the state of our discipline.
+</p>
+
+<p>
+After this pause, take a look at some notebooks:
+</p>
+
+<p>
+<a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a>
+</p>
+
+
+<p>
+Links and resources for python:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://scipy-lectures.github.io/">https://scipy-lectures.github.io/</a></li>
+<li><a href="http://www.physics.nyu.edu/pine/pymanual/html/pymanMaster.html">http://www.physics.nyu.edu/pine/pymanual/html/pymanMaster.html</a></li>
+<li><a href="https://aeturrell.github.io/coding-for-economists/intro.html">https://aeturrell.github.io/coding-for-economists/intro.html</a> (introduction to python with economics in mind)</li>
+<li><a href="https://python.quantecon.org/intro.html">https://python.quantecon.org/intro.html</a> (fairly advanced economics with python)</li>
+<li><a href="https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-">https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-</a> (video lectures on a number of python topics)</li>
+</ul>
+</div>
+
+<div id="outline-container-orgb888a61" class="outline-3">
+<h3 id="orgb888a61">Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orgb888a61">
+</div>
+<div id="outline-container-org170ec1f" class="outline-4">
+<h4 id="org170ec1f">Markdown</h4>
+<div class="outline-text-4" id="text-org170ec1f">
+<p>
+For the assignment it is useful to know a bit of markdown. You can
+either google "markdown tutorial" or use one of the following websites:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a></li>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge10da74" class="outline-4">
+<h4 id="orge10da74">Latex</h4>
+<div class="outline-text-4" id="text-orge10da74">
+<p>
+For the python assignment it is useful to familiarize yourself with
+latex. Note that you do not need to type a whole document in latex (so
+don't worry about preambles etc.), you just need to know how to type
+\(x^2\), \(\alpha,\beta\) or have math displayed like
+</p>
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+<p>
+Google "latex tutorial" or go to pages like:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf</a></li>
+<li><a href="https://www.latex-tutorial.com/tutorials/amsmath/">https://www.latex-tutorial.com/tutorials/amsmath/</a></li>
+<li><a href="http://www.andy-roberts.net/writing/latex/mathematics_1">http://www.andy-roberts.net/writing/latex/mathematics_1</a></li>
+</ul>
+
+<p>
+and focus on typesetting.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>

@@ -74,25 +74,24 @@ We highly recommend that you read the book by Jean Tirole to get an idea how you
 
 At the moment, we believe that the all lectures will be on campus. If we would need to switch to on-line lectures, we will let you know via Canvas
 
-| day |       date |        time | staff          | room         | Topic                                          | Datacamp             |
-|-----+------------+-------------+----------------+--------------+------------------------------------------------+----------------------|
-| Tue | 2022-08-30 | 14:45-16:30 | Boone, J.      | CZ 114 (99)  | Intro python, markdown, github, jupyterlab     |                      |
-| Thu | 2022-09-01 | 14:45-16:30 | VERVALT        | AZ 201 (97)  |                                                | Intro (1,2)          |
-| Wed | 2022-09-07 | 16:45-18:30 | Ladenstein, J  | CZ 7 (96)    | Plenary Career Session: see Canvas for details | Intro (3,4)          |
-| Mon | 2022-09-12 | 14:45-18:30 | Ladenstein, J. | RTZ 202 (32) | Career workshops: see Canvas for details       | Intermediate (1,2)   |
-| Mon | 2022-09-12 | 14:45-18:30 | Boomaars, J.   | RTZ 203 (32) | Career workshops: see Canvas for details       |                      |
-| Tue | 2022-09-13 | 12:45-16:30 | Ladenstein, J. | RTZ 103 (32) | Career workshops: see Canvas for details       | Intermediate (3,4,5) |
-| Tue | 2022-09-13 | 12:45-16:30 | Boomaars, J.   | RTZ 501 (32) | Career workshops: see Canvas for details       |                      |
-| Wed | 2022-09-21 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | The market                                     | Pandas (1,2)         |
-| Thu | 2022-09-29 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | Asymmetric information                         | Pandas (3,4)         |
-| Tue | 2022-10-11 | 10:45-12:30 | Boone, J.      | CZ 9 (97)    | Financial crisis                               |                      |
-| Tue | 2022-11-08 | 10:45-12:30 | Boone, J.      | CZ 9 (97)    | Empirical research                             |                      |
-| Wed | 2022-11-16 | 10:45-12:30 | Boone, J.      | AZ 201 (97)  | Healthcare and regulation                      |                      |
-| Mon | 2022-11-21 | 10:45-12:30 | Ferrando, M.   | AZ 201 (97)  | Lecture gender economics                       |                      |
-| Fri | 2022-11-25 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | notebook gender economics                      |                      |
-| Mon | 2022-11-28 | 10:45-12:30 | Ferrando, M.   | AZ 201 (97)  | Lecture gender economics                       |                      |
-| Fri | 2022-12-02 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | notebook gender economics                      |                      |
-| Wed | 2022-12-07 | 12:45-14:30 | Boone, J.      | CZ 7 (96)    | Q&A                                            |                      |
+| day |       date |        time | staff          | room    | Topic                                          | Datacamp             |
+|-----+------------+-------------+----------------+---------+------------------------------------------------+----------------------|
+| Tue | 2022-08-30 | 14:45-16:30 | Boone, J.      | CZ 114  | Intro python, markdown, github, jupyterlab     |                      |
+| Wed | 2022-09-07 | 16:45-18:30 | Ladenstein, J  | CZ 7    | Plenary Career Session: see Canvas for details | Intro (3,4)          |
+| Mon | 2022-09-12 | 14:45-18:30 | Ladenstein, J. | RTZ 202 | Career workshops: see Canvas for details       | Intermediate (1,2)   |
+| Mon | 2022-09-12 | 14:45-18:30 | Boomaars, J.   | RTZ 203 | Career workshops: see Canvas for details       |                      |
+| Tue | 2022-09-13 | 12:45-16:30 | Ladenstein, J. | RTZ 103 | Career workshops: see Canvas for details       | Intermediate (3,4,5) |
+| Tue | 2022-09-13 | 12:45-16:30 | Boomaars, J.   | RTZ 501 | Career workshops: see Canvas for details       |                      |
+| Wed | 2022-09-21 | 12:45-14:30 | CANCELLED      |         |                                                | Pandas (1,2)         |
+| Thu | 2022-09-29 | 12:45-14:30 | Boone, J.      | CZ 7    | The market and Asymmetric information          | Pandas (3,4)         |
+| Tue | 2022-10-11 | 10:45-12:30 | Boone, J.      | CZ 9    | Financial crisis                               |                      |
+| Tue | 2022-11-08 | 10:45-12:30 | Boone, J.      | CZ 9    | Empirical research                             |                      |
+| Wed | 2022-11-16 | 10:45-12:30 | Boone, J.      | AZ 201  | Healthcare and regulation                      |                      |
+| Mon | 2022-11-21 | 10:45-12:30 | Ferrando, M.   | AZ 201  | Lecture gender economics                       |                      |
+| Fri | 2022-11-25 | 12:45-14:30 | Boone, J.      | CZ 7    | notebook gender economics                      |                      |
+| Mon | 2022-11-28 | 10:45-12:30 | Ferrando, M.   | AZ 201  | Lecture gender economics                       |                      |
+| Fri | 2022-12-02 | 12:45-14:30 | Boone, J.      | CZ 7    | notebook gender economics                      |                      |
+| Wed | 2022-12-07 | 12:45-14:30 | Boone, J.      | CZ 7    | Q&A                                            |                      |
 
 
 
@@ -152,7 +151,7 @@ It is up to you how to combine the Datacamp courses with the [[file:./pagescreen
 
 Follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
-Also note the rules for the resit assignment in case you submitted an assignment for the first exam opportunity (you cannot use the same paper twice for your assignment).
+Also note the rules for the resit assignment in case you submitted an assignment for the first exam opportunity (you cannot discuss/program the same paper twice for your assignment).
 
 ** Questions
 
@@ -194,14 +193,17 @@ Also note the rules for the resit assignment in case you submitted an assignment
 + once you have "cloned" the applied-economics repository, you can see there the ~assignment_template.ipynb~ notebook. This gives you an idea of the template for the final assignment
 + to submit your final assignment:
   + do not change the name of the ~assignment_template.ipynb~ notebook
-  + fill in this [[https://forms.gle/QQxvEwYWAUwbZLBp9][google form]]
+  + fill in this [[https://forms.gle/Fri5MZc9J2wbzhim7][google form]]
   + push the final notebook on the github classroom repository
 
 
 ** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
 
 - [ ] create assignment on github classroom with the AEA/datascience template/notebook: https://github.com/janboone/AEA_final_assignment or https://github.com/janboone/datascience_assignment_template
-- [ ] create google form for students to fill in once they finish assignment: replace last year link above
+- [ ] my link for 2022/3 is https://classroom.github.com/classrooms/16413080-tisem-aea/assignments/assignment-2022-2023
+- within classroom TiSEM-AEA: https://classroom.github.com/classrooms/16413080-tisem-aea
+- [ ] set deadline in github classroom
+- [ ] create google form for students to fill in once they finish assignment: replace link above (is for 2022/2023)
 - [ ] change link to the classroom assignment below
 
 - attach instructions: [[file:~/Google Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
@@ -211,7 +213,7 @@ Also note the rules for the resit assignment in case you submitted an assignment
 
 Dear students,
 
-The link for the final AEA python assignment (template) is: https://classroom.github.com/a/hIBtWC9c (this is the link for 2021/2022)
+The link for the final AEA python assignment (template) is: https://classroom.github.com/a/xvoMJs8z (this is the link for 2022/2023)
 
 You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name. Choose your favorite name!
 

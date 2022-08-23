@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-08-23 Tue 12:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ReadTheOrg style</title>
+<meta name="author" content="Fabrice Niessen" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">ReadTheOrg style</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org81376c4">1. Overview</a></li>
+<li><a href="#org00902a3">2. Typography</a>
+<ul>
+<li><a href="#org19ceb48">2.1. Headings</a></li>
+<li><a href="#orga1afe23">2.2. Body</a></li>
+<li><a href="#orgf129fd5">2.3. Bold</a></li>
+<li><a href="#orgb1068d9">2.4. Blockquotes</a></li>
+<li><a href="#org7623b32">2.5. Lists</a></li>
+</ul>
+</li>
+<li><a href="#orga1ec9e1">3. Media queries</a></li>
+<li><a href="#orgccf9846">4. Code</a>
+<ul>
+<li><a href="#org8f55090">4.1. Inline</a></li>
+<li><a href="#orgdb5424d">4.2. Basic block</a></li>
+<li><a href="#org8b75a06">4.3. Sample output</a></li>
+</ul>
+</li>
+<li><a href="#org2fd2451">5. Tables</a>
+<ul>
+<li><a href="#orgdd536cf">5.1. Basic example</a></li>
+<li><a href="#orge3e2549">5.2. Optional table caption</a></li>
+<li><a href="#org06fb92b">5.3. Striped rows</a></li>
+</ul>
+</li>
+<li><a href="#org42d86ea">6. Images</a>
+<ul>
+<li><a href="#orgc0eab90">6.1. Optional image caption</a></li>
+</ul>
+</li>
+<li><a href="#org83fb619">7. Helper classes</a></li>
+<li><a href="#orgec7941c">8. Responsive utilities</a></li>
+<li><a href="#orgc0611a1">9. CSS</a></li>
+<li><a href="#org6641118">10. Htmlize</a></li>
+<li><a href="#org8fb0351">11. JS</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8fb0351" class="outline-2">
+<h2 id="org8fb0351"><span class="section-number-2">11.</span> JS</h2>
+<div class="outline-text-2" id="text-11">
+$(function() {
+    $('.note').before("<p class='admonition-title note'>Note</p>");
+    $('.seealso').before("<p class='admonition-title seealso'>See also</p>");
+    $('.warning').before("<p class='admonition-title warning'>Warning</p>");
+    $('.caution').before("<p class='admonition-title caution'>Caution</p>");
+    $('.attention').before("<p class='admonition-title attention'>Attention</p>");
+    $('.tip').before("<p class='admonition-title tip'>Tip</p>");
+    $('.important').before("<p class='admonition-title important'>Important</p>");
+    $('.hint').before("<p class='admonition-title hint'>Hint</p>");
+    $('.error').before("<p class='admonition-title error'>Error</p>");
+    $('.danger').before("<p class='admonition-title danger'>Danger</p>");
+});
+
+$( document ).ready(function() {
+
+    // Shift nav in mobile when clicking the menu.
+    $(document).on('click', "[data-toggle='wy-nav-top']", function() {
+      $("[data-toggle='wy-nav-shift']").toggleClass("shift");
+      $("[data-toggle='rst-versions']").toggleClass("shift");
+    });
+    // Close menu when you click a link.
+    $(document).on('click', ".wy-menu-vertical .current ul li a", function() {
+      $("[data-toggle='wy-nav-shift']").removeClass("shift");
+      $("[data-toggle='rst-versions']").toggleClass("shift");
+    });
+    $(document).on('click', "[data-toggle='rst-current-version']", function() {
+      $("[data-toggle='rst-versions']").toggleClass("shift-up");
+    });
+    // Make tables responsive
+    $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
+});
+
+$( document ).ready(function() {
+    $('#text-table-of-contents ul').first().addClass('nav');
+					// ScrollSpy also requires that we use
+					// a Bootstrap nav component.
+    $('body').scrollspy({target: '#text-table-of-contents'});
+
+    // DON'T add sticky table headers (Fix issue #69?)
+    // $('table').stickyTableHeaders();
+
+    // set the height of tableOfContents
+    var $postamble = $('#postamble');
+    var $tableOfContents = $('#table-of-contents');
+    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
+
+    // add TOC button
+    var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
+    $('#content').prepend(toggleSidebar);
+
+    // add close button when sidebar showed in mobile screen
+    var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
+    var tocTitle = $('#table-of-contents').find('h2');
+    tocTitle.append(closeBtn);
+});
+
+window.SphinxRtdTheme = (function (jquery) {
+    var stickyNav = (function () {
+	var navBar,
+	    win,
+	    stickyNavCssClass = 'stickynav',
+	    applyStickNav = function () {
+		if (navBar.height() <= win.height()) {
+		    navBar.addClass(stickyNavCssClass);
+		} else {
+		    navBar.removeClass(stickyNavCssClass);
+		}
+	    },
+	    enable = function () {
+		applyStickNav();
+		win.on('resize', applyStickNav);
+	    },
+	    init = function () {
+		navBar = jquery('nav.wy-nav-side:first');
+		win    = jquery(window);
+	    };
+	jquery(init);
+	return {
+	    enable : enable
+	};
+    }());
+    return {
+	StickyNav : stickyNav
+    };
+}($));<div class="org-src-container">
+<pre class="src src-js">$(<span style="font-weight: bold;">function</span>() {
+    $(<span style="font-style: italic;">'.note'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title note'&gt;Note&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.seealso'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title seealso'&gt;See also&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.warning'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title warning'&gt;Warning&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.caution'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title caution'&gt;Caution&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.attention'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title attention'&gt;Attention&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.tip'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title tip'&gt;Tip&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.important'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title important'&gt;Important&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.hint'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title hint'&gt;Hint&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.error'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title error'&gt;Error&lt;/p&gt;"</span>);
+    $(<span style="font-style: italic;">'.danger'</span>).before(<span style="font-style: italic;">"&lt;p class='admonition-title danger'&gt;Danger&lt;/p&gt;"</span>);
+});
+
+$( document ).ready(<span style="font-weight: bold;">function</span>() {
+
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Shift nav in mobile when clicking the menu.</span>
+    $(document).on(<span style="font-style: italic;">'click'</span>, <span style="font-style: italic;">"[data-toggle='wy-nav-top']"</span>, <span style="font-weight: bold;">function</span>() {
+      $(<span style="font-style: italic;">"[data-toggle='wy-nav-shift']"</span>).toggleClass(<span style="font-style: italic;">"shift"</span>);
+      $(<span style="font-style: italic;">"[data-toggle='rst-versions']"</span>).toggleClass(<span style="font-style: italic;">"shift"</span>);
+    });
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Close menu when you click a link.</span>
+    $(document).on(<span style="font-style: italic;">'click'</span>, <span style="font-style: italic;">".wy-menu-vertical .current ul li a"</span>, <span style="font-weight: bold;">function</span>() {
+      $(<span style="font-style: italic;">"[data-toggle='wy-nav-shift']"</span>).removeClass(<span style="font-style: italic;">"shift"</span>);
+      $(<span style="font-style: italic;">"[data-toggle='rst-versions']"</span>).toggleClass(<span style="font-style: italic;">"shift"</span>);
+    });
+    $(document).on(<span style="font-style: italic;">'click'</span>, <span style="font-style: italic;">"[data-toggle='rst-current-version']"</span>, <span style="font-weight: bold;">function</span>() {
+      $(<span style="font-style: italic;">"[data-toggle='rst-versions']"</span>).toggleClass(<span style="font-style: italic;">"shift-up"</span>);
+    });
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Make tables responsive</span>
+    $(<span style="font-style: italic;">"table.docutils:not(.field-list)"</span>).wrap(<span style="font-style: italic;">"&lt;div class='wy-table-responsive'&gt;&lt;/div&gt;"</span>);
+});
+
+$( document ).ready(<span style="font-weight: bold;">function</span>() {
+    $(<span style="font-style: italic;">'#text-table-of-contents ul'</span>).first().addClass(<span style="font-style: italic;">'nav'</span>);
+                                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">ScrollSpy also requires that we use</span>
+                                        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">a Bootstrap nav component.</span>
+    $(<span style="font-style: italic;">'body'</span>).scrollspy({target: <span style="font-style: italic;">'#text-table-of-contents'</span>});
+
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">DON'T add sticky table headers (Fix issue #69?)</span>
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">$('table').stickyTableHeaders();</span>
+
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">set the height of tableOfContents</span>
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">$postamble</span> = $(<span style="font-style: italic;">'#postamble'</span>);
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">$tableOfContents</span> = $(<span style="font-style: italic;">'#table-of-contents'</span>);
+    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
+
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">add TOC button</span>
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">toggleSidebar</span> = $(<span style="font-style: italic;">'&lt;div id="toggle-sidebar"&gt;&lt;a href="#table-of-contents"&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;&lt;/a&gt;&lt;/div&gt;'</span>);
+    $(<span style="font-style: italic;">'#content'</span>).prepend(toggleSidebar);
+
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">add close button when sidebar showed in mobile screen</span>
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">closeBtn</span> = $(<span style="font-style: italic;">'&lt;a class="close-sidebar" href="#"&gt;Close&lt;/a&gt;'</span>);
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tocTitle</span> = $(<span style="font-style: italic;">'#table-of-contents'</span>).find(<span style="font-style: italic;">'h2'</span>);
+    tocTitle.append(closeBtn);
+});
+
+window.SphinxRtdTheme = (<span style="font-weight: bold;">function</span> (<span style="font-weight: bold; font-style: italic;">jquery</span>) {
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">stickyNav</span> = (<span style="font-weight: bold;">function</span> () {
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">navBar</span>,
+            win,
+            stickyNavCssClass = <span style="font-style: italic;">'stickynav'</span>,
+            applyStickNav = <span style="font-weight: bold;">function</span> () {
+                <span style="font-weight: bold;">if</span> (navBar.height() &lt;= win.height()) {
+                    navBar.addClass(stickyNavCssClass);
+                } <span style="font-weight: bold;">else</span> {
+                    navBar.removeClass(stickyNavCssClass);
+                }
+            },
+            enable = <span style="font-weight: bold;">function</span> () {
+                applyStickNav();
+                win.on(<span style="font-style: italic;">'resize'</span>, applyStickNav);
+            },
+            init = <span style="font-weight: bold;">function</span> () {
+                navBar = jquery(<span style="font-style: italic;">'nav.wy-nav-side:first'</span>);
+                win    = jquery(window);
+            };
+        jquery(init);
+        <span style="font-weight: bold;">return</span> {
+            enable : enable
+        };
+    }());
+    <span style="font-weight: bold;">return</span> {
+        StickyNav : stickyNav
+    };
+}($));
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Fabrice Niessen</p>
+<p class="date">Created: 2022-08-23 Tue 12:13</p>
+</div>
+</body>
+</html>

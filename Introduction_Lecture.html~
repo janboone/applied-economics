@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AEA 1</title>
+<title>Python track in AEA</title>
 <meta name="author" content="Jan Boone" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/htmlize.css"/>
@@ -22,13 +22,12 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">AEA 1</h1>
+<h1 class="title">Python track in AEA</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#orge658c95">Overview of the course</a></li>
 <li><a href="#office-excel-and-word">Office and Excel</a></li>
 <li><a href="#open-source-word-processing">Open source word processing</a></li>
 <li><a href="#what-do-you-need">What do you need?</a></li>
@@ -52,7 +51,6 @@
 
 <ul class="org-ul">
 <li>motivation to learn python</li>
-<li>overview of the course</li>
 <li>typing texts in markdown and latex</li>
 <li>markdown files on github</li>
 <li>first assignment</li>
@@ -74,12 +72,12 @@
 <li>while your results can be easily reproduced</li>
 </ul></li>
 
-<li>we do this by teaching you
+<li>in the python track we do this by teaching you
 
 <ul class="org-ul">
-<li>a programming language: Python</li>
+<li>a programming language: python</li>
 <li>how to create notebooks where you can explain your code and</li>
-<li>publish them on-line, e.g. on github</li>
+<li>publish them on-line</li>
 </ul></li>
 </ul>
 </div>
@@ -92,10 +90,9 @@
 <li>when you finish this course, you can
 
 <ul class="org-ul">
-<li>solve models in Python</li>
-<li>do simulations in Python</li>
+<li>solve models in python</li>
+<li>do simulations in python</li>
 <li>create a file or notebook like <a href="https://github.com/janboone/applied-economics/blob/master/economics_notebook.ipynb">this</a></li>
-<li>go on to the Datascience course next semester</li>
 </ul></li>
 </ul>
 </div>
@@ -119,39 +116,16 @@
 </div>
 </div>
 
-<div id="outline-container-orge658c95" class="outline-2">
-<h2 id="orge658c95">Overview of the course</h2>
-<div class="outline-text-2" id="text-orge658c95">
-<ul class="org-ul">
-<li>Python (most of the time)
-<ul class="org-ul">
-<li>programming economic models, e.g. market outcome, asymmetric information, oligopoly</li>
-<li>simulating outcomes and interpreting these results</li>
-</ul></li>
-<li>Career Services offers training:
-<ul class="org-ul">
-<li>these classes are compulsory!</li>
-<li>see AEA1 on Canvas for details</li>
-</ul></li>
-<li>Gender economics taught by Mery Ferrando:
-<ul class="org-ul">
-<li>helps you to understand gender economics and</li>
-<li>what we have in mind for the final assignment</li>
-</ul></li>
-</ul>
-</div>
-</div>
-
-
 <div id="outline-container-office-excel-and-word" class="outline-2">
 <h2 id="office-excel-and-word">Office and Excel</h2>
 <div class="outline-text-2" id="text-office-excel-and-word">
 </div>
 
-<div id="outline-container-orgf024fa5" class="outline-3">
-<h3 id="orgf024fa5">Excel is great for programming?</h3>
-<div class="outline-text-3" id="text-orgf024fa5">
+<div id="outline-container-orge7a4a42" class="outline-3">
+<h3 id="orge7a4a42">Excel is great for programming?</h3>
+<div class="outline-text-3" id="text-orge7a4a42">
 <ul class="org-ul">
+<li><a href="https://twitter.com/philipbstark/status/498683914592862208">check this</a></li>
 <li>indeed, simple things can be done in excel</li>
 <li>e.g. keep track of your grades and calculate the average</li>
 <li>but possibilities are limited: it is not a programming language</li>
@@ -179,7 +153,7 @@
 <li>examples are:</li>
 </ul>
 
-<pre class="example" id="orgbbe43b0">
+<pre class="example" id="org5625140">
 
 # this is a heading
 
@@ -205,12 +179,12 @@
 <div class="outline-text-3" id="text-latex">
 <ul class="org-ul">
 <li>latex is great word processing software</li>
-<li>many students write their thesis in latex</li>
-<li>here we focus on writing math in latex</li>
+<li>you should consider writing your thesis in latex</li>
+<li>but for now, we focus on writing math in latex</li>
 <li>you can guess what the following will do:</li>
 </ul>
 
-<pre class="example" id="orgafba0c0">
+<pre class="example" id="orge292bd4">
 $x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
 
 \begin{equation}
@@ -257,7 +231,7 @@ google "latex empty set" etc.</li>
 <li>github allows you to
 
 <ul class="org-ul">
-<li>publish web pages</li>
+<li>publish web pages (gh-pages)</li>
 <li>work "in the cloud" with version control</li>
 <li>collaborate in the cloud</li>
 <li>have different versions ("branches") of the same project</li>
@@ -278,33 +252,32 @@ google "latex empty set" etc.</li>
 <div class="outline-text-2" id="text-rules-of-the-game">
 </div>
 
-<div id="outline-container-org60b921c" class="outline-3">
-<h3 id="org60b921c">to learn python we use <a href="https://www.datacamp.com/home">datacamp</a>, <a href="https://janboone.github.io/applied-economics/pagescreencasts.html">screencasts</a> and lectures:</h3>
-<div class="outline-text-3" id="text-org60b921c">
+<div id="outline-container-orgf474e47" class="outline-3">
+<h3 id="orgf474e47">to learn python we use <a href="https://www.datacamp.com/home">datacamp</a>, <a href="https://janboone.github.io/applied-economics/pagescreencasts.html">screencasts</a> and lectures:</h3>
+<div class="outline-text-3" id="text-orgf474e47">
 <ul class="org-ul">
 <li>you need to finish the datacamp courses and screencasts in time</li>
 <li>otherwise you will be lost during the lectures</li>
 <li>see the <a href="index.html#lecture_schedule_AEA">Lecture schedule</a> for the planning</li>
+<li>for the python part, attend my lectures in the Lecture schedule</li>
 <li>if you want to learn everything on your own, you do not need to attend my lectures</li>
 <li>but if you do attend the lectures, you participate actively</li>
-<li>you do not learn Python by passively typing in answers!</li>
-<li>you have to attend Joyce's career services classes</li>
-<li>Mery's lectures on gender economics, coupled with the Python classes in the same week, give you an idea of what we expect in the final assignment</li>
+<li>you do not learn python by passively typing in answers!</li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org0d038e3" class="outline-3">
-<h3 id="org0d038e3">lecture format</h3>
-<div class="outline-text-3" id="text-org0d038e3">
+<div id="outline-container-org121f6d6" class="outline-3">
+<h3 id="org121f6d6">lecture format</h3>
+<div class="outline-text-3" id="text-org121f6d6">
 <ul class="org-ul">
 <li>in the lectures we will answer questions that you ask us</li>
 <li>in order to prepare these answers, it is useful if you create an issue via <a href="https://github.com/janboone/applied-economics/issues">this link</a>
 <ul class="org-ul">
 <li>using the link, create an "issue" where you explain what your question is: what did you try and why did it not work?
 <ul class="org-ul">
-<li>hence not something like "I do not know the answer to: <b>Question</b> Calculate the total welfare that this planner can achieve. Denote this value <code>max_welfare</code>."</li>
+<li>hence not a something like "I do not know the answer to: <b>Question</b> Calculate the total welfare that this planner can achieve. Denote this value <code>max_welfare</code>."</li>
 <li>but "I tried to calculate total welfare in the following way &#x2026; but then I get the following error &#x2026;"</li>
 </ul></li>
 </ul></li>
@@ -313,9 +286,9 @@ google "latex empty set" etc.</li>
 </div>
 </div>
 
-<div id="outline-container-orgc6b94c2" class="outline-3">
-<h3 id="orgc6b94c2">suggested workflow</h3>
-<div class="outline-text-3" id="text-orgc6b94c2">
+<div id="outline-container-orga480196" class="outline-3">
+<h3 id="orga480196">suggested workflow</h3>
+<div class="outline-text-3" id="text-orga480196">
 <ul class="org-ul">
 <li>follow the Datacamp courses and make notes of what you learn at Datacamp in a notebook on the jupyterlab server
 <ul class="org-ul">
@@ -329,9 +302,9 @@ google "latex empty set" etc.</li>
 </div>
 </div>
 
-<div id="outline-container-orgd6f556f" class="outline-3">
-<h3 id="orgd6f556f">to get a grade for the python track:</h3>
-<div class="outline-text-3" id="text-orgd6f556f">
+<div id="outline-container-org842f942" class="outline-3">
+<h3 id="org842f942">to get a grade for the python track:</h3>
+<div class="outline-text-3" id="text-org842f942">
 <ul class="org-ul">
 <li>finish assignment 1 (see below) before the deadline</li>
 <li>attend the career services workshops</li>
@@ -348,8 +321,8 @@ google "latex empty set" etc.</li>
 <h2 id="assignment">Assignment 1</h2>
 <div class="outline-text-2" id="text-assignment">
 <ul class="org-ul">
-<li>follow and finish the steps under <a href="index.html#assignment_1_AEA">Assignment 1</a></li>
-<li>type your first Python and markdow at the <a href="https://jupyterlab.uvt.nl/">jupyter lab server</a> and follow along with the screencast: <a href="pagescreencasts.html#Short_introduction_to_JupyterLab">Short introduction to JupyterLab</a></li>
+<li>follow and finish the four steps under <a href="index.html#assignment_1_AEA">Assignment 1</a></li>
+<li>type your first python and markdow at the <a href="https://jupyterlab.uvt.nl/">jupyter lab server</a> and follow along with the screencast: <a href="pagescreencasts.html#Short_introduction_to_JupyterLab">Short introduction to JupyterLab</a></li>
 </ul>
 </div>
 </div>

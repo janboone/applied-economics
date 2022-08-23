@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Screencasts for Applied Economic Analysis</title>
+<title>Screencasts for the python track in Applied Economic Analysis</title>
 <meta name="author" content="Jan Boone" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
@@ -33,67 +33,67 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Screencasts for Applied Economic Analysis</h1>
+<h1 class="title">Screencasts for the python track in Applied Economic Analysis</h1>
 <p>
 <b>Under construction</b>
 </p>
 
 
 <p>
-This page contains the screencasts for the course <a href="index.html#python_track_AEA">AEA</a>
+This page contains the screencasts for the python track of the course <a href="index.html#python_track_AEA">AEA</a>
 </p>
 
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd9fb6e3">How are the screencasts supposed to help?</a>
+<li><a href="#org451de27">How are the screencasts supposed to help?</a>
 <ul>
-<li><a href="#orgc259827">Why are there screencasts?</a></li>
-<li><a href="#org2813547">Suggested use of the screencasts</a></li>
-<li><a href="#org0557930">Prerequisite knowledge</a></li>
-<li><a href="#org3f7f818">Libraries we use regularly</a></li>
+<li><a href="#orgbe290cc">Why are there screencasts?</a></li>
+<li><a href="#org47d40bc">Suggested use of the screencasts</a></li>
+<li><a href="#org57da817">Prerequisite knowledge</a></li>
+<li><a href="#orgc380c1a">Libraries we use</a></li>
 </ul>
 </li>
 <li><a href="#Short_introduction_to_JupyterLab">Short introduction to JupyterLab</a>
 <ul>
-<li><a href="#org62a9a11">getting the repository in colab</a></li>
+<li><a href="#org7d40003">getting the repository in colab</a></li>
 </ul>
 </li>
-<li><a href="#org0794976">Compare jupyter notebook/lab and emacs</a>
+<li><a href="#orgb0828e1">Compare jupyter notebook/lab and emacs</a>
 <ul>
-<li><a href="#orga8a97c6">Why am I using emacs</a></li>
-<li><a href="#orgd5beee0">Jupyter vs Emacs</a></li>
+<li><a href="#orgc112627">Why am I using emacs</a></li>
+<li><a href="#org0532945">Jupyter vs Emacs</a></li>
 </ul>
 </li>
-<li><a href="#org74cfc5c">The market</a>
+<li><a href="#org2c54b4c">The market</a>
 <ul>
-<li><a href="#orgffe9dc4">why do we love the market?</a></li>
-<li><a href="#org5833f4d">why do others not love the market?</a></li>
+<li><a href="#orge73aecc">why do we love the market?</a></li>
+<li><a href="#org3eb4ae0">why do others not love the market?</a></li>
 </ul>
 </li>
-<li><a href="#orgc86bb47">Asymmetric information</a>
+<li><a href="#org49cb459">Asymmetric information</a>
 <ul>
-<li><a href="#orgba78f2d">adverse selection</a></li>
-<li><a href="#org8653d61">moral hazard</a></li>
+<li><a href="#org755685e">adverse selection</a></li>
+<li><a href="#orgb9c788c">moral hazard</a></li>
 </ul>
 </li>
-<li><a href="#orgbfc3d4b">Financial crisis</a>
+<li><a href="#org50b83e1">Financial crisis</a>
 <ul>
-<li><a href="#org6deae59">why is there a problem in financial markets?</a></li>
-<li><a href="#orged4b035">why these bonus contracts?</a></li>
+<li><a href="#orgc8ca672">why is there a problem in financial markets?</a></li>
+<li><a href="#org1434c5d">why these bonus contracts?</a></li>
 </ul>
 </li>
-<li><a href="#orga142880">Using Python for empirical research</a>
+<li><a href="#orga89cadb">Using Python for empirical research</a>
 <ul>
-<li><a href="#org4910afb">API's to get data</a></li>
-<li><a href="#orge87983a">hacker statistics</a></li>
+<li><a href="#orgd1562e1">API's to get data</a></li>
+<li><a href="#orgc3d6ab0">hacker statistics</a></li>
 </ul>
 </li>
-<li><a href="#org148c7fc">Regulation in healthcare markets</a>
+<li><a href="#orgec59a3d">Regulation in healthcare markets</a>
 <ul>
-<li><a href="#org540b3af">getting the data ready</a></li>
-<li><a href="#orge7e86b2">plot and model</a></li>
+<li><a href="#org17d38fe">getting the data ready</a></li>
+<li><a href="#orga287bd3">plot and model</a></li>
 <li><a href="#upload_data_on_the_university_server">upload data on the university server</a></li>
 </ul>
 </li>
@@ -101,48 +101,56 @@ This page contains the screencasts for the course <a href="index.html#python_tra
 </div>
 </div>
 
-<div id="outline-container-orgd9fb6e3" class="outline-2">
-<h2 id="orgd9fb6e3">How are the screencasts supposed to help?</h2>
-<div class="outline-text-2" id="text-orgd9fb6e3">
+<div id="outline-container-org451de27" class="outline-2">
+<h2 id="org451de27">How are the screencasts supposed to help?</h2>
+<div class="outline-text-2" id="text-org451de27">
 <p>
-We use <a href="https://github.com/janboone/applied-economics">this notebook</a> for the course. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed.
+For the python part of the course we use <a href="https://github.com/janboone/applied-economics">this notebook</a>. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed.
 </p>
 
 <p>
-For students without a programming background (like most economics students) it can be intimidating or frustrating to start typing code. Reasons include not knowing how to do it perfectly or getting scared when there is an error message. Obviously, this is not necessary nor helpful when trying to learn a programming language. But the upshot is that some students do not try anything, sit back and type the correct answers when given to them. Needless to say, you do not learn how to program in Python by typing in the correct answers given in class.
+For students without a programming background (like most economics students) it can be intimidating or frustrating to start typing code. Reasons include not knowing how to do it perfectly or getting scared when there is an error message. Obviously, this is not necessary nor helpful when trying to learn a programming language. But the upshot is that some students do not try anything, sit back and type the correct answers when given to them. Needless to say, you do not learn how to program in python by typing in the correct answers given in class.
 </p>
 
 <p>
-Hence, the screencasts give you hints on how to finish the notebook but they do not give you step-by-step answers for each question. If you get stuck, ask us during the tutorials.
+The way we solve this in class is to give plenty of time to solve the questions yourself. In economics terminology: by keeping you in class, we reduce your opportunity costs to zero. Hence, you might as well type in some code and press Shift-Enter.
 </p>
-</div>
 
-<div id="outline-container-orgc259827" class="outline-3">
-<h3 id="orgc259827">Why are there screencasts?</h3>
-<div class="outline-text-3" id="text-orgc259827">
 <p>
-The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. Now that we have them, we use them as complements to the classes taught.
+We cannot do this with a screencast. Chances are, you understand how fast-forward works on the video. Hence, the screencasts give you hints on how to finish the notebook but it does not give you step-by-step answers for each question. If you still get stuck, ask us during the tutorials.
 </p>
 </div>
+
+<div id="outline-container-orgbe290cc" class="outline-3">
+<h3 id="orgbe290cc">Why are there screencasts?</h3>
+<div class="outline-text-3" id="text-orgbe290cc">
+<p>
+The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+</p>
+</div>
 </div>
 
-<div id="outline-container-org2813547" class="outline-3">
-<h3 id="org2813547">Suggested use of the screencasts</h3>
-<div class="outline-text-3" id="text-org2813547">
+<div id="outline-container-org47d40bc" class="outline-3">
+<h3 id="org47d40bc">Suggested use of the screencasts</h3>
+<div class="outline-text-3" id="text-org47d40bc">
 <p>
 Just watching the screencasts is not going to be very useful for you. The best way to use them is as follows:
 </p>
 
 <ul class="org-ul">
 <li>first read the relevant section in the notebook and try to solve the questions by yourself</li>
-<li>if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what issues to look for in the video</li>
+<li>if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what problems to look for in the video</li>
 <li>type along with what we do in the screencast. Pause the video if you need more time to type</li>
 <li>experiment with the code that we give you in the video either during the video or after watching it; try different numerical values, use different syntax or a different library; if you get an error, google it to see what is going on etc.</li>
-<li>in general, play around with the Python code; that is the best way to understand and learn the language</li>
+<li>in general, play around with the python code; that is the best way to understand and learn the language</li>
 </ul>
 
 <p>
-When you get an error message, here are some tips on how to deal with such messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
+With screencasts there is &#x2013;obviously&#x2013; no interaction between teachers and students. This is a problem when you run into an error message. In class students then immediately raise their hand to understand what is happening.
+</p>
+
+<p>
+As this is not possible with a screencast, here are some tips on how to deal with error messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
 </p>
 
 <p>
@@ -151,36 +159,36 @@ Python error messages:
 <ul class="org-ul">
 <li>start reading the error message at the end; hence scroll down in your notebook to see the last line of the error message. This will usually give a clue of what is happening</li>
 <li>if you do not know what the last line means, use copy/paste to google it or go to <a href="https://stackoverflow.com/">stackoverflow</a> directly</li>
-<li>reading "upwards" from the last line, you can trace how the error was generated; that is, which parts of your code caused the error.</li>
+<li>reading "upwards" from the last line, you can trace how the error was generated</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0557930" class="outline-3">
-<h3 id="org0557930">Prerequisite knowledge</h3>
-<div class="outline-text-3" id="text-org0557930">
+<div id="outline-container-org57da817" class="outline-3">
+<h3 id="org57da817">Prerequisite knowledge</h3>
+<div class="outline-text-3" id="text-org57da817">
 <p>
 <b>Economics</b>: this introduction to python is part of an MSc degree in Economics. Hence, we assume that you know what utility is and how utility (and producer surplus, if relevant)
-adds up to welfare. You know how demand and supply curves are derived. What market power is, how a Cournot model is solved. Concepts like asymmetric information, adverse selection and moral hazard ring a bell. You know what risk is and how it can be measured. You know what the <a href="https://www.worldbank.org/">World Bank</a> is, as later on we will use their data. You have done introductions to statistics and econometrics. Generally speaking, you understand the economics parts of the notebooks, though not necessarily their Python implementation.
+adds up to welfare. You know how demand and supply curves are derived. What market power is, how a Cournot model is solved. Concepts like asymmetric information, adverse selection and moral hazard ring a bell. You know what risk is and how it can be measured. You know what the <a href="https://www.worldbank.org/">World Bank</a> is, as later on we will use their data. You have done introductions to statistics and econometrics. Generally speaking, you understand the economics parts of the notebooks, though not necessarily their python implementation.
 </p>
 
 <p>
-<b>Python</b>: before you start with the notebook and the screencasts you need some basic knowledge of Python. You can use <a href="https://www.datacamp.com/">Datacamp</a>, <a href="https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-">Socratica</a>, or introduction videos to Python, numpy etc. from one of the big python conferences, like <a href="https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC">SciPy 2019</a> or <a href="https://www.youtube.com/playlist?list=PLPbTDk1hBo3xof51R8pk3kP1BVBuMYP9c">PyCon 2019</a> or more recent events.
+<b>Python</b>: before you start with the notebook and the screencasts you need some basic knowledge of python. You can use <a href="https://www.datacamp.com/">Datacamp</a>, <a href="https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-">Socratica</a>, or introduction videos to python, numpy etc. from one of the big python conferences, like <a href="https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC">SciPy 2019</a> or <a href="https://www.youtube.com/playlist?list=PLPbTDk1hBo3xof51R8pk3kP1BVBuMYP9c">PyCon 2019</a>.
 </p>
 
 <p>
-Things you should be familiar with is the syntax of Python (e.g. the role of spaces), how to import libraries (difference between <code>import numpy as np, import numpy, from numpy import *</code>), how to define a function, use of datatypes like lists, tuples, dictionaries, <code>numpy</code> arrays (what is the difference between adding lists (using "+") and adding numpy arrays), you understand slicing notation for arrays and lists, the use of masks to select data from an array, you are able to plot a function or data points with <code>matplotlib</code>, you can read data into a dataframe with <code>pandas</code> and then manipulate this data (define new columns/variables).
+Things you should be familiar with is the syntax of python (e.g. the role of spaces), how to import libraries (difference between <code>import numpy as np, import numpy, from numpy import *</code>), how to define a function, use of datatypes like lists, tuples, dictionaries, <code>numpy</code> arrays (what is the difference between adding lists (using "+") and adding numpy arrays), you understand slicing notation for arrays and lists, the use of masks to select data from an array, you are able to plot a function or data points with <code>matplotlib</code>, you can read data into a dataframe with <code>pandas</code> and then manipulate this data (define new columns/variables).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3f7f818" class="outline-3">
-<h3 id="org3f7f818">Libraries we use regularly</h3>
-<div class="outline-text-3" id="text-org3f7f818">
+<div id="outline-container-orgc380c1a" class="outline-3">
+<h3 id="orgc380c1a">Libraries we use</h3>
+<div class="outline-text-3" id="text-orgc380c1a">
 <ul class="org-ul">
 <li>numpy: basic number crunching and vector manipulation</li>
-<li>pymc: to generate random numbers and do Bayesian analysis</li>
-<li>tensorflow: to generate random numbers; here used mainly to "have seen it"; we use it more in a later course on data science</li>
+<li>pymc3: to generate random numbers and do Bayesian analysis</li>
+<li>tensorflow (2.0 or later): to generate random numbers; here used mainly to "have seen it"; we use it more in a later course on data science</li>
 <li>scipy: scientific python</li>
 <li>matplotlib: to make plots</li>
 </ul>
@@ -200,7 +208,7 @@ The video was recorded using an older version of the website; but it will look s
 </p>
 
 <p>
-The goal of this video is to give you an introduction to JupyterLab; not an introduction to Python. So, do not worry if you do not understand (yet) the Python code that is typed and evaluated.
+The goal of this video is to give you an introduction to JupyterLab; not an introduction to python. So, do not worry if you do not understand the python code that is typed and evaluated.
 </p>
 
 <p>
@@ -219,10 +227,10 @@ Topics we cover in this video:
 <li>how to create headings (using <code>#</code>) and bullet lists (using <code>*</code>) in markdown;</li>
 <li>create a link in markdown;</li>
 <li>how to type math in markdown using <a href="https://www.latex-project.org/">latex</a> and the delimiters <code>$ $</code></li>
-<li>in a code cell, you can type Python code:
+<li>in a code cell, you can type python code:
 <ul class="org-ul">
 <li>this can be useful if you want to make notes on your datacamp courses</li>
-<li>type and evaluate the Python code (from datacamp) and explain what the code does in a markdown cell;</li>
+<li>type and evaluate the python code (from datacamp) and explain what the code does in a markdown cell;</li>
 </ul></li>
 <li>if you have long variable or function names, use the TAB key to complete the names;</li>
 <li>this also works if you want to type functions associated with a library like <code>numpy</code>
@@ -233,7 +241,7 @@ Topics we cover in this video:
 <li>create a plot using <code>matplotlib.pyplot</code> and add labels to the axes, a title to the figure and a legend.</li>
 <li>when you are finished with a notebook, you can close the file and do not forget to close the kernel as well (see the video on how to do this)
 <ul class="org-ul">
-<li>if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate Python code anymore.</li>
+<li>if you have too many kernel sessions running, you can run out of memory on the server meaning you cannot evaluate python code anymore.</li>
 </ul></li>
 </ul>
 
@@ -255,9 +263,9 @@ You can also google "jupyterlab introduction" and the <a href="https://jupyterla
 </p>
 </div>
 
-<div id="outline-container-org62a9a11" class="outline-3">
-<h3 id="org62a9a11">getting the repository in colab</h3>
-<div class="outline-text-3" id="text-org62a9a11">
+<div id="outline-container-org7d40003" class="outline-3">
+<h3 id="org7d40003">getting the repository in colab</h3>
+<div class="outline-text-3" id="text-org7d40003">
 <p>
 If for some reason you would like to use the notebook on <a href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">google colab</a> (e.g. because the university server is temporarily down), the following video shows how to import the applied economics repository into colab.
 </p>
@@ -279,13 +287,13 @@ Topics we cover in the video:
 </div>
 </div>
 
-<div id="outline-container-org0794976" class="outline-2">
-<h2 id="org0794976">Compare jupyter notebook/lab and emacs</h2>
-<div class="outline-text-2" id="text-org0794976">
+<div id="outline-container-orgb0828e1" class="outline-2">
+<h2 id="orgb0828e1">Compare jupyter notebook/lab and emacs</h2>
+<div class="outline-text-2" id="text-orgb0828e1">
 </div>
-<div id="outline-container-orga8a97c6" class="outline-3">
-<h3 id="orga8a97c6">Why am I using emacs</h3>
-<div class="outline-text-3" id="text-orga8a97c6">
+<div id="outline-container-orgc112627" class="outline-3">
+<h3 id="orgc112627">Why am I using emacs</h3>
+<div class="outline-text-3" id="text-orgc112627">
 <p>
 As explained , one of the worries is that students sit back and copy/paste whatever is done in the videos. To force them to make more of an effort, I do not use jupyter notebooks in the screencasts. Hence, a bit more "mental processing" is needed to follow along. This is also the reason that we do not publish the notebooks from the videos. Students need to type along with the video; not copy/paste from the final file.
 </p>
@@ -296,14 +304,14 @@ Further, Emacs makes it easier to give a presentation in the screencast than jup
 </div>
 </div>
 
-<div id="outline-container-orgd5beee0" class="outline-3">
-<h3 id="orgd5beee0">Jupyter vs Emacs</h3>
-<div class="outline-text-3" id="text-orgd5beee0">
+<div id="outline-container-org0532945" class="outline-3">
+<h3 id="org0532945">Jupyter vs Emacs</h3>
+<div class="outline-text-3" id="text-org0532945">
 <p>
-When you see me use Emacs in the videos, you can spot some differences with JupyterLab:
+When you see my use Emacs in the videos, you can spot some differences with JupyterLab:
 </p>
 <ul class="org-ul">
-<li>evaluating a code cell with Python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)</li>
+<li>evaluating a code cell with python in jupyter is done by pressing Shift-Enter (that is, press the Shift and Enter keys at the same time); in Emacs press C-c C-c (that is press Control and C simultaneously two times)</li>
 <li>to get help on a function, type e.g. <code>np.arange?</code> in a code cell and evaluate the cell</li>
 <li>to type text in a jupyter notebook, turn a code-cell into a Markdown cell; in Emacs you can simply type text</li>
 <li>to create a new code cell in jupyter: press "a" (new cell above) or "b" (new cell below) when you do not have a cursor in the current cell (if you do have a cursor, first press the ESC key); in Emacs (and org-mode version &gt;= 9.2) type C-c C-, and a menu will appear of block types (python, ipython, elisp etc.)</li>
@@ -315,13 +323,13 @@ When you see me use Emacs in the videos, you can spot some differences with Jupy
 </div>
 </div>
 
-<div id="outline-container-org74cfc5c" class="outline-2">
-<h2 id="org74cfc5c">The market</h2>
-<div class="outline-text-2" id="text-org74cfc5c">
+<div id="outline-container-org2c54b4c" class="outline-2">
+<h2 id="org2c54b4c">The market</h2>
+<div class="outline-text-2" id="text-org2c54b4c">
 </div>
-<div id="outline-container-orgffe9dc4" class="outline-3">
-<h3 id="orgffe9dc4">why do we love the market?</h3>
-<div class="outline-text-3" id="text-orgffe9dc4">
+<div id="outline-container-orge73aecc" class="outline-3">
+<h3 id="orge73aecc">why do we love the market?</h3>
+<div class="outline-text-3" id="text-orge73aecc">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/naYoM7cezSE" frameborder="0" allowfullscreen>Allocating goods to consumers</iframe>
 </p>
@@ -349,9 +357,9 @@ Questions you should be able to answer before continuing:
 </ul>
 </div>
 
-<div id="outline-container-org20052a9" class="outline-4">
-<h4 id="org20052a9">market outcome</h4>
-<div class="outline-text-4" id="text-org20052a9">
+<div id="outline-container-org8b96fad" class="outline-4">
+<h4 id="org8b96fad">market outcome</h4>
+<div class="outline-text-4" id="text-org8b96fad">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/8ywVw9lIMmM" frameborder="0" allowfullscreen>Equilibrium price and welfare</iframe>
 </p>
@@ -374,9 +382,9 @@ Topics we cover:
 </div>
 </div>
 
-<div id="outline-container-orgf9a26d6" class="outline-4">
-<h4 id="orgf9a26d6">elastic demand and supply</h4>
-<div class="outline-text-4" id="text-orgf9a26d6">
+<div id="outline-container-orge21c550" class="outline-4">
+<h4 id="orge21c550">elastic demand and supply</h4>
+<div class="outline-text-4" id="text-orge21c550">
 <p>
 You should be able to do this section in the notebook yourself. If not, then check the videos above once more.
 </p>
@@ -384,13 +392,13 @@ You should be able to do this section in the notebook yourself. If not, then che
 </div>
 </div>
 
-<div id="outline-container-org5833f4d" class="outline-3">
-<h3 id="org5833f4d">why do others not love the market?</h3>
-<div class="outline-text-3" id="text-org5833f4d">
+<div id="outline-container-org3eb4ae0" class="outline-3">
+<h3 id="org3eb4ae0">why do others not love the market?</h3>
+<div class="outline-text-3" id="text-org3eb4ae0">
 </div>
-<div id="outline-container-org57caaa1" class="outline-4">
-<h4 id="org57caaa1">income distribution</h4>
-<div class="outline-text-4" id="text-org57caaa1">
+<div id="outline-container-orgcb081e8" class="outline-4">
+<h4 id="orgcb081e8">income distribution</h4>
+<div class="outline-text-4" id="text-orgcb081e8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/tyqtrIAx898" frameborder="0" allowfullscreen>Income distribution</iframe>
 </p>
@@ -412,9 +420,9 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orgcea28bb" class="outline-4">
-<h4 id="orgcea28bb">market power</h4>
-<div class="outline-text-4" id="text-orgcea28bb">
+<div id="outline-container-org1c3b91e" class="outline-4">
+<h4 id="org1c3b91e">market power</h4>
+<div class="outline-text-4" id="text-org1c3b91e">
 <p>
 You should be able to do the market power section on your own. It shows a graph suggesting the monopoly price is lower than the perfect competition price. In this context this is simply wrong. The question is: what is wrong in the python code?
 </p>
@@ -424,17 +432,17 @@ Hence, test parts of the code to understand where things are going wrong. To sol
 </p>
 </div>
 
-<div id="outline-container-org60f642e" class="outline-5">
-<h5 id="org60f642e">merger simulation</h5>
-<div class="outline-text-5" id="text-org60f642e">
+<div id="outline-container-org0c527c9" class="outline-5">
+<h5 id="org0c527c9">merger simulation</h5>
+<div class="outline-text-5" id="text-org0c527c9">
 <p>
 We split the merger simulation section into different subsections/videos.
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="org1fe9c97"></a>Cournot<br />
-<div class="outline-text-6" id="text-org1fe9c97">
+<li><a id="org4862210"></a>Cournot<br />
+<div class="outline-text-6" id="text-org4862210">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/LiOqDkj9wWw" frameborder="0" allowfullscreen>Cournot</iframe>
 </p>
@@ -462,8 +470,8 @@ Questions you should be able to answer:
 </div>
 </li>
 
-<li><a id="org5ab653c"></a>Pandas<br />
-<div class="outline-text-6" id="text-org5ab653c">
+<li><a id="org09e1b12"></a>Pandas<br />
+<div class="outline-text-6" id="text-org09e1b12">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/8nHpZ-1MidE" frameborder="0" allowfullscreen>Pandas</iframe>
 </p>
@@ -494,8 +502,8 @@ q = np.array([sp.optimize.fsolve(lambda x: fixed_point(x,costs[i]),[0,0]) for i 
 </div>
 </li>
 
-<li><a id="org747c30d"></a>OPTIONAL: Cournot with variable \(n\)<br />
-<div class="outline-text-6" id="text-org747c30d">
+<li><a id="orgdcafe0a"></a>OPTIONAL: Cournot with variable \(n\)<br />
+<div class="outline-text-6" id="text-orgdcafe0a">
 <p>
 This section is optional. If this is your first Python course, skip this section for now (and come back to it later).
 </p>
@@ -539,9 +547,9 @@ print(np.sum(np.arange(6)[mask]))
 </div>
 
 
-<div id="outline-container-org93391a1" class="outline-4">
-<h4 id="org93391a1">external effects</h4>
-<div class="outline-text-4" id="text-org93391a1">
+<div id="outline-container-org92cb4a3" class="outline-4">
+<h4 id="org92cb4a3">external effects</h4>
+<div class="outline-text-4" id="text-org92cb4a3">
 <p>
 This section you should be able to do on your own. If not, watch again the video's above.
 </p>
@@ -554,17 +562,17 @@ It provides another reason why markets may not generate max. welfare in the real
 </div>
 </div>
 
-<div id="outline-container-orgc86bb47" class="outline-2">
-<h2 id="orgc86bb47">Asymmetric information</h2>
-<div class="outline-text-2" id="text-orgc86bb47">
+<div id="outline-container-org49cb459" class="outline-2">
+<h2 id="org49cb459">Asymmetric information</h2>
+<div class="outline-text-2" id="text-org49cb459">
 <p>
 Here we consider two standard forms of asymmetric information: adverse selection and moral hazard.
 </p>
 </div>
 
-<div id="outline-container-orgba78f2d" class="outline-3">
-<h3 id="orgba78f2d">adverse selection</h3>
-<div class="outline-text-3" id="text-orgba78f2d">
+<div id="outline-container-org755685e" class="outline-3">
+<h3 id="org755685e">adverse selection</h3>
+<div class="outline-text-3" id="text-org755685e">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/GeVGCJmq9PE" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -588,9 +596,9 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-org8653d61" class="outline-3">
-<h3 id="org8653d61">moral hazard</h3>
-<div class="outline-text-3" id="text-org8653d61">
+<div id="outline-container-orgb9c788c" class="outline-3">
+<h3 id="orgb9c788c">moral hazard</h3>
+<div class="outline-text-3" id="text-orgb9c788c">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/saST6igsR6Y" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -617,13 +625,13 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orgbfc3d4b" class="outline-2">
-<h2 id="orgbfc3d4b">Financial crisis</h2>
-<div class="outline-text-2" id="text-orgbfc3d4b">
+<div id="outline-container-org50b83e1" class="outline-2">
+<h2 id="org50b83e1">Financial crisis</h2>
+<div class="outline-text-2" id="text-org50b83e1">
 </div>
-<div id="outline-container-org6deae59" class="outline-3">
-<h3 id="org6deae59">why is there a problem in financial markets?</h3>
-<div class="outline-text-3" id="text-org6deae59">
+<div id="outline-container-orgc8ca672" class="outline-3">
+<h3 id="orgc8ca672">why is there a problem in financial markets?</h3>
+<div class="outline-text-3" id="text-orgc8ca672">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/petP6Bdf8Pk" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -648,9 +656,9 @@ Question you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orged4b035" class="outline-3">
-<h3 id="orged4b035">why these bonus contracts?</h3>
-<div class="outline-text-3" id="text-orged4b035">
+<div id="outline-container-org1434c5d" class="outline-3">
+<h3 id="org1434c5d">why these bonus contracts?</h3>
+<div class="outline-text-3" id="text-org1434c5d">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/-BzxZU8f1pU" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -675,13 +683,13 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orga142880" class="outline-2">
-<h2 id="orga142880">Using Python for empirical research</h2>
-<div class="outline-text-2" id="text-orga142880">
+<div id="outline-container-orga89cadb" class="outline-2">
+<h2 id="orga89cadb">Using Python for empirical research</h2>
+<div class="outline-text-2" id="text-orga89cadb">
 </div>
-<div id="outline-container-org4910afb" class="outline-3">
-<h3 id="org4910afb">API's to get data</h3>
-<div class="outline-text-3" id="text-org4910afb">
+<div id="outline-container-orgd1562e1" class="outline-3">
+<h3 id="orgd1562e1">API's to get data</h3>
+<div class="outline-text-3" id="text-orgd1562e1">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/pstyrBrwXqw" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -706,13 +714,13 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orge87983a" class="outline-3">
-<h3 id="orge87983a">hacker statistics</h3>
-<div class="outline-text-3" id="text-orge87983a">
+<div id="outline-container-orgc3d6ab0" class="outline-3">
+<h3 id="orgc3d6ab0">hacker statistics</h3>
+<div class="outline-text-3" id="text-orgc3d6ab0">
 </div>
-<div id="outline-container-org365d5e9" class="outline-4">
-<h4 id="org365d5e9">high school puzzles</h4>
-<div class="outline-text-4" id="text-org365d5e9">
+<div id="outline-container-org5e0a128" class="outline-4">
+<h4 id="org5e0a128">high school puzzles</h4>
+<div class="outline-text-4" id="text-org5e0a128">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/s1stRzO8a0Q" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -735,9 +743,9 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orgd7764f5" class="outline-4">
-<h4 id="orgd7764f5">statistics</h4>
-<div class="outline-text-4" id="text-orgd7764f5">
+<div id="outline-container-orgb59f282" class="outline-4">
+<h4 id="orgb59f282">statistics</h4>
+<div class="outline-text-4" id="text-orgb59f282">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/aaDtTmNlWiY" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -764,17 +772,17 @@ Questions you should be able to answer:
 </div>
 
 
-<div id="outline-container-org148c7fc" class="outline-2">
-<h2 id="org148c7fc">Regulation in healthcare markets</h2>
-<div class="outline-text-2" id="text-org148c7fc">
+<div id="outline-container-orgec59a3d" class="outline-2">
+<h2 id="orgec59a3d">Regulation in healthcare markets</h2>
+<div class="outline-text-2" id="text-orgec59a3d">
 <p>
 In this lecture we analyze Dutch healthcare data from <a href="https://www.vektis.nl/open-data">Vektis</a> using <code>pandas</code>, <code>matplotlib</code> and <code>pymc3</code>.
 </p>
 </div>
 
-<div id="outline-container-org540b3af" class="outline-3">
-<h3 id="org540b3af">getting the data ready</h3>
-<div class="outline-text-3" id="text-org540b3af">
+<div id="outline-container-org17d38fe" class="outline-3">
+<h3 id="org17d38fe">getting the data ready</h3>
+<div class="outline-text-3" id="text-org17d38fe">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/X6XNd2NaBpg" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -814,11 +822,11 @@ Questions you should be able to answer:
 </div>
 </div>
 
-<div id="outline-container-orge7e86b2" class="outline-3">
-<h3 id="orge7e86b2">plot and model</h3>
-<div class="outline-text-3" id="text-orge7e86b2">
+<div id="outline-container-orga287bd3" class="outline-3">
+<h3 id="orga287bd3">plot and model</h3>
+<div class="outline-text-3" id="text-orga287bd3">
 <p>
-This screencast is not meant as an introduction into Bayesian analysis and <code>pymc3</code>. It just shows that this can be done in Python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
+This screencast is not meant as an introduction into Bayesian analysis and <code>pymc3</code>. It just shows that this can be done in python. The notebook gives a bit more detail and some references in case the video "wets your appetite".
 </p>
 
 <p>

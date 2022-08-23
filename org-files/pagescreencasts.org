@@ -1,5 +1,5 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-#+Title: Screencasts for the python track in Applied Economic Analysis
+#+Title: Screencasts for Applied Economic Analysis
 #+Author: Jan Boone
 #+OPTIONS: toc:2 timestamp:nil toc:nil
 
@@ -54,8 +54,8 @@ Things you should be familiar with is the syntax of Python (e.g. the role of spa
 ** Libraries we use regularly
 
 + numpy: basic number crunching and vector manipulation
-+ pymc3: to generate random numbers and do Bayesian analysis
-+ tensorflow (2.0 or later): to generate random numbers; here used mainly to "have seen it"; we use it more in a later course on data science
++ pymc: to generate random numbers and do Bayesian analysis
++ tensorflow: to generate random numbers; here used mainly to "have seen it"; we use it more in a later course on data science
 + scipy: scientific python
 + matplotlib: to make plots
 

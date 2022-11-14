@@ -15,7 +15,7 @@ This year the course is taught by:
 + Barbora Písecká
 
 
-* Python track AEA
+* Python in AEA
   :PROPERTIES:
   :CUSTOM_ID:       python_track_AEA
   :END:
@@ -53,7 +53,7 @@ Since we have recorded screencasts, we will not repeat these during the lectures
   + if you can solve everything yourself, there is no need to attend the lecture (but you are, of course, welcome to do so)
   + this is one of the advantages of programming: you can see for yourself whether it works or not.
 
-A suggested workflow for the python track is:
+A suggested workflow to learn programming efficiently is:
 + follow the Datacamp courses and make notes of what you learn at Datacamp in a notebook on the jupyterlab server
   + in this way it is easy to refer back to useful code snippets that you see on Datacamp
 + go through the jupyter notebook for the lecture and try to answer the questions and assignments
@@ -114,7 +114,7 @@ Do the following three steps:
     + sometimes it helps to access jupyter lab with an incognito/private window
     + or --if all else fails-- you can use [[https://colab.research.google.com/][google's colab]]
 + create a new python notebook and type the following code in the first cell:
-#+BEGIN_SRC ipython
+#+BEGIN_SRC python
 %%bash
 
 git clone https://github.com/janboone/applied-economics
@@ -146,7 +146,7 @@ It is up to you how to combine the Datacamp courses with the [[file:./pagescreen
    :CUSTOM_ID: deadlines_AEA
    :END:
 
-- The deadline for the *final python assignment* is: Monday December 19, 2022. Your grade is determined by this final assignment (only).
+- The deadline for the *final python assignment* is: Monday January 9th, 2023. Your grade is determined by this final assignment (only).
 - The resit deadline for the python assignment is: Monday May 15th, 2023. Let us know by email that you have submitted your assignment for the resit.
 
 Follow the instructions below on how to submit an assignment on github and fill in the google form etc.

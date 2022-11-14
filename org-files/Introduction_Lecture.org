@@ -220,7 +220,7 @@
 + if you still cannot figure it out, create an issue on github to ask us
 + we will answer your questions in class
 
-** to get a grade for the python track:
+** to get a grade for this course:
 
   - finish assignment 1 (see below) before the deadline
   - attend the career services workshops

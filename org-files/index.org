@@ -88,8 +88,8 @@ At the moment, we believe that the all lectures will be on campus. If we would n
 | Tue | 2022-11-08 | 10:45-12:30 | Boone, J.      | CZ 9    | Empirical research                             |                      |
 | Wed | 2022-11-16 | 10:45-12:30 | Boone, J.      | AZ 201  | Healthcare and regulation                      |                      |
 | Mon | 2022-11-21 | 10:45-12:30 | Ferrando, M.   | AZ 201  | Lecture gender economics                       |                      |
-| Fri | 2022-11-25 | 12:45-14:30 | Boone, J.      | CZ 7    | notebook gender economics                      |                      |
-| Mon | 2022-11-28 | 10:45-12:30 | Ferrando, M.   | AZ 201  | Lecture gender economics                       |                      |
+| Fri | 2022-11-25 | 12:45-14:30 | CANCELLED      | CZ 7    |                                                |                      |
+| Mon | 2022-11-28 | 10:45-12:30 | CANCELLED      | AZ 201  |                                                |                      |
 | Fri | 2022-12-02 | 12:45-14:30 | Boone, J.      | CZ 7    | notebook gender economics                      |                      |
 | Wed | 2022-12-07 | 12:45-14:30 | Boone, J.      | CZ 7    | Q&A                                            |                      |
 
